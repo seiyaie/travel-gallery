@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>デンマーク</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--denmark js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">DENMARK</h1>
+                    <p class="c-kv-describe">
+                        <span>where fairy tales live</span>
+                        <span>and modern design shines</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2023-09-18">2023年9月18日</time> - <time datetime="2023-09-20">2023年9月20日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Copenhagen</span><span class="c-description-city-jp">コペンハーゲン</span></li>
+                            <li><span class="c-description-city-en">Christiania</span><span class="c-description-city-jp">クリスチャニア</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>デンマークでは首都コペンハーゲンを訪れました。街全体に北欧らしいシンプルで洗練された美しさがあり、歩いているだけで心地よさを感じました。街並みにはデザイン性があふれていて、日常の景色そのものが美しいと感じられる場所でした。</span>
+                            <span>その一方で、中心部にある「クリスチャニア」という特異な街にも足を運びました。ここは住民たちが独自のコミュニティを築き、コペンハーゲンから独立した“自由都市”として存在しています。住民は彼ら自身のルールに従って生活しており、首都の真ん中に全く異なる文化が共存していることに驚かされました。クリスチャニアの出口に掲げられていた「ここから先はEU」という看板は、この街の独自性を象徴する印象的な光景でした。 洗練された首都の姿と、独自の世界を築くクリスチャニア。コペンハーゲンには、対照的でありながら共存する多様な魅力があり、それこそがこの街を特別な場所にしているのだと感じました。 </span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: 昼のニューハウン  / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ニューハウンの昼景" data-caption="青空の下、カラフルな建物と船が並ぶ運河。コペンハーゲンを象徴する風景。">
+                        <img src="../img/denmark/denmark.jpg" width="1512" height="2016" alt="昼のニューハウンと船" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.19</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Nyhavn by Day, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 2: 夜のニューハウン  / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="夜のニューハウン" data-caption="運河沿いのカラフルな家々が暖かな灯りに包まれ、水面に美しく映り込む夜の光景。">
+                        <img src="../img/denmark/denmark02.jpg" width="1512" height="2016" alt="夜のニューハウンと水面に映る光" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.18</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Nyhavn by Night, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 3: セブンイレブン / Copenhagen  -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="コペンハーゲンのセブンイレブン" data-caption="街角を照らす虹色のサイン。日常の風景にユニークな彩りを添えるコンビニ。">
+                        <img src="../img/denmark/denmark03.jpg" width="1512" height="2016" alt="レインボーカラーのセブンイレブン" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.18</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Rainbow 7-Eleven, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 4: 天使のモニュメント / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="天使のモニュメント" data-caption="翼を広げる天使の像と、力強い人々のレリーフ。歴史を刻む荘厳な記念碑。">
+                        <img src="../img/denmark/denmark04.jpg" width="1512" height="2016" alt="天使像とレリーフのモニュメント" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.19</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Angel Monument, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 5: 人魚姫の像 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="人魚姫の像" data-caption="海を見つめ続ける小さな像。コペンハーゲンを象徴する静かなアイコン。">
+                        <img src="../img/denmark/denmark05.jpg" width="1512" height="2016" alt="岩の上に座る人魚姫の像" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.19</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">The Little Mermaid, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 6: 白線アートの道路 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="白線のうねる道路" data-caption="地面を走る白いラインが波のように揺れる。遊び心あふれる都市のデザイン。">
+                        <img src="../img/denmark/denmark06.jpg" width="1512" height="2016" alt="波打つ白線の道路" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.19</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wave Lines Street, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 7: 壁の落書き / Christiania -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="Antikvariatの壁画" data-caption="古びた壁に描かれた青い顔と椅子。街の片隅に潜むアートの息吹。">
+                        <img src="../img/denmark/denmark07.jpg" width="1512" height="2016" alt="Antikvariatの壁アート" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Antikvariat Graffiti, Christiania</span>
+                    </button>
+                </li>
+
+                <!-- 8: 海に伸びる桟橋 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="海に伸びる桟橋" data-caption="まっすぐに海へと延びる木製の桟橋。北欧の空と海に抱かれるひととき。">
+                        <img src="../img/denmark/denmark08.jpg" width="1512" height="2016" alt="海に続く桟橋" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Pier into the Sea, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 9: カラフルな住宅街 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="カラフルな家並み" data-caption="赤や青に彩られた建物が並ぶ住宅街。澄んだ空に映える街並み。">
+                        <img src="../img/denmark/denmark09.jpg" width="1512" height="2016" alt="カラフルな家並みの住宅街" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Colorful Street, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 10: レンガ造りの建物 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="レンガ造りの建物" data-caption="整然と並ぶ窓とレンガの質感。シンプルさの中に個性が光る。">
+                        <img src="../img/denmark/denmark10.jpg" width="1512" height="2016" alt="レンガ造りの建物" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Brick Building, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 11: アーチと自転車 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="アーチをくぐる自転車" data-caption="黄昏時の街灯と石造りのアーチ。その下を走り抜ける自転車が印象的。">
+                        <img src="../img/denmark/denmark11.jpg" width="1512" height="2016" alt="アーチをくぐる自転車" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Archway and Bicycle, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 12: 光に包まれた塔 / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="光に包まれた塔" data-caption="工事中の幕に灯りが走り、夜空に浮かび上がる幻想的な塔の姿。">
+                        <img src="../img/denmark/denmark12.jpg" width="1512" height="2016" alt="ライトアップされた塔" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Tower of Light, Copenhagen</span>
+                    </button>
+                </li>
+
+                <!-- 13: レゴのパイロット / Copenhagen -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="レゴのパイロット" data-caption="空港でお見送りしてくれたレゴのパイロット。遊び心たっぷりの北欧らしいユーモア。">
+                        <img src="../img/denmark/denmark13.jpg" width="1512" height="2016" alt="レゴで作られたパイロットの像" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.09.20</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">LEGO Pilot, Copenhagen</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

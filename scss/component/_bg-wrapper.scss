@@ -1,0 +1,95 @@
+@use "../global" as g;
+
+/*!
+component > bg-wrapper
+------------------------------
+*/
+
+.c-bg-wrapper {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    &--top {
+        background-image: url(../img/top/top-bg.jpg);
+    }
+    &--ireland {
+        background-image: url(../img/ireland/ireland-bg.jpg);
+    }
+    &--italy {
+        background-image: url(../img/italy/italy-bg.jpg);
+    }
+    &--netherlands {
+        background-image: url(../img/netherlands/netherlands-bg.jpg);
+    }
+    &--scotland {
+        background-image: url(../img/scotland/scotland-bg.jpg);
+    }
+    &--singapore {
+        background-image: url(../img/singapore/singapore-bg.jpg);
+    }
+    &--germany {
+        background-image: url(../img/germany/germany-bg.jpg);
+    }
+    &--portugal {
+        background-image: url(../img/portugal/portugal-bg.jpg);
+    }
+    &--france {
+        background-image: url(../img/france/france-bg.jpg);
+    }
+    &--denmark {
+        background-image: url(../img/denmark/denmark-bg.jpg);
+    }
+    &--greece {
+        background-image: url(../img/greece/greece-bg.jpg);
+    }
+    &--czechia {
+        background-image: url(../img/czechia/czechia-bg.jpg);
+    }
+    &--spain {
+        background-image: url(../img/spain/spain-bg.jpg);
+    }
+    &--belgium {
+        background-image: url(../img/belgium/belgium-bg.jpg);
+    }
+    &--england {
+        background-image: url(../img/england/england-bg.jpg);
+    }
+    &--turkey {
+        background-image: url(../img/turkey/turkey-bg.jpg);
+    }
+    
+    &--thailand {
+        background-image: url(../img/thailand/thailand-bg.jpg);
+    }
+    &--philippines {
+        background-image: url(../img/philippines/philippines-bg.jpg);
+    }
+}
+
+.c-body-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.c-page-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: #fff;
+    background: #000;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translateY(0%); /* 初期は覆う */
+    will-change: transform;
+}

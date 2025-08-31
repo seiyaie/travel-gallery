@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>ポルトガル</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--portugal js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">PORTUGAL</h1>
+                    <p class="c-kv-describe">
+                        <span>the land of explorers</span>
+                        <span>and timeless charm</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2023-07-05">2023年7月5日</time> - <time datetime="2023-07-08">2023年7月8日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Lisbon</span><span class="c-description-city-jp">リスボン</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>ポルトガルを訪れたきっかけは、リスボンで開催された音楽フェス「NOS Alive」。目的は大好きなレッチリのライブを見ることでした。フェス自体は想像以上に最高の体験で、音楽に包まれながら特別な時間を過ごせました。しかし、それ以上に心を奪われたのは街そのものの美しさでした。丘の上から見下ろすオレンジ色の屋根や、街角に残る青いアズレージョのタイル装飾は太陽の光に照らされてきらめき、歴史と芸術が生活に溶け込んでいることを実感しました。</span>
+                            <span>さらに驚いたのは、コーヒーの美味しさ。これまで訪れた国の中で一番だと感じるほどで、何度もカフェに立ち寄ってしまいました。レストランでの食事も印象的で、ヨーロッパの中では格段にリーズナブルでありながら、どれも味わい深く、毎回期待を超えてくれました。音楽と景色、人々の温かさ、そして芸術的なタイルの美しさに触れたこの旅は、リスボンという街の魅力を強く刻み込んでくれるものになりました。</span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: 波模様の石畳 / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="波模様の石畳" data-caption="リスボンの有名な石畳。黒と白のコントラストが波のように揺れて見えて、まるで街全体が動いているような感覚になる。">
+                        <img src="../img/portugal/portugal.jpg" width="1512" height="2016" alt="波模様の石畳が広がる広場" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.07</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wave Pattern Pavement, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 2: 青空と街並み / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="青空と街並み" data-caption="見晴らしの良い場所から眺めた住宅街。オレンジの屋根と青空の組み合わせが印象的で、リスボンらしい明るさを感じた。">
+                        <img src="../img/portugal/portugal02.jpg" width="1512" height="2016" alt="リスボンの住宅街と青空" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Blue Sky and Cityscape, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 3: 屋上テラス / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="屋上テラス" data-caption="海を望む屋上テラス。テーブルや椅子が並び、風が気持ちよく通り抜ける。ゆったりとした時間を過ごせそうな空間。">
+                        <img src="../img/portugal/portugal03.jpg" width="1512" height="2016" alt="リスボンの屋上テラスと海" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Rooftop Terrace, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 4: 屋根越しのステッカー / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="屋根越しのステッカー" data-caption="赤い屋根の手前にあるフェンスには、色とりどりのステッカーが貼られている。『LIFE IS GOOD』という文字が印象的。">
+                        <img src="../img/portugal/portugal04.jpg" width="1512" height="2016" alt="赤い屋根とステッカーだらけのフェンス" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Stickers over the Rooftops, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 5: 城を望む景色 / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="城を望む景色" data-caption="木陰からリスボンの街並みを一望。丘の上には城が見え、赤い屋根の家々がぎっしりと立ち並んでいた。">
+                        <img src="../img/portugal/portugal05.jpg" width="1512" height="2016" alt="丘の上の城とリスボンの街並み" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">View of the Castle and the City, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 6: 路地裏の建物 / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="路地裏の建物" data-caption="古びた建物とフェンス。壁の剥がれ具合や、レンズフレアの光が相まって、独特の雰囲気を醸し出している。">
+                        <img src="../img/portugal/portugal06.jpg" width="1512" height="2016" alt="古い建物と光が差し込む路地" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.07</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Backstreet Building, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 7: ファドの壁画 / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ファドの壁画" data-caption="路地に描かれたカラフルな壁画。ギターを弾く人や歌う人が描かれ、ポルトガルの伝統音楽ファドの世界観を表している。">
+                        <img src="../img/portugal/portugal07.jpg" width="1512" height="2016" alt="ファドをテーマにした壁画" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.07</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Fado Mural, Lisbon</span>
+                    </button>
+                </li>
+
+                <!-- 8: トラムの通る坂道 / Lisbon -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="トラムの通る坂道" data-caption="石畳の坂道に続くトラムの線路。両脇にはピンクやタイル模様の建物が立ち並び、典型的なリスボンの街並みを感じられる。">
+                        <img src="../img/portugal/portugal08.jpg" width="1512" height="2016" alt="リスボンの坂道とトラムの線路" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.07.08</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Slope with Tram, Lisbon</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

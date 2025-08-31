@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>イギリス</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--england js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">ENGLAND</h1>
+                    <p class="c-kv-describe">
+                        <span>where history whispers</span>
+                        <span>through stone walls</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2024-01-22">2024年1月22日</time> - <time datetime="2024-01-26">2024年1月26日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">London</span><span class="c-description-city-jp">ロンドン</span></li>
+                            <li><span class="c-description-city-en">Hasting</span><span class="c-description-city-jp">ヘイスティング</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>憧れだったロンドンを訪れました。街には近代的な建造物と歴史的な建造物が並び立ち、モダンさと伝統が見事に共存していました。自分が今まさにあのロンドンに立っているのだと思うと、不思議で信じられない気持ちになりました。ビッグ・ベンやテムズ川沿いを歩くひとときは、まさに夢のような体験でした。</span>
+                            <span>ロンドン滞在中には「他のイングランドの顔も見てみたい」という思いから、勢いで海辺の街ヘイスティングスへも足を運びました。小さな港町には中世の名残を感じさせる歴史が漂い、ロンドンとはまた違った魅力がありました。訪れてみて本当に良かったと心から思える場所でした。 ロンドンの華やかさとヘイスティングスの素朴な歴史ある風景。その対照的な魅力を味わったことで、イングランドという国の多彩さに触れることができました。</span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: ビッグベン / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ビッグベン" data-caption="青空の下にそびえるロンドンの象徴。時を告げる鐘の音が街の鼓動を刻む。">
+                        <img src="../img/england/england.jpg" width="1512" height="2016" alt="ロンドンのビッグベン" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.22</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Big Ben, London</span>
+                    </button>
+                </li>
+
+                <!-- 2: 官庁街のライトアップ / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="官庁街のライトアップ" data-caption="夜の帳が下りても、白亜の建物はまるで舞台のように光を浴びて輝く。">
+                        <img src="../img/england/england02.jpg" width="1512" height="2016" alt="ロンドン官庁街のライトアップ" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.22</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">London at Night, London</span>
+                    </button>
+                </li>
+
+                <!-- 3: 赤い電話ボックス / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="赤い電話ボックス" data-caption="煌めく街にひときわ映える赤。伝統と現代が交差するロンドンの夜景。">
+                        <img src="../img/england/england03.jpg" width="1512" height="2016" alt="ロンドンの赤い電話ボックス" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.22</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Red Telephone Box, London</span>
+                    </button>
+                </li>
+
+                <!-- 4: シティの高層ビル群 / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シティの高層ビル群" data-caption="歴史的な建物とガラス張りの摩天楼。ロンドンの時間は重なり合いながら進んでいく。">
+                        <img src="../img/england/england04.jpg" width="1512" height="2016" alt="ロンドンシティの高層ビル群" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">London Skyline, London</span>
+                    </button>
+                </li>
+
+                <!-- 5: ロイヤル・エクスチェンジの時計 / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ロイヤル・エクスチェンジの時計" data-caption="空を背景に輝く時計が、今も変わらぬロンドンの時を刻む。">
+                        <img src="../img/england/england05.jpg" width="1512" height="2016" alt="ロイヤル・エクスチェンジの時計" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Royal Exchange Clock, London</span>
+                    </button>
+                </li>
+
+                <!-- 6: バラ・マーケット / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="バラ・マーケット" data-caption="頭上に煌めくライト、漂う香りと喧騒。ロンドンの食文化の息づかいがここにある。">
+                        <img src="../img/england/england06.jpg" width="1512" height="2016" alt="ロンドンのバラ・マーケット" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Borough Market, London</span>
+                    </button>
+                </li>
+
+                <!-- 7: テート・モダンの展示作品 / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="テート・モダンの展示作品" data-caption="青い光が無限に広がるような幻想。現代アートの持つ静かな力を感じる。">
+                        <img src="../img/england/england07.jpg" width="1512" height="2016" alt="テート・モダンの展示作品" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Tate Modern, London</span>
+                    </button>
+                </li>
+
+                <!-- 8: テムズ川と夜景 / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="テムズ川と夜景" data-caption="川面に映る光の粒が、ロンドンの夜をより深く美しく彩っていた。">
+                        <img src="../img/england/england08.jpg" width="2016" height="1512" alt="テムズ川とロンドンの夜景" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Thames Night View, London</span>
+                    </button>
+                </li>
+
+                <!-- 9: 聖ゲオルギウスの竜退治 / London -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="聖ゲオルギウスの竜退治" data-caption="白馬にまたがる聖人と血を流す竜。中世から続く物語が、絵画の中で今も息づく。">
+                        <img src="../img/england/england09.jpg" width="1512" height="2016" alt="聖ゲオルギウスの竜退治の絵画" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.22</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">St. George and the Dragon, London</span>
+                    </button>
+                </li>
+
+                <!-- 10: ビーチハットの並ぶ海辺 / Hastings -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ビーチハットの並ぶ海辺" data-caption="青と白のハットが浜辺に整然と並び、冬の海に静かなリズムを刻む。">
+                        <img src="../img/england/england10.jpg" width="1512" height="2016" alt="ヘイスティングスのビーチハット" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Hastings Beach Huts, Hastings</span>
+                    </button>
+                </li>
+
+                <!-- 11: 丘の上の家並み / Hastings -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="丘の上の家並み / Hastings" data-caption="海風が届く丘の上、等間隔に並ぶ屋根たち。煙突の向こうで雲が流れ、町は穏やかに深呼吸していた。">
+                        <img src="../img/england/england11.jpg" width="2016" height="1512" alt="緑の丘越しに並ぶ家々（ヘイスティングス）" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Hillside Homes, Hastings</span>
+                    </button>
+                </li>
+
+                <!-- 12: 角の小さなパブ / Hastings -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="角の小さなパブ / Hastings" data-caption="寒い夜ほど灯りはあたたかい。赤い電飾が雨粒を受け止め、窓越しの笑い声が路地にこぼれる。">
+                        <img src="../img/england/england12.jpg" width="1512" height="2016" alt="夜の路地角に建つ小さなパブ（ヘイスティングス）" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Corner Pub, Hastings</span>
+                    </button>
+                </li>
+
+                <!-- 13: 砂利浜に眠る漁船 / Hastings -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="砂利浜に眠る漁船 / Hastings" data-caption="潮の匂いと静かなエンジンの余熱。波の気配を待つ木の船体は、夜の浜で大きく息をひそめていた。">
+                        <img src="../img/england/england13.jpg" width="1512" height="2016" alt="夜の砂利浜に置かれた赤い漁船RX58（ヘイスティングス）" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">RX58 at Dusk, Hastings</span>
+                    </button>
+                </li>
+
+                <!-- 14: フェンスの花束 / Hastings -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="フェンスの花束 / Hastings" data-caption="誰かの想いの行き先。色を失いかけた花びらが、緑の鉄と海風の上でまだ柔らかく揺れている。">
+                        <img src="../img/england/england14.jpg" width="1512" height="2016" alt="緑のフェンスに結ばれた枯れた花束（ヘイスティングス）" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Bouquet on the Fence, Hastings</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>ギリシャ</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--greece js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">GREECE</h1>
+                    <p class="c-kv-describe">
+                        <span>where myths live</span>
+                        <span>and seas shine</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2023-10-22">2023年10月22日</time> - <time datetime="2023-10-28">2023年10月28日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Santorini</span><span class="c-description-city-jp">サントリーニ島</span></li>
+                            <li><span class="c-description-city-en">Athens</span><span class="c-description-city-jp">アテネ</span></li>
+                            <li><span class="c-description-city-en">Aegina</span><span class="c-description-city-jp">エギナ島</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>ギリシャには1週間滞在しました。最初に訪れたのはサントリーニ。テレビで見て以来ずっと憧れていた場所で、ようやくその夢を叶えることができました。真っ青なエーゲ海を背景に、崖に沿って立ち並ぶ白い家々。その光景は今まで訪れたどの場所よりも美しく、言葉を失うほどの絶景でした。その後に訪れたアテネは、サントリーニとは全く異なる表情を見せてくれました。街を歩いていると、突然目の前に古代遺跡が姿を現す――そんな不思議な感覚に包まれる都市です。現代の喧騒の中に、悠久の歴史が息づいていることを肌で感じました。</span>
+                            <span>さらに、アテネから船でエギナ島へも足を伸ばしました。アテネのにぎやかさとは対照的に、エギナでは時間がゆったりと流れ、心からリラックスできる空気が漂っていました。海辺の景色を眺めながら、「こんな場所に別荘があったら」と思わず夢見てしまうほど魅力的な島でした。 サントリーニの絶景、アテネの歴史、そしてエギナの穏やかさ――まったく異なる顔を持つ3つの場所を巡ることで、ギリシャという国の奥深さに触れることができました。</span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: 夕暮れの青ドーム教会 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="夕暮れの青ドーム教会" data-caption="淡いピンクと紫に染まる空を背景に、青いドームが際立つ。サントリーニらしい夕景。">
+                        <img src="../img/greece/greece.jpg" width="1512" height="2016" alt="夕暮れの青ドーム教会と鐘楼" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.25</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Blue Dome at Sunset, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 2: サントリーニの白壁と海とくつろぐ猫たち / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="サントリーニの白壁と海とくつろぐ猫たち" data-caption="白い壁の影に寄り添う猫たち。背後にはエーゲ海が広がり、時がゆっくりと流れていく。">
+                        <img src="../img/greece/greece02.jpg" width="1512" height="2016" alt="サントリーニの白壁と海、日陰に休む猫" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Santorini Cats & Sea, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 3: 青空にたなびくギリシャ国旗 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="青空にたなびくギリシャ国旗" data-caption="白壁の教会と青空、そして風にはためく国旗。エーゲ海の誇りが空いっぱいに広がる。">
+                        <img src="../img/greece/greece03.jpg" width="1512" height="2016" alt="ギリシャ国旗とサントリーニの白い教会" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Greek Flag & Church, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 4: サントリーニの白い街並み / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="サントリーニの白い街並み" data-caption="青空を背景に積み重なる白い家々。太陽の光に反射して、街全体がまるで宝石のように輝く。">
+                        <img src="../img/greece/greece04.jpg" width="1512" height="2016" alt="サントリーニの丘に広がる白い家々" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Santorini White Houses, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 5: イアの港の夜景 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="イアの港の夜景" data-caption="崖に沿って灯る明かりと、港に映る光。エーゲ海の夜は、静けさと賑わいが交差する。">
+                        <img src="../img/greece/greece05.jpg" width="1512" height="2016" alt="イアの港を見下ろす夜景とレストラン" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Oia Harbor Night, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 6: 夜のサントリーニの景色 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="夜のサントリーニの景色" data-caption="無数の灯りが散りばめられた丘の家々。暗闇に浮かぶ光の群れが幻想的な雰囲気を作り出す。">
+                        <img src="../img/greece/greece06.jpg" width="1512" height="2016" alt="夜にライトアップされたサントリーニの家並み" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Santorini Nightscape, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 7: 白亜の鐘楼 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="白亜の鐘楼" data-caption="青空に伸びる真っ白な鐘楼。澄んだ鐘の音が、海風に運ばれて島全体に響く。">
+                        <img src="../img/greece/greece07.jpg" width="1512" height="2016" alt="サントリーニの白い鐘楼と青空" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">White Bell Tower, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 8: 崖の上のリゾート / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="崖の上のリゾート" data-caption="岩肌の上に並ぶ白いヴィラと青いプール。自然と調和した贅沢な眺め。">
+                        <img src="../img/greece/greece08.jpg" width="1512" height="2016" alt="断崖に建つリゾートホテル群と青いプール" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.24</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Clifftop Resort, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 9: 白壁の路地と階段 / Santorini -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="白壁の路地と階段" data-caption="細い石段が続く白壁の路地。足音と影が、迷路のような街にリズムを刻む。">
+                        <img src="../img/greece/greece09.jpg" width="1512" height="2016" alt="白壁に囲まれた狭い路地と階段" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">White Alley Stairs, Santorini</span>
+                    </button>
+                </li>
+
+                <!-- 10: アクロポリス / Athens -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="アクロポリス" data-caption="アテネの丘に立つ古代遺跡。石の柱が今もなお、歴史と神話の重みを伝えている。">
+                        <img src="../img/greece/greece10.jpg" width="1512" height="2016" alt="アクロポリスの遺跡と曇り空" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.26</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Acropolis, Athens</span>
+                    </button>
+                </li>
+                <!-- 11: アテネの市場通り / Athens -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="アテネの市場通り" data-caption="曇り空の下でも人の熱気は絶えない。壁画と屋台が、街の鼓動を映していた。">
+                        <img src="../img/greece/greece11.jpg" width="1512" height="2016" alt="アテネの市場通りと人々の賑わい" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.26</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Market Street, Athens</span>
+                    </button>
+                </li>
+
+                <!-- 12: エギナ島の港 / Aegina -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="エギナ島の港" data-caption="水面に映る家並みとヨット。アテネ近郊の小島で、時間は穏やかに流れていた。">
+                        <img src="../img/greece/greece12.jpg" width="1512" height="2016" alt="エギナ島の港と海に映る家並み" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.23</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Aegina Island Port, Aegina</span>
+                    </button>
+                </li>
+
+                <!-- 13: アテネの街角 / Athens -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="アテネの街角" data-caption="現代建築と生活感が入り混じる。古代遺跡の街にも、今を生きる息遣いがある。">
+                        <img src="../img/greece/greece13.jpg" width="1512" height="2016" alt="アテネの街角の建物と駐車場" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.10.28</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Street Corner, Athens</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

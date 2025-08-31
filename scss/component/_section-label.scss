@@ -1,0 +1,18 @@
+@use "../global" as g;
+
+/*!
+component > section label
+------------------------------
+*/
+
+.c-section-label {
+  font-size: 16px;
+  font-size: 16px;
+  padding-inline: 4px;
+  border-radius: 4px;
+  background-color: var(--bg-white);
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+  color: var(--font-base);
+}

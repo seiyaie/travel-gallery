@@ -1,0 +1,162 @@
+@use "../global" as g;
+
+/*!
+component >  info
+------------------------------
+*/
+body.is-modal-open {
+    overflow: hidden;
+}
+.c-lightbox {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100%;
+    max-height: none;
+    max-width: none;
+    background-color: var(--bg-black);
+    color: var(--font-white);
+    z-index: 1000;
+    overflow: auto;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    @include g.mq() {
+        height: 100vh;
+    }
+}
+
+.c-lightbox::backdrop {
+    display: none;
+}
+
+.c-lightbox-bg {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.c-lightbox-inner {
+    width: 90%;
+    max-width: var(--width-content);
+    height: auto;
+    min-height: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    gap: 16px;
+    align-items: stretch;
+    justify-items: stretch;
+    @include g.mq() {
+        grid-template-rows: none;
+        grid-template-columns: minmax(460px, 1fr) minmax(260px, 500px);
+        align-content: stretch;
+    }
+}
+
+.c-lightbox-img-section {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 16px;
+    padding: 32px;
+    min-height: 0;
+    @include g.mq() {
+        max-height: 100vh;
+    }
+}
+
+.c-lightbox-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(200px, 50vh, 70vh);
+    height: 100%;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain; // 必要に応じて
+        display: block;
+        margin-inline: auto;
+    }
+}
+
+.c-lightbox-item {
+    position: relative;
+    text-transform: uppercase;
+    font-family: var(--font-family-label);
+    text-align: center;
+}
+
+.c-lightbox-text {
+    position: relative;
+    top: 25px;
+    display: inline-flex;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 0;
+    @include g.mq() {
+        font-size: 16px;
+    }
+}
+
+.c-lightbox-close-btn {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.c-lightbox-caption {
+    place-self: center;
+    min-height: 0;
+    padding: 16px;
+    font-size: 14px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    @include g.mq() {
+        font-size: 16px;
+    }
+}
+
+.c-lightbox-item-revealer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-black);
+    }
+    &--caption::after {
+        top: 100px;
+    }
+}
+
+// .c-lightbox-caption-revealer {
+
+// }
+
+// .c-img-lightbox-close-btn {
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     color: inherit;
+//     padding: 0;
+// }
+
+// .c-img-lightbox-close-btn:focus-visible {
+//     outline: 2px solid #fff;
+//     outline-offset: 4px;
+// }

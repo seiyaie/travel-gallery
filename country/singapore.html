@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>シンガポール</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--singapore js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">SINGAPORE</h1>
+                    <p class="c-kv-describe">
+                        <span>small island,</span>
+                        <span>big world</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2023-05-30">2023年5月30日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Singapore</span><span class="c-description-city-jp">シンガポール</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>アイルランドから日本に一時帰国し、再びアイルランドへ戻る途中、乗り継ぎで訪れたのがシンガポールでした。次の便まで約16時間あり、せっかくの機会なので街に出て観光をしました。街の第一印象は「東京のような大都会」。しかし同時に、中国系・マレー系・インド系など多様な文化が共存し、ひとつの都市にいながら異国を巡っているような不思議な感覚を覚えました。高層ビル群の間に広がるマーライオン公園や、近未来的な姿をしたマリーナベイ・サンズやガーデンズ・バイ・ザ・ベイの建築群には圧倒され、まるで未来都市に足を踏み入れたようでした。</span>
+                            <span>そして忘れられないのが食の体験です。地元の人々で賑わうホーカーズ（屋台街）で食べた料理はどれも絶品で、香辛料の香りや熱気に包まれながら味わう一皿は、ただの食事以上の思い出になりました。 わずか16時間の滞在でしたが、シンガポールの持つ多彩な魅力を垣間見ることができ、短いながらも強烈な印象を残す旅となりました。</span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: ガーデンズ・バイ・ザ・ベイのスーパーツリー / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ガーデンズ・バイ・ザ・ベイのスーパーツリー" data-caption="夜空を突き抜ける人工の巨木。光と緑が共存する未来都市の象徴。">
+                        <img src="../img/singapore/singapore.jpg" width="1512" height="2016" alt="夜空にライトアップされたスーパーツリー" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Supertree, Gardens by the Bay, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 2: 光に包まれるスーパーツリーと空中歩道 / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="光に包まれるスーパーツリーと空中歩道" data-caption="光の網に照らされる未来の森。歩道を渡ると、夜空まで手が届きそうだった。">
+                        <img src="../img/singapore/singapore02.jpg" width="1512" height="2016" alt="ライトアップされたスーパーツリーと空中歩道" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Supertree & Skywalk, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 3: マリーナ・ベイ・サンズを望む夜景 / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="マリーナ・ベイ・サンズを望む夜景" data-caption="夜空に浮かぶ船の形。光の粒が都市のリズムを映し出す。">
+                        <img src="../img/singapore/singapore03.jpg" width="1512" height="2016" alt="夜のマリーナ・ベイ・サンズをスーパーツリーの間から望む" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Marina Bay Sands by Night, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 4: シンガポールの集合住宅（HDB） / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シンガポールの集合住宅（HDB）" data-caption="窓の一つひとつに暮らしの光。幾何学模様のように重なる日常の断片。">
+                        <img src="../img/singapore/singapore04.jpg" width="1512" height="2016" alt="シンガポールの集合住宅HDBの外観" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">HDB Apartment, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 5: 夜のガーデンズ・バイ・ザ・ベイからの眺め / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="夜のガーデンズ・バイ・ザ・ベイからの眺め" data-caption="樹木の影に映える高層ビル群。自然と都市が調和する光景。">
+                        <img src="../img/singapore/singapore05.jpg" width="1512" height="2016" alt="ガーデンズ・バイ・ザ・ベイ越しに見る高層ビル群の夜景" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">City Skyline from Gardens, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 6: 水辺に映るマリーナ・ベイ・サンズ / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="水辺に映るマリーナ・ベイ・サンズ" data-caption="湖面に逆さに映る光の船。都市と水が一つに溶け合う。">
+                        <img src="../img/singapore/singapore06.jpg" width="1512" height="2016" alt="水辺に映るマリーナ・ベイ・サンズの夜景" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Reflection of Marina Bay Sands, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 7: シンガポール版レッドブル / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シンガポール版レッドブル" data-caption="異国のエナジー。小さな缶に詰まった旅の活力。">
+                        <img src="../img/singapore/singapore07.jpg" width="1512" height="2016" alt="シンガポールで購入したタイ語表記のレッドブルの缶" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Red Bull, Singapore</span>
+                    </button>
+                </li>
+
+                <!-- 8: ホーカーズでのローカルフード / Singapore -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ホーカーズでのローカルフード" data-caption="湯気とともに漂う甘辛い香り。旅の記憶に刻まれる一皿。">
+                        <img src="../img/singapore/singapore08.jpg" width="2016" height="1512" alt="ホーカーズで提供された肉料理のプレートとスープ" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.30</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Local Dish at Hawker Centre, Singapore</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

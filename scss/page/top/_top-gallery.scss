@@ -1,0 +1,73 @@
+@use "../../global" as g;
+
+/*!
+pages > top > gallery
+------------------------------
+*/
+
+.top-gallery {
+    position: relative;
+}
+
+.top-gallery-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+    @include g.mq(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include g.mq(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.top-gallery-item {
+    will-change: clip-path;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    border: 1px solid var(--border-base);
+    height: 300px;
+    width: 100%;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.top-gallery-item a {
+    height: 100%;
+    @media (any-hover: hover) {
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+}
+.top-gallery-item-thumbnail {
+    height: 70%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s;
+        
+    }
+}
+
+.top-gallery-item-label {
+    margin-top: 16px;
+    font-family: var(--font-family-label);
+    span {
+        @include g.mq(sm) {
+            display: block;
+        }
+        &:last-child {
+            @include g.mq(sm) {
+                margin-left: 8px;
+            }
+            &::before {
+                content: "/";
+                display: inline-block;
+                margin-inline: 0.25em;
+            }
+        }
+    }
+}

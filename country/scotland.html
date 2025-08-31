@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>スコットランド</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--scotland js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">SCOTLAND</h1>
+                    <p class="c-kv-describe">
+                        <span>castles in stone</span>
+                        <span>and songs in air</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2023-07-05">2023年5月10日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Edinburgh</span><span class="c-description-city-jp">エディンバラ</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>スコットランドにはアイルランドから日帰りで訪れました。驚いたのは航空券の安さで、往復わずか2000円ほど。こんなにも気軽に国をまたいで旅行できることにヨーロッパらしさを感じました。</span>
+                            <span>目的地は首都エディンバラ。街に足を踏み入れた瞬間から、まるで時代をさかのぼったかのような雰囲気に包まれました。特に旧市街は、まるでハリーポッターの物語の舞台そのもので、石造の建造物とゴシック建築が放つ迫力に圧倒されました。狭い路地や坂道が入り組み、どこを歩いても映画のワンシーンの中にいるようでした。 短い滞在でしたが、街全体が放つ歴史と重厚さに強く心を惹かれました。日帰りの旅でありながら、スコットランドの深い魅力の一端に触れられたことは忘れられない思い出です。 </span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: ビクトリア・ストリート / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ビクトリア・ストリート" data-caption="曲がりくねる坂道に並ぶカラフルな建物。歩くだけで童話の世界に迷い込んだ気分になる。">
+                        <img src="../img/scotland/scotland.jpg" width="1512" height="2016" alt="エディンバラのビクトリア・ストリートの石畳と建物" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Victoria Street, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 2: エディンバラの丘と街並み / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="エディンバラの丘と街並み" data-caption="曇り空の下に広がる重厚な街並み。遠くに見える丘が、物語の舞台のように静かにそびえていた。">
+                        <img src="../img/scotland/scotland02.jpg" width="1512" height="2016" alt="丘から眺めたエディンバラの街並みと山" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Edinburgh Hillside View, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 3: ザ・ハブ（The Hub） / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ザ・ハブ（The Hub）" data-caption="黒い尖塔が空に突き刺さるように伸びる。歴史の中に現代が息づく、不思議な存在感。">
+                        <img src="../img/scotland/scotland03.jpg" width="1512" height="2016" alt="青空に尖塔を伸ばすザ・ハブの外観" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">The Hub, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 4: 石造りの細い路地 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="石造りの細い路地" data-caption="雨に濡れた石畳の路地を抜けると、まるでタイムスリップしたような感覚に包まれた。">
+                        <img src="../img/scotland/scotland04.jpg" width="1512" height="2016" alt="石造りの建物に囲まれた細い路地" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Narrow Alleyway, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 5: スコット記念塔 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="スコット記念塔" data-caption="どこまでも尖っていくようなゴシックの塔。見上げるほどに、街の誇りと重みを感じる。">
+                        <img src="../img/scotland/scotland05.jpg" width="1512" height="2016" alt="エディンバラの街にそびえるスコット記念塔" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Scott Monument, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 6: オールド・フィッシュマーケット・クローズの家 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="オールド・フィッシュマーケット・クローズの家" data-caption="モダンさの中に石造りの重厚さが残る。過去と現在が同居する不思議な街の一角。">
+                        <img src="../img/scotland/scotland06.jpg" width="1512" height="2016" alt="オールド・フィッシュマーケット・クローズにある家の外観" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">House in Old Fishmarket Close, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 7: ライターズ・ミュージアム / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ライターズ・ミュージアム" data-caption="石の壁に刻まれた時の流れ。作家たちの物語が、今も建物全体に息づいているようだった。">
+                        <img src="../img/scotland/scotland07.jpg" width="1512" height="2016" alt="エディンバラの旧市街にあるライターズ・ミュージアム" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Writers' Museum, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 8: エディンバラ城 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="エディンバラ城" data-caption="岩山の上にそびえる要塞。曇天に溶け込む姿に、スコットランドの歴史の重みを感じた。">
+                        <img src="../img/scotland/scotland08.jpg" width="1512" height="2016" alt="岩山にそびえるエディンバラ城" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Edinburgh Castle, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 9: 赤いカフェボックス / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="赤いカフェボックス" data-caption="桜に包まれた赤いカフェ。小さな箱のような空間に、不思議と街の温もりを感じた。">
+                        <img src="../img/scotland/scotland09.jpg" width="1512" height="2016" alt="桜と赤いボックス型のカフェ" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Red Cafe Box, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 10: 川辺の石造り住宅街 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="川辺の石造り住宅街" data-caption="川に映る家々の姿が、絵画のように美しかった。エディンバラの静けさを象徴する景色。">
+                        <img src="../img/scotland/scotland10.jpg" width="1512" height="2016" alt="川沿いに建ち並ぶ石造りの家々" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Riverside Stone Houses, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 11: ジグザグの階段と黄色い家並み（Dean Village） / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ジグザグの階段と黄色い家並み（Dean Village）" data-caption="濡れた石畳に足音が吸いこまれていく。手すりの影まで曲線で、雨のエディンバラはやさしい。">
+                        <img src="../img/scotland/scotland11.jpg" width="1512" height="2016" alt="ディーン・ビレッジの黄色い外壁とジグザグの階段" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Yellow Houses in Dean Village, Edinburgh</span>
+                    </button>
+                </li>
+
+                <!-- 12: ディーン・ビレッジの水辺 / Edinburgh -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ディーン・ビレッジの水辺" data-caption="川面が空を連れて流れていく。見上げれば家々が寄り添い、時間まで斜面に腰かけているみたい。">
+                        <img src="../img/scotland/scotland12.jpg" width="1512" height="2016" alt="ディーン・ビレッジの川沿いに並ぶ家並み" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.05.10</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Dean Village Riverside, Edinburgh</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

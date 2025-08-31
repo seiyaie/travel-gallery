@@ -1,0 +1,66 @@
+@use "../global" as g;
+
+/*!
+component > kv
+------------------------------
+*/
+
+.c-kv {
+    height: clamp(400px, 100svh, 1000px);
+    position: relative;
+    z-index: 1;
+    // width: 90%;
+    // margin-inline: auto;
+}
+
+.c-kv-title-wrapper {
+    // position: fixed;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.c-kv-title {
+    font-family: var(--font-family-title);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+    @include g.mq(sm) {
+        font-size: 50px;
+    }
+    @include g.mq() {
+        font-size: 100px;
+    }
+    &--top {
+        span {
+            &:first-child {
+                font-family: var(--font-family-accent);
+                font-style: italic;
+            }
+            &:last-child {
+                font-family: var(--font-family-title);
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.c-kv-describe {
+    margin-top: 4px;
+    font-size: 32px;
+    font-family: var(--font-family-accent);
+    font-style: italic;
+    @include g.mq(sm) {
+        font-size: 40px;
+    }
+    @include g.mq() {
+        font-size: 70px;
+    }
+    span {
+        display: block;
+        @include g.mq() {
+            display: inline-block;
+        }
+    }
+}

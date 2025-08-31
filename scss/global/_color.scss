@@ -1,0 +1,21 @@
+/*!
+global > color
+------------------------------
+*/
+
+:root {
+    //background colors
+    --bg-base: #0f0f0f;
+    --bg-black: #090909;
+    --bg-white: #ffffff;
+    //border color
+    --border-base: rgba(255, 255, 255, 0.125);
+    --border-white: #ffffff;
+    --border-black: #000000;
+    --border-selected: #7a3ada;
+    //font colors
+    --font-base: #090909;
+    --font-black: #000000;
+    --font-white: #fff;
+    --font-gray: #fff9;
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>タイ</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+    <body class="js-body">
+        <div class="c-bg-wrapper c-bg-wrapper--thailand js-bg-wrapper"></div>
+        <div class="c-page-overlay js-page-overlay"></div>
+        <div class="c-body-overlay js-body-overlay"></div>
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+                <p class="header-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/logo-sp.svg" />
+                            <img src="../img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </p>
+                <nav class="header-nav" aria-label="ヘッダーナビゲーション">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
+                            <ul class="header-submenu js-dropdown-submenu">
+                                <li class="header-submenu-item js-dropdown-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="italy.html">Italy</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="germany.html">Germany</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="france.html">France</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="greece.html">Greece</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="spain.html">Spain</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="england.html">England</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="header-submenu-item js-dropdown-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-item">
+                            <a href="about.html" class="header-button">ABOUT</a>
+                        </li>
+                        <li class="header-item">
+                            <button class="header-button">CONTACT</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- the end of header -->
+        <!-- kv -->
+        <div class="l-container">
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h1 class="c-kv-title">THAILAND</h1>
+                    <p class="c-kv-describe">
+                        <span>a kingdom of smiles</span>
+                        <span>and open hearts</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+        <!-- gallery -->
+        <main class="c-gallery">
+            <ul class="c-gallery-list">
+                <!-- description -->
+                <li class="c-description c-gallery-item">
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">DATE</h2>
+                        <div class="c-description-date"><time datetime="2024-01-31">2024年1月31日</time> - <time datetime="2024-02-23">2024年2月23日</time></div>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">CITY</h2>
+                        <ul class="c-description-city-list">
+                            <li><span class="c-description-city-en">Bangkok</span><span class="c-description-city-jp">バンコク</span></li>
+                            <li><span class="c-description-city-en">Pattaya</span><span class="c-description-city-jp">パタヤ</span></li>
+                            <li><span class="c-description-city-en">Si Racha</span><span class="c-description-city-jp">シラチャ</span></li>
+                            <li><span class="c-description-city-en">Chiang Mai</span><span class="c-description-city-jp">チェンマイ</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-description-item">
+                        <h2 class="c-section-label">INFO</h2>
+                        <p class="c-description-text">
+                            <span>アイルランド留学を終え、日本への帰路で立ち寄ったのがタイでした。実はタイには過去に三度訪れたことがあり、祖父が住んでいたこともあって自分にとっては特別な国です。物価が安いこともあり、このときは思い切って約1ヶ月の滞在をしました。 首都バンコクは東京にも劣らない大都市でありながら、より濃密な熱気に包まれていました。バイクの交通量の多さや、三人乗りが当たり前の光景には驚かされました。雑然としながらもエネルギッシュな街の姿が強く印象に残っています。 次に訪れたパタヤでは「サンクチュアリー・オブ・トゥルース」を目にしました。木造で建てられた巨大な寺院はまさに“アジア版サグラダ・ファミリア”と呼ぶにふさわしく、その精巧さと迫力に圧倒されました。</span>
+                            <span>また、祖父が住んでいたシラチャにも立ち寄りました。かつて何度も訪れた懐かしい街ですが、久しぶりに歩いてみると以前より大きく発展しており、昔の面影が薄れていたのが少し寂しくもありました。個人的な思い出と街の変化を同時に感じられる特別な時間でした。 旅の最後は古都チェンマイ。街を歩くと次々に美しい寺院が現れ、その静けさと荘厳さに心を奪われました。華やかな都会のバンコクとは対照的に、落ち着きと伝統を感じさせる街で、タイの多様な魅力を改めて実感しました。 大都市の熱気、宗教建築の迫力、家族の記憶が残る街、そして古都の静けさ――一つの国でこれほど多彩な表情を見せてくれるタイは、私にとって特別な意味を持つ場所です。</span>
+                        </p>
+                    </div>
+                </li>
+                <!-- the end of description -->
+
+                <!-- 1: ワットパクナム / Bangkok -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ワットパクナム" data-caption="エメラルド色に輝く仏塔と、宇宙のように広がる天井画。荘厳さと幻想的な美しさに圧倒された。">
+                        <img src="../img/thailand/thailand.jpg" width="1512" height="2016" alt="ワットパクナムの仏塔と天井画" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.02</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wat Paknam, Bangkok</span>
+                    </button>
+                </li>
+
+                <!-- 2: バンコクの街並み / Bangkok -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="バンコクの街並み" data-caption="活気あふれる大通りと高層ビル群。混沌とした都市のエネルギーを体感できる瞬間だった。">
+                        <img src="../img/thailand/thailand02.jpg" width="1512" height="2016" alt="バンコクの街並み" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.31</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Bangkok Cityscape, Bangkok</span>
+                    </button>
+                </li>
+
+                <!-- 3: ワットパクナム / Bangkok -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ワットパクナム" data-caption="緑のガラスの仏塔が天へと伸びる。周囲を囲む仏画と天井の装飾が、まるで別世界のようだった。">
+                        <img src="../img/thailand/thailand03.jpg" width="1512" height="2016" alt="ワットパクナムの仏塔内部" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.02</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wat Paknam Interior, Bangkok</span>
+                    </button>
+                </li>
+
+                <!-- 4: サンクチュアリー・オブ・トゥルース / Pattaya -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="サンクチュアリー・オブ・トゥルース" data-caption="すべてが木彫りで造られた巨大寺院。精巧な装飾に目を奪われ、タイ文化の壮大さを感じた。">
+                        <img src="../img/thailand/thailand04.jpg" width="1512" height="2016" alt="パタヤのサンクチュアリー・オブ・トゥルース" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.05</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Sanctuary of Truth, Pattaya</span>
+                    </button>
+                </li>
+
+                <!-- 5: ラン島の階段 / Pattaya -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ラン島の階段" data-caption="急な階段の先に見えるエメラルドグリーンの海。登り降りの疲れも、その景色で一瞬にして癒された。">
+                        <img src="../img/thailand/thailand05.jpg" width="1512" height="2016" alt="ラン島の海へ続く階段" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Koh Larn Stairs, Pattaya</span>
+                    </button>
+                </li>
+
+                <!-- 6: ラン島の頂上からの眺め / Pattaya -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ラン島の頂上からの眺め" data-caption="山頂の仏像の背後に広がる青い海。静寂の中で時間が止まったように感じた瞬間だった。">
+                        <img src="../img/thailand/thailand06.jpg" width="1512" height="2016" alt="ラン島の頂上の仏像と海" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.06</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Koh Larn Summit, Pattaya</span>
+                    </button>
+                </li>
+
+                <!-- 7: シラチャの海岸 / Si Racha -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シラチャの海岸" data-caption="橋の向こうに広がる海と空。どこか懐かしさを感じる穏やかな風景だった。">
+                        <img src="../img/thailand/thailand07.jpg" width="1512" height="2016" alt="シラチャの橋と海" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.09</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Coastline, Si Racha</span>
+                    </button>
+                </li>
+
+                <!-- 8: シーチャン島の木 / Koh Si Chang -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シーチャン島の木" data-caption="青空の下で咲く白い花。孤独ながらも力強く立つ姿に、島の自然の美しさを感じた。">
+                        <img src="../img/thailand/thailand08.jpg" width="1512" height="2016" alt="シーチャン島の一本の木" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.11</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Tree, Koh Si Chang</span>
+                    </button>
+                </li>
+
+                <!-- 9: シーチャン島のベンチ / Koh Si Chang -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シーチャン島のベンチ" data-caption="海を見つめる孤独なベンチ。ここに座って波音を聞いていると、時間の感覚を忘れてしまいそうだった。">
+                        <img src="../img/thailand/thailand09.jpg" width="1512" height="2016" alt="海辺に置かれたベンチ" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.11</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Bench by the Sea, Koh Si Chang</span>
+                    </button>
+                </li>
+
+                <!-- 10: シーチャン島の沖に浮かぶ家 / Koh Si Chang -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="シーチャン島の沖に浮かぶ家" data-caption="静かな海に浮かぶ家。まるで夢の中の風景のように穏やかで、不思議な安心感を与えてくれた。">
+                        <img src="../img/thailand/thailand10.jpg" width="1512" height="2016" alt="シーチャン島の海に浮かぶ家" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.11</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Floating House, Koh Si Chang</span>
+                    </button>
+                </li>
+
+                <!-- 11: ワットアルン / Bangkok -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ワットアルン" data-caption="細かな装飾が施された高い仏塔。青空に映えて、堂々とした存在感を放っていた。">
+                        <img src="../img/thailand/thailand11.jpg" width="1512" height="2016" alt="ワットアルンの仏塔" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.13</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wat Arun, Bangkok</span>
+                    </button>
+                </li>
+
+                <!-- 12: ワットロークモーリー / Chiang Mai -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ワットロークモーリー" data-caption="精緻な木彫りが美しい寺院。チェンマイらしい穏やかな空気に包まれていた。">
+                        <img src="../img/thailand/thailand12.jpg" width="1512" height="2016" alt="ワットロークモーリーの本堂" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.17</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wat Lok Moli, Chiang Mai</span>
+                    </button>
+                </li>
+
+                <!-- 13: チェンマイの橋と寺院 / Chiang Mai -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="チェンマイの橋" data-caption="花が飾られた橋の先に見える寺院。赤いソンテウが通り過ぎ、日常の風景に彩りを添えていた。">
+                        <img src="../img/thailand/thailand13.jpg" width="1512" height="2016" alt="チェンマイの橋と寺院" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.17</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Bridge & Temple, Chiang Mai</span>
+                    </button>
+                </li>
+
+                <!-- 14: ソイカウボーイ / Bangkok -->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ソイカウボーイ" data-caption="ネオンが輝く夜の街。エネルギッシュで独特な雰囲気が漂っていた。">
+                        <img src="../img/thailand/thailand14.jpg" width="1512" height="2016" alt="バンコクのソイカウボーイの夜景" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.01.31</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Soi Cowboy, Bangkok</span>
+                    </button>
+                </li>
+
+                <!-- 15: ホテルの注意書き / Pattaya-->
+                <li class="c-gallery-item js-gallery-item">
+                    <button aria-label="画像詳細を表示" data-title="ホテルの注意書き" data-caption="「No Durian」の文字に思わず笑ってしまった。タイならではのユニークな禁止事項。">
+                        <img src="../img/thailand/thailand15.jpg" width="1512" height="2016" alt="ホテル内のドリアン持ち込み禁止の注意書き" decoding="async" />
+                        <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.09</span>
+                        <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">No Durian, Pattaya</span>
+                    </button>
+                </li>
+            </ul>
+        </main>
+        <!-- the end of gallery -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="../index.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="../img/footer-logo-sp.svg" />
+                            <img src="../img/footer-logo.svg" width="616" height="115" alt="seiya imoto" decoding="async" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
+                    <ul class="footer-list">
+                        <li class="footer-item footer-item--contact">
+                            <span>CONTACT</span>
+                            <address>
+                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                            </address>
+                        </li>
+                        <li class="footer-item footer-item--about">
+                            <a href="about.html">ABOUT</a>
+                        </li>
+                        <li class="footer-item footer-item--country">
+                            <span>COUNTRY</span>
+                            <ul class="footer-submenu">
+                                <li class="footer-submenu-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="footer-submenu-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="footer-submenu-item"><a href="italy.html">Italy</a></li>
+                                <li class="footer-submenu-item"><a href="scotland.html">Scotland</a></li>
+                                <li class="footer-submenu-item"><a href="singapore.html">Singapore</a></li>
+                                <li class="footer-submenu-item"><a href="germany.html">Germany</a></li>
+                                <li class="footer-submenu-item"><a href="portugal.html">Portugal</a></li>
+                                <li class="footer-submenu-item"><a href="france.html">France</a></li>
+                                <li class="footer-submenu-item"><a href="denmark.html">Denmark</a></li>
+                                <li class="footer-submenu-item"><a href="greece.html">Greece</a></li>
+                                <li class="footer-submenu-item"><a href="czechia.html">Czechia</a></li>
+                                <li class="footer-submenu-item"><a href="spain.html">Spain</a></li>
+                                <li class="footer-submenu-item"><a href="belgium.html">Belgium</a></li>
+                                <li class="footer-submenu-item"><a href="england.html">England</a></li>
+                                <li class="footer-submenu-item"><a href="turkey.html">Turkey</a></li>
+                                <li class="footer-submenu-item"><a href="thailand.html">Thailand</a></li>
+                                <li class="footer-submenu-item"><a href="philippines.html">The Philippines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-copy">
+                    <small>&copy; 2025 Seiya Imoto. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

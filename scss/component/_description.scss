@@ -1,0 +1,58 @@
+@use "../global" as g;
+
+/*!
+component > description
+------------------------------
+*/
+
+.c-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 14px;
+    @include g.mq() {
+        font-size: 18px;
+    }
+}
+
+.c-description-date {
+    margin-top: 16px;
+}
+
+.c-description-city-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.c-description-city-list li {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: baseline;
+}
+
+.c-description-city-jp {
+    &::before {
+        content: '/';
+        margin-inline: 16px;
+        display: inline-block;
+    }
+}
+
+
+
+.c-description-text {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 14px;
+    span {
+        display: block;
+    }
+
+    @include g.mq() {
+        font-size: 18px;
+    }
+}
