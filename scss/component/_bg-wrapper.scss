@@ -58,7 +58,7 @@ component > bg-wrapper
     &--turkey {
         background-image: url(../img/turkey/turkey-bg.jpg);
     }
-    
+
     &--thailand {
         background-image: url(../img/thailand/thailand-bg.jpg);
     }
@@ -90,6 +90,6 @@ component > bg-wrapper
     background: #000;
     z-index: 9999;
     pointer-events: none;
-    transform: translateY(0%); /* 初期は覆う */
+    transform: translateY(0%); 
     will-change: transform;
 }
