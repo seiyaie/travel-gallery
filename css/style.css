@@ -42,6 +42,7 @@ global > z-index
 */
 :root {
   --z-index-header: 1000;
+  --z-index-modal: 100;
 }
 
 /*!
@@ -210,6 +211,14 @@ svg {
   display: block;
 }
 
+dialog {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  color: inherit;
+  border: none;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -325,7 +334,7 @@ component > bg-wrapper
   background: #000;
   z-index: 9999;
   pointer-events: none;
-  transform: translateY(0%); /* 初期は覆う */
+  transform: translateY(0%);
   will-change: transform;
 }
 
@@ -702,6 +711,74 @@ body.is-modal-open {
 }
 
 /*!
+component > hamburger menu
+------------------------------
+*/
+.c-hamburger-menu {
+  background-color: var(--bg-base);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--font-white);
+  z-index: var(--z-index-modal);
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .c-hamburger-menu {
+    display: none;
+  }
+}
+.c-hamburger-menu::backdrop {
+  display: none;
+}
+
+.c-hamburger-country-list {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 32px;
+  margin-top: 120px;
+}
+
+.c-hamburger-country-item a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  opacity: 0.7;
+}
+@media (any-hover: hover) {
+  .c-hamburger-country-item a:hover {
+    opacity: 1;
+  }
+}
+
+.c-hamburger-country-item span:first-child {
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  font-size: 40px;
+}
+.c-hamburger-bottom-list {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  gap: 32px;
+}
+
+.c-hamburger-bottom-item a {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+@media (any-hover: hover) {
+  .c-hamburger-bottom-item a:hover {
+    opacity: 1;
+  }
+}
+
+/*!
 layout > container
 ------------------------------
 */
@@ -727,31 +804,32 @@ layout > header
 ------------------------------
 */
 .header {
-  padding-block: 16px;
   height: 120px;
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
-  z-index: 100;
+  z-index: var(--z-index-header);
 }
-
 .header-inner {
   height: 100%;
   width: 90%;
   margin-inline: auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 16px;
 }
-@media screen and (min-width: 768px) {
-  .header-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+
+.header-nav {
+  text-align: center;
+  position: relative;
+  z-index: 1000;
 }
 
+.header-logo {
+  position: relative;
+  z-index: 1000;
+}
 .header-logo a {
   display: inline-block;
   width: 159px;
@@ -766,10 +844,6 @@ layout > header
   width: 100%;
 }
 
-.header-nav {
-  text-align: center;
-}
-
 .header-list {
   display: flex;
   justify-content: space-between;
@@ -777,14 +851,9 @@ layout > header
 }
 
 .header-item {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   width: 120px;
-}
-@media screen and (min-width: 768px) {
-  .header-item {
-    font-size: 16px;
-  }
 }
 
 .header-button {
@@ -832,6 +901,28 @@ layout > header
 }
 .header-button.is-active::before {
   transform: scaleX(1);
+}
+
+.header-item--country,
+.header-item--about,
+.header-item--contact {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-item--country,
+  .header-item--about,
+  .header-item--contact {
+    display: inline-block;
+  }
+}
+
+.header-item--menu {
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .header-item--menu {
+    display: none;
+  }
 }
 
 .header-submenu {

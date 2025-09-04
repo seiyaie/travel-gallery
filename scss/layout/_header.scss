@@ -6,13 +6,14 @@ layout > header
 */
 
 .header {
-    padding-block: 16px;
     height: 120px;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    z-index: 100;
+    z-index: var(--z-index-header);
+    &.is-modal-open {
+ 
+    }
 }
 
 .header-inner {
@@ -20,16 +21,19 @@ layout > header
     width: 90%;
     margin-inline: auto;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 16px;
-    @include g.mq() {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
 
+.header-nav {
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
 .header-logo {
+    position: relative;
+    z-index: 1000;
     a {
         display: inline-block;
         width: 159px;
@@ -42,9 +46,6 @@ layout > header
         width: 100%;
     }
 }
-.header-nav {
-    text-align: center;
-}
 
 .header-list {
     display: flex;
@@ -53,12 +54,9 @@ layout > header
 }
 
 .header-item {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     width: 120px;
-    @include g.mq() {
-        font-size: 16px;
-    }
 }
 
 .header-button {
@@ -104,8 +102,20 @@ layout > header
     }
 }
 
-.header-button--country {
-    // position: relative;
+.header-item--country,
+.header-item--about,
+.header-item--contact {
+    display: none;
+    @include g.mq() {
+        display: inline-block;
+    }
+}
+
+.header-item--menu {
+    display: inline-block;
+    @include g.mq() {
+        display: none;
+    }
 }
 
 .header-submenu {

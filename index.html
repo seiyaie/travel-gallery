@@ -28,7 +28,7 @@
         <div class="c-bg-wrapper c-bg-wrapper--top js-bg-wrapper"></div>
         <div class="c-body-overlay js-body-overlay"></div>
         <!-- header -->
-        <header class="header">
+        <header class="header js-header">
             <div class="header-inner">
                 <h1 class="header-logo">
                     <a href="index.html">
@@ -38,9 +38,10 @@
                         </picture>
                     </a>
                 </h1>
+                <!-- header nav -->
                 <nav class="header-nav" aria-label="ヘッダーナビゲーション">
                     <ul class="header-list">
-                        <li class="header-item">
+                        <li class="header-item header-item--country">
                             <button class="header-button header-button--country js-dropdown-btn">COUNTRY</button>
                             <ul class="header-submenu js-dropdown-submenu">
                                 <li class="header-submenu-item js-dropdown-item"><a href="country/ireland.html">Ireland</a></li>
@@ -62,26 +63,92 @@
                                 <li class="header-submenu-item js-dropdown-item"><a href="country/philippines.html">The Philippines</a></li>
                             </ul>
                         </li>
-                        <li class="header-item">
-                            <a href="about.html" class="header-button">ABOUT</a>
+                        <li class="header-item header-item--about">
+                            <a href="about.html" class="header-button header-button--about">ABOUT</a>
                         </li>
-                        <li class="header-item">
-                            <button class="header-button">CONTACT</button>
+                        <li class="header-item header-item--contact">
+                            <button class="header-button header-button--contact">CONTACT</button>
+                        </li>
+                        <li class="header-item header-item--menu">
+                            <button class="header-button header-button--menu js-hamburger-menu-button">MENU</button>
                         </li>
                     </ul>
                 </nav>
+                <!-- the end of header nav -->
             </div>
+
+            <!-- hamburger menu -->
+            <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+                <ul class="c-hamburger-country-list">
+                    <li class="c-hamburger-country-item">
+                        <a href="country/ireland.html"><span>Ireland</span><span>アイルランド</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/netherlands.html"><span>Netherlands</span><span>オランダ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/italy.html"><span>Italy</span><span>イタリア</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/scotland.html"><span>Scotland</span><span>スコットランド</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/singapore.html"><span>Singapore</span><span>シンガポール</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/germany.html"><span>Germany</span><span>ドイツ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/portugal.html"><span>Portugal</span><span>ポルトガル</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/france.html"><span>France</span><span>フランス</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/denmark.html"><span>Denmark</span><span>デンマーク</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/greece.html"><span>Greece</span><span>ギリシャ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/czechia.html"><span>Czechia</span><span>チェコ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/spain.html"><span>Spain</span><span>スペイン</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/belgium.html"><span>Belgium</span><span>ベルギー</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/england.html"><span>England</span><span>イングランド</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/turkey.html"><span>Turkey</span><span>トルコ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/thailand.html"><span>Thailand</span><span>タイ</span></a>
+                    </li>
+                    <li class="c-hamburger-country-item">
+                        <a href="country/philippines.html"><span>The Philippines</span><span>フィリピン</span></a>
+                    </li>
+                </ul>
+                <ul class="c-hamburger-bottom-list">
+                    <li class="c-hamburger-bottom-item"><a href="">ABOUT</a></li>
+                    <li class="c-hamburger-bottom-item"><a href="">CONTACT</a></li>
+                </ul>
+            </dialog>
+            <!-- the end of hamburger menu -->
         </header>
         <!-- the end of header -->
 
         <!-- kv -->
         <div class="l-container">
-        <div class="c-kv js-kv">
-            <div class="c-kv-title-wrapper js-kv-title-wrapper">
-                <h2 class="c-kv-title c-kv-title--top"><span>Seiya</span><span>Imoto's</span></h2>
-                <p class="c-kv-describe">Travel Gallery</p>
+            <div class="c-kv js-kv">
+                <div class="c-kv-title-wrapper js-kv-title-wrapper">
+                    <h2 class="c-kv-title c-kv-title--top"><span>Seiya</span><span>Imoto's</span></h2>
+                    <p class="c-kv-describe">Travel Gallery</p>
+                </div>
             </div>
-        </div>
         </div>
         <!-- the end of kv -->
 
