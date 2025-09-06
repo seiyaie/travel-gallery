@@ -2,16 +2,19 @@ export const initLightbox = () => {
     // querySelector（既存）
     const lightbox = document.querySelector(".js-lightbox");
     const thumbnails = document.querySelectorAll(".js-gallery-item button");
+    const lightboxImgWrapper = document.querySelector(".js-lightbox-img-wrapper");
     const lightboxImg = document.querySelector(".js-lightbox-img-wrapper img");
     const imgName = document.querySelector(".js-lightbox-img-name p");
     const closeBtn = document.querySelector(".js-lightbox-close-btn");
+    const closeBtnText = document.querySelector(".js-lightbox-close-btn-text");
     const lightboxCaption = document.querySelector(".js-lightbox-caption");
     const lightboxBg = document.querySelector(".js-lightbox-bg");
 
     // ===== Timeline（1本だけ：順再生=開く／逆再生=閉じる） =====
     let isAnimating = false;
 
-    if (!lightbox) return;
+    // if (!lightbox) return;
+    if (!lightbox || !lightboxImgWrapper || !lightboxImg || !imgName || !closeBtn || !closeBtnText || !lightboxCaption || !lightboxBg) return;
 
     const tl = gsap.timeline({
         paused: true,
@@ -31,7 +34,7 @@ export const initLightbox = () => {
     });
 
     // クリップパスを「開いた形」へ
-    tl.to(".js-lightbox", {
+    tl.to(lightbox, {
         duration: 0.6,
         clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
         onStart: () => {
@@ -42,7 +45,7 @@ export const initLightbox = () => {
 
     // 画像枠もワイプ
     tl.to(
-        [".js-lightbox-img-wrapper", lightboxCaption],
+        [lightboxImgWrapper, lightboxCaption],
         {
             duration: 1,
             clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -55,7 +58,7 @@ export const initLightbox = () => {
 
     // ラベル／キャプション：上にスライド＋フェード
     tl.to(
-        [imgName, ".js-lightbox-close-btn-text"],
+        [imgName, closeBtnText],
         {
             duration: 1,
             top: 0,
@@ -63,7 +66,7 @@ export const initLightbox = () => {
         "<+0.3"
     );
 
-    // 初期は閉じた状態へ
+    // アニメーション初期化
     tl.reverse(0);
 
     // ===== 開く処理 =====
@@ -74,13 +77,6 @@ export const initLightbox = () => {
         lightboxImg.src = src || "";
         imgName.textContent = title || "";
         lightboxCaption.textContent = caption || "";
-
-        // 初期形を必ず戻す（連続オープン対策）
-        // gsap.set(".js-lightbox", { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" });
-        gsap.set([".js-lightbox", ".js-lightbox-img-wrapper", lightboxCaption], { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" });
-        gsap.set([imgName, ".js-lightbox-close-btn-text"], { top: 25 });
-        // gsap.set(lightboxCaption, { top: 100 });
-        // gsap.set(closeBtn, { opacity: 0, y: -8 });
 
         // dialogを開いてからTL再生
         lightbox.showModal();
@@ -93,7 +89,7 @@ export const initLightbox = () => {
         tl.timeScale(1).reverse();
     }
 
-    // ===== サムネクリック：既存ロジックを流用 =====
+    // ===== サムネクリック =====
     thumbnails.forEach((item) => {
         item.addEventListener("click", (e) => {
             e.preventDefault();
@@ -111,7 +107,7 @@ export const initLightbox = () => {
     // ===== 閉じるトリガ =====
     closeBtn.addEventListener("click", closeLightbox);
 
-    // 背景クリックで閉じる（あなたの方針に合わせて除外）
+    // 背景クリックで閉じる
     lightboxBg.addEventListener("click", (e) => {
         const isInteractiveElement = e.target.closest("p, img, button");
         if (!isInteractiveElement) closeLightbox();
