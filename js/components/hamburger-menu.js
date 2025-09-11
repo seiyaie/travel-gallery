@@ -3,7 +3,7 @@ export const initHamburgerMenu = () => {
     const openBtn = document.querySelector(".js-hamburger-open-button");
     const closeBtn = document.querySelector(".js-hamburger-close-button");
     const bg = menu.querySelector(".js-hamburger-bg");
-    const items = Array.from(menu.querySelectorAll(".c-hamburger-country-item a"));
+    const items = Array.from(menu.querySelectorAll(".js-hamburger-country-item a"));
 
     if (!openBtn || !closeBtn || !menu || !bg) return;
 
@@ -105,21 +105,22 @@ export const initHamburgerMenu = () => {
 
     // menuをしたから上に開く
     tl.to(menu, { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7 })
-    // itemsをスライドアップ
-    .to(items,
-        {
-            y: 0,
-            duration: 0.4,
-            ease: "power3.out",
-            onComplete: () => {
-                initItemScrollTriggers(); // アニメーション終了後スクロールトリガー作成
-                ScrollTrigger.refresh();
-                refreshBackground();
-                refreshOpacities();
+        // itemsをスライドアップ
+        .to(
+            items,
+            {
+                y: 0,
+                duration: 0.4,
+                ease: "power3.out",
+                onComplete: () => {
+                    initItemScrollTriggers(); // アニメーション終了後スクロールトリガー作成
+                    ScrollTrigger.refresh();
+                    refreshBackground();
+                    refreshOpacities();
+                },
             },
-        },
-        ">+0.03"
-    );
+            ">+0.03"
+        );
 
     // メニュー開く関数
     const openMenu = () => {
@@ -162,7 +163,7 @@ export const initHamburgerMenu = () => {
 
     // 背景クリックで閉じる
     menu.addEventListener("click", (e) => {
-        if (!e.target.closest(".c-hamburger-country-item", ".header-logo", "c-hamburger-bottom-item")) {
+        if (!e.target.closest(".js-hamburger-country-item", ".js-header-logo", ".js-hamburger-bottom-item")) {
             closeMenu();
         }
     });
