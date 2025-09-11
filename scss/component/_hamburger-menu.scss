@@ -12,8 +12,10 @@ component > hamburger menu
     width: 100%;
     height: 100%;
     color: var(--font-white);
-    z-index: var(--z-index-modal);
     overflow: auto;
+    z-index: var(--z-index-modal);
+    will-change: opacity;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     @include g.mq() {
         display: none;
     }
@@ -22,21 +24,97 @@ component > hamburger menu
     }
 }
 
+.c-hamburger-bg {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.2);
+    pointer-events: none;
+}
+
+.c-hamburger-menu-header {
+    position: fixed;
+    z-index: 103;
+    inset: 0;
+    padding-inline: 5%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-hamburger-button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    text-align: right;
+    position: relative;
+    padding-block: 3px; /* 下線との距離調整 */
+    transition: color 0.3s ease;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        inset-block-end: -3px;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.35);
+        pointer-events: none;
+        inset-inline-end: 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset-block-end: -3px;
+        height: 1px;
+        width: 100%;
+        background: rgba(255, 255, 255, 1);
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+        pointer-events: none;
+        transform-origin: right;
+        inset-inline-end: 0;
+    }
+    @media (any-hover: hover) {
+        &:hover::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
 .c-hamburger-country-list {
+    position: absolute;
+    z-index: 102;
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 8px;
-    margin-left: 32px;
-    margin-top: 120px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-1px);
+    &::after {
+        content: "";
+        display: block;
+        height: 85vh;
+    }
+}
+
+.c-hamburger-country-item {
+    will-change: opacity, transform;
+    text-align: right;
+    overflow: hidden;
 }
 
 .c-hamburger-country-item a {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 4px;
-    opacity: 0.7;
+    opacity: 0.4;
+    padding-left: 5px;
     @media (any-hover: hover) {
         &:hover {
             opacity: 1;
@@ -45,29 +123,30 @@ component > hamburger menu
 }
 
 .c-hamburger-country-item span {
+    display: block;
     &:first-child {
         font-family: var(--font-family-accent);
         font-style: italic;
-        font-size: 40px;
+        font-size: 56px;
     }
     &:last-child {
+        font-size: 20px;
     }
 }
 
 .c-hamburger-bottom-list {
+    z-index: 103;
+    width: 100%;
+    position: fixed;
+    // background: var(--bg-base);
+    bottom: 0;
     display: flex;
     align-items: center;
-    padding: 32px;
+    padding: 16px;
     gap: 32px;
 }
 
 .c-hamburger-bottom-item a {
     font-size: 16px;
     font-weight: bold;
-    opacity: 0.7;
-    @media (any-hover: hover) {
-        &:hover {
-            opacity: 1;
-        }
-    }
 }
