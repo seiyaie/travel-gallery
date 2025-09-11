@@ -12,12 +12,12 @@ export const initTopGalleryReveal = () => {
             });
         },
     });
-    ScrollTrigger.batch(".js-top-gallery-item", {
-      start: "top bottom",
-        onLeaveBack: (batch) => {
-            gsap.set(batch, {
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            });
-        },
-    });
+    // ScrollTrigger.batch(".js-top-gallery-item", {
+    //     start: "top bottom",
+    //     onLeaveBack: (batch) => {
+    //         gsap.set(batch, {
+    //             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //         });
+    //     },
+    // });
 };

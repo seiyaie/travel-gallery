@@ -27,12 +27,16 @@ component > description
     @include g.mq() {
         width: 40%;
     }
+    &:not(:first-child) {
+        height: clamp(400px, 70svh, 770px);
+    }
     &:nth-child(odd) {
         @include g.mq() {
             align-self: flex-start;
         }
     }
     &:first-child {
+        height: auto;
         @include g.mq() {
             align-self: flex-end;
         }
@@ -47,7 +51,6 @@ component > description
         height: 100%;
     }
     img {
-        // clip-path: inset(0 0 100% 0);
         width: 100%;
         height: auto;
         object-fit: cover;

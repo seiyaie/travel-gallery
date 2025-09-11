@@ -4,7 +4,7 @@ export const initDropdownMenu = () => {
     const submenu = document.querySelector(".js-dropdown-submenu");
     const items = document.querySelectorAll(".js-dropdown-item");
 
-    if (!btn || !submenu || !items.length ) return;
+    if (!btn || !submenu || !items.length) return;
 
     const tl = gsap.timeline({
         paused: true,
@@ -20,9 +20,6 @@ export const initDropdownMenu = () => {
     });
 
     tl.fromTo(items, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.1, stagger: 0.05 });
-
-    // tl.progress(0).pause();
-    tl.pause(0);
 
     btn.addEventListener("click", () => {
         if (tl.isActive()) return;

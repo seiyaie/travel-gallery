@@ -11,9 +11,6 @@ layout > header
     inset: 0;
     width: 100%;
     z-index: var(--z-index-header);
-    &.is-modal-open {
- 
-    }
 }
 
 .header-inner {
@@ -29,11 +26,10 @@ layout > header
 .header-nav {
     text-align: center;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
 }
 .header-logo {
     position: relative;
-    z-index: 1000;
     a {
         display: inline-block;
         width: 159px;

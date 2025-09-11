@@ -23,7 +23,7 @@ export const initKvScroll = () => {
       scrollTrigger: {
         trigger: kv,
         start: "top top",
-        end: "bottom top",
+        end: "bottom center",
         scrub: true,
       },
     });

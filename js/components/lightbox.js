@@ -14,6 +14,7 @@ export const initLightbox = () => {
     let isAnimating = false;
 
     // if (!lightbox) return;
+
     if (!lightbox || !lightboxImgWrapper || !lightboxImg || !imgName || !closeBtn || !closeBtnText || !lightboxCaption || !lightboxBg) return;
 
     const tl = gsap.timeline({
