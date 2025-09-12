@@ -28,7 +28,7 @@ component > description
         width: 40%;
     }
     &:not(:first-child) {
-        height: clamp(400px, 70svh, 770px);
+        // height: clamp(400px, 70svh, 770px);
     }
     &:nth-child(odd) {
         @include g.mq() {
