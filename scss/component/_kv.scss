@@ -22,27 +22,29 @@ component > kv
 }
 
 .c-kv-title {
-    font-family: var(--font-family-title);
     font-size: 40px;
     font-weight: 500;
     line-height: 1;
     @include g.mq(sm) {
-        font-size: 50px;
+        font-size: 60px;
     }
     @include g.mq() {
         font-size: 100px;
     }
     &--top {
         span {
-            &:first-child {
-                font-family: var(--font-family-accent);
-                font-style: italic;
-            }
-            &:last-child {
-                font-family: var(--font-family-title);
-                font-weight: 500;
-            }
+            display: inline-block;
         }
+    }
+    &--first {
+        font-style: italic;
+        font-family: var(--font-family-accent);
+    }
+    &--last {
+        font-family: var(--font-family-title);
+    }
+    &--country {
+        font-family: var(--font-family-title);
     }
 }
 
@@ -52,15 +54,21 @@ component > kv
     font-family: var(--font-family-accent);
     font-style: italic;
     @include g.mq(sm) {
-        font-size: 40px;
+        font-size: 48px;
     }
     @include g.mq() {
         font-size: 70px;
     }
-    span {
-        display: block;
-        @include g.mq() {
-            display: inline-block;
-        }
+}
+
+.c-kv-describe-split {
+    display: block;
+    @include g.mq() {
+        display: inline-block;
     }
+}
+
+.c-kv-split {
+    display: inline-block;
+    will-change: transform, opacity;
 }
