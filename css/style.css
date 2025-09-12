@@ -372,14 +372,13 @@ component > kv
 }
 
 .c-kv-title {
-  font-family: var(--font-family-title);
   font-size: 40px;
   font-weight: 500;
   line-height: 1;
 }
 @media screen and (min-width: 500px) {
   .c-kv-title {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -387,13 +386,18 @@ component > kv
     font-size: 100px;
   }
 }
-.c-kv-title--top span:first-child {
-  font-family: var(--font-family-accent);
-  font-style: italic;
+.c-kv-title--top span {
+  display: inline-block;
 }
-.c-kv-title--top span:last-child {
+.c-kv-title--first {
+  font-style: italic;
+  font-family: var(--font-family-accent);
+}
+.c-kv-title--last {
   font-family: var(--font-family-title);
-  font-weight: 500;
+}
+.c-kv-title--country {
+  font-family: var(--font-family-title);
 }
 
 .c-kv-describe {
@@ -404,7 +408,7 @@ component > kv
 }
 @media screen and (min-width: 500px) {
   .c-kv-describe {
-    font-size: 40px;
+    font-size: 48px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -412,13 +416,19 @@ component > kv
     font-size: 70px;
   }
 }
-.c-kv-describe span {
+
+.c-kv-describe-split {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .c-kv-describe span {
+  .c-kv-describe-split {
     display: inline-block;
   }
+}
+
+.c-kv-split {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 /*!
@@ -504,9 +514,6 @@ component > description
   .c-gallery-item {
     width: 40%;
   }
-}
-.c-gallery-item:not(:first-child) {
-  height: clamp(400px, 70svh, 770px);
 }
 @media screen and (min-width: 768px) {
   .c-gallery-item:nth-child(odd) {
@@ -809,7 +816,7 @@ component > hamburger menu
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 16px;
   top: 50%;
   right: 5%;
   transform: translateY(-1px);
