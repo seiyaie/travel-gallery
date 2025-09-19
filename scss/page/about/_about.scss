@@ -1,0 +1,100 @@
+@use "../../global" as g;
+
+/*!
+pages > about > about
+------------------------------
+*/
+
+.about {
+    z-index: 1;
+    position: relative;
+    padding-top: 160px;
+}
+
+.about-me {
+    display: grid;
+    gap: 24px;
+    @include g.mq() {
+        align-items: start;
+        grid-template-columns: minmax(300px, 1fr) 1fr;
+        gap: 40px;
+    }
+    @include g.mq(lg) {
+        gap: 60px;
+    }
+}
+
+.about-me-img {
+    align-self: start;
+}
+
+.about-me-img button {
+    aspect-ratio: 1;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    @include g.mq() {
+        aspect-ratio: 3 / 4;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-me-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-me-name {
+    font-size: 32px;
+    @include g.mq() {
+        font-size: 40px;
+    }
+    span {
+        &:first-child {
+            font-family: var(--font-family-accent);
+            font-style: italic;
+        }
+        &:last-child {
+            font-family: var(--font-family-title);
+            letter-spacing: 0;
+        }
+    }
+}
+
+.about-me-text {
+    margin-top: 16px;
+    @include g.mq() {
+        font-size: 16px;
+    }
+    @include g.mq(lg) {
+        font-size: 20px;
+    }
+    span {
+        display: block;
+        &:last-child {
+            margin-top: 16px;
+        }
+    }
+}
+
+.about-site {
+    margin-top: 24px;
+}
+
+.about-site-text {
+    font-size: 16px;
+    margin-top: 24px;
+    @include g.mq() {
+        font-size: 18px;
+    }
+    @include g.mq() {
+        font-size: 20px;
+    }
+}
