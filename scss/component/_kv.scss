@@ -26,10 +26,13 @@ component > kv
     font-weight: 500;
     line-height: 1;
     @include g.mq(sm) {
-        font-size: 60px;
+        font-size: 48px;
     }
     @include g.mq() {
-        font-size: 100px;
+        font-size: 64px;
+    }
+    @include g.mq(lg) {
+        font-size: 88px;
     }
     &--top {
         span {
@@ -50,20 +53,23 @@ component > kv
 
 .c-kv-describe {
     margin-top: 4px;
-    font-size: 32px;
+    font-size: 24px;
     font-family: var(--font-family-accent);
     font-style: italic;
     @include g.mq(sm) {
-        font-size: 48px;
+        font-size: 32px;
     }
     @include g.mq() {
-        font-size: 70px;
+        font-size: 48px;
+    }
+    @include g.mq(lg) {
+        font-size: 72px;
     }
 }
 
 .c-kv-describe-split {
     display: block;
-    @include g.mq() {
+    @include g.mq(lg) {
         display: inline-block;
     }
 }
@@ -72,3 +78,29 @@ component > kv
     display: inline-block;
     will-change: transform, opacity;
 }
+
+.c-kv-scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    bottom: 32px;
+    right: 5%;
+    overflow: hidden;
+    @include g.mq() {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.c-kv-scroll-text {
+    font-weight: bold;
+    font-family: var(--font-family-title);
+}
+
+.c-kv-scroll-arrow {
+    color: white;
+    display: inline-block;
+}
+
+
