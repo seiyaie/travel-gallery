@@ -5,15 +5,10 @@ pages > top > gallery
 ------------------------------
 */
 
-.top-gallery {
-    position: relative;
-}
-
 .top-gallery-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    margin-top: 32px;
     @include g.mq(sm) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -48,7 +43,6 @@ pages > top > gallery
         height: 100%;
         object-fit: cover;
         transition: transform 0.2s;
-        
     }
 }
 
