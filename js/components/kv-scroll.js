@@ -1,5 +1,3 @@
-// gsap.registerPlugin(ScrollTrigger);
-
 export const initKvScroll = () => {
     const overlay = document.querySelector(".js-body-overlay");
     const kv = document.querySelector(".js-kv");
@@ -24,11 +22,10 @@ export const initKvScroll = () => {
         });
     });
 
-    // スタイル初期化（CSSで設定済みでも念のため）
+    // スタイル初期化
     gsap.set(overlay, { opacity: 0.5 });
-    gsap.set(titleWrapper, { opacity: 1, y: 0 });
 
-    // ctxでスコープ管理（将来クリーンアップしやすい）
+
     const ctx = gsap.context(() => {
         // 1) オーバーレイをスクロールに応じて濃く
         gsap.to(overlay, {
@@ -37,50 +34,29 @@ export const initKvScroll = () => {
             scrollTrigger: {
                 trigger: kv,
                 start: "top top",
-                end: "bottom center",
+                end: "bottom top",
                 scrub: true,
             },
         });
-
-        // 2) タイトルをふんわり消す（少し上へ）
-        // gsap.to(titleWrapper, {
-        //     opacity: 0,
-        //     // y: -40,
-        //     ease: "power2.out",
-        //     scrollTrigger: {
-        //         trigger: kv,
-        //         start: "top top",
-        //         end: "bottom center",
-        //         scrub: true,
-        //     },
-        // });
-        gsap.to(".js-kv-split", 0.5, {
+        gsap.to(".js-kv-split", {
             opacity: 0,
             scaleX: 0.4,
-            y: -25,
+            y: -20,
             ease: "power3.in",
             scrollTrigger: {
                 scroller: 'body',
                 trigger: kv,
                 start: "top top",
-                end: "bottom top",
+                end: "bottom 20%",
                 scrub: true,
                 pin: true,
-                markers: true,
             },
             stagger: {
                 amount: 1,
                 from: "random",
             },
         });
-        // gsap.from(".c-split", {
-        //   opacity: 0,
-        //   y: 20,
-        //   ease: "power2.out",
-        //   stagger: 0.05,  // 1文字ずつ順番に
-        // });
     });
 
-    // SPA化等で破棄したい時に使える
     return () => ctx.revert();
 };
