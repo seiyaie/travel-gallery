@@ -22,7 +22,7 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
         <script src="../js/main.js" type="module"></script>
     </head>
-    <body class="js-body">
+    <body>
         <div class="c-bg-wrapper c-bg-wrapper--greece js-bg-wrapper"></div>
         <div class="c-page-overlay js-page-overlay"></div>
         <div class="c-body-overlay js-body-overlay"></div>
@@ -63,10 +63,10 @@
                             </ul>
                         </li>
                         <li class="header-item header-item--about">
-                            <a href="about.html" class="header-button">ABOUT</a>
+                            <a href="../about.html" class="header-button">ABOUT</a>
                         </li>
                         <li class="header-item header-item--contact">
-                            <button class="header-button">CONTACT</button>
+                            <a href="mailto:seiya2342@gmail.com?subject=Travel Galleryからお問い合わせ&body=お名前%20:%0D%0Aお問い合わせ内容%20:%0D%0A" class="header-button header-button--contact">CONTACT</a>
                         </li>
                         <li class="header-item header-item--menu">
                             <button class="header-button header-button--menu js-hamburger-open-button">MENU</button>
@@ -77,7 +77,7 @@
             <!-- hamburger menu -->
             <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
                 <div class="c-hamburger-bg js-hamburger-bg"></div>
-                <!-- <div class="c-hamburger-inner js-hamburger-inner"> -->
+
                 <div class="c-hamburger-menu-header">
                     <div class="header-logo js-header-logo">
                         <a href="../index.html">
@@ -140,10 +140,9 @@
                     </li>
                 </ul>
                 <ul class="c-hamburger-bottom-list">
-                    <li class="c-hamburger-bottom-item js-hamburger-bottom-item"><a href="#">ABOUT</a></li>
-                    <li class="c-hamburger-bottom-item js-hamburger-bottom-item"><a href="#">CONTACT</a></li>
+                    <li class="c-hamburger-bottom-item js-hamburger-bottom-item"><a href="../about.html">ABOUT</a></li>
+                    <li class="c-hamburger-bottom-item js-hamburger-bottom-item"><a href="mailto:seiya2342@gmail.com?subject=Travel Galleryからお問い合わせ&body=お名前%20:%0D%0Aお問い合わせ内容%20:%0D%0A">CONTACT</a></li>
                 </ul>
-                <!-- </div> -->
             </dialog>
             <!-- the end of hamburger menu -->
         </header>
@@ -155,9 +154,13 @@
                 <div class="c-kv-title-wrapper js-kv-title-wrapper">
                     <h1 class="c-kv-title c-kv-title--country js-split">GREECE</h1>
                     <p class="c-kv-describe">
-                        <span class="c-kv-describe-split js-split">where myths live</span>
-                        <span class="c-kv-describe-split js-split">and seas shine</span>
+                        <span class="c-kv-describe-split js-split">Where Myths Live</span>
+                        <span class="c-kv-describe-split js-split">and Seas Shine</span>
                     </p>
+                </div>
+                <div class="c-kv-scroll-indicator js-indicator">
+                    <span class="c-kv-scroll-text">Scroll</span>
+                    <img src="../img/arrow-down.svg" width="24" height="24" alt="" decoding="async" class="c-kv-scroll-arrow js-arrow" />
                 </div>
             </div>
         </div>
@@ -349,11 +352,11 @@
                         <li class="footer-item footer-item--contact">
                             <span>CONTACT</span>
                             <address>
-                                <a href="mailto:seiya2342@gmail.com" class="footer-email">seiya2342@gmail.com</a>
+                                <a href="mailto:seiya2342@gmail.com?subject=Travel Galleryからお問い合わせ&body=お名前%20:%0D%0Aお問い合わせ内容%20:%0D%0A" class="footer-email">seiya2342@gmail.com</a>
                             </address>
                         </li>
                         <li class="footer-item footer-item--about">
-                            <a href="about.html">ABOUT</a>
+                            <a href="../about.html">ABOUT</a>
                         </li>
                         <li class="footer-item footer-item--country">
                             <span>COUNTRY</span>

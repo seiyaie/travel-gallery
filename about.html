@@ -25,19 +25,20 @@
     </head>
     <body>
         <div class="c-page-overlay js-page-overlay"></div>
-        <div class="c-bg-wrapper c-bg-wrapper--top js-bg-wrapper"></div>
-        <div class="c-body-overlay js-body-overlay"></div>
+        <div class="c-bg-wrapper c-bg-wrapper--about js-bg-wrapper"></div>
+        <div class="c-body-overlay c-body-overlay--about js-body-overlay"></div>
+
         <!-- header -->
         <header class="header js-header">
             <div class="header-inner">
-                <h1 class="header-logo">
+                <p class="header-logo">
                     <a href="index.html">
                         <picture>
                             <source media="(max-width: 768px)" srcset="img/logo-sp.svg" />
                             <img src="img/logo.svg" width="201" height="54" alt="seiya imoto" decoding="async" />
                         </picture>
                     </a>
-                </h1>
+                </p>
                 <!-- header nav -->
                 <nav class="header-nav" aria-label="ヘッダーナビゲーション">
                     <ul class="header-list">
@@ -80,6 +81,7 @@
             <!-- hamburger menu -->
             <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
                 <div class="c-hamburger-bg js-hamburger-bg"></div>
+
                 <div class="c-hamburger-menu-header">
                     <div class="header-logo js-header-logo">
                         <a href="index.html">
@@ -154,8 +156,10 @@
         <div class="l-container">
             <div class="c-kv js-kv">
                 <div class="c-kv-title-wrapper js-kv-title-wrapper">
-                    <h2 class="c-kv-title c-kv-title--top"><span class="c-kv-title--first js-split">Seiya</span><span class="c-kv-title--last js-split">Imoto's</span></h2>
-                    <p class="c-kv-describe js-split">Travel Gallery</p>
+                    <h2 class="c-kv-title c-kv-title--country js-split">ABOUT</h2>
+                    <p class="c-kv-describe">
+                        <span class="c-kv-describe-split js-split">Me and This Gallery</span>
+                    </p>
                 </div>
                 <div class="c-kv-scroll-indicator js-indicator">
                     <span class="c-kv-scroll-text">Scroll</span>
@@ -165,183 +169,63 @@
         </div>
         <!-- the end of kv -->
 
-        <!-- top gallery -->
-        <main class="top-gallery l-section">
-            <div class="l-container">
-                <div class="top-gallery-list">
-                    <!-- アイルランド -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="ireland">
-                        <a href="country/ireland.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/ireland/ireland.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇮🇪 Ireland</span><span>アイルランド</span></h2>
-                        </a>
-                    </section>
+        <!-- about -->
+        <div class="about">
+            <div class="l-container-s">
+                <div class="about-me js-about-me">
+                    <div class="about-me-img js-gallery-item js-about-trigger js-about-img">
+                        <button aria-label="画像詳細を表示" data-title="ジャイアントコーズウェイにて" data-caption="北アイルランド、ベルファストにあるジャイアントコーズウェイに行った時に友達に撮ってもらった写真。">
+                            <img src="img/seiya-imoto.jpg" width="768" height="1024" alt="" decoding="async" />
+                        </button>
+                    </div>
+                    <div class="about-me-description js-about-description">
+                        <h1 class="about-me-name js-about-trigger"><span>Seiya</span><span>Imoto</span></h1>
+                        <div class="about-me-profile js-about-trigger">
+                            <span class="c-section-label">PROFILE</span>
+                            <p class="about-me-text">
+                                <span>静岡県富士市在住のWebコーダー志望、せいやです。2022年から2024年にかけてアイルランドに留学し、世界各国から集まる人たちと交流する中で、Web制作やプログラミングの可能性に惹かれるようになりました。帰国後はその思いを形にするため、2024年6月よりコーディングの学習をスタートし、挑戦を続けています。</span>
+                                <span>趣味： 英会話、スケートボード、海外旅行、コーディング、映画鑑賞</span>
+                            </p>
+                        </div>
+                        <div class="about-me-skill js-about-trigger">
+                            <span class="c-section-label">SKILL</span>
+                            <p class="about-me-text">HTML/ CSS/ JavaScript/ GSAP/</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-site js-about-trigger">
+                    <span class="c-section-label">ABOUT</span>
 
-                    <!-- オランダ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="netherlands">
-                        <a href="country/netherlands.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/netherlands/netherlands.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇳🇱 Netherlands</span><span>オランダ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- イタリア -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="italy">
-                        <a href="country/italy.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/italy/italy.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇮🇹 Italy</span><span>イタリア</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- スコットランド -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="scotland">
-                        <a href="country/scotland.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/scotland/scotland.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span><span>スコットランド</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- シンガポール -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="singapore">
-                        <a href="country/singapore.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/singapore/singapore.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇸🇬 Singapore</span><span>シンガポール</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- ドイツ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="germany">
-                        <a href="country/germany.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/germany/germany.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇩🇪 Germany</span><span>ドイツ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- ポルトガル -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="portugal">
-                        <a href="country/portugal.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/portugal/portugal.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇵🇹 Portugal</span><span>ポルトガル</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- フランス -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="france">
-                        <a href="country/france.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/france/france.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇫🇷 France</span><span>フランス</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- デンマーク -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="denmark">
-                        <a href="country/denmark.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/denmark/denmark.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇩🇰 Denmark</span><span>デンマーク</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- ギリシャ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="greece">
-                        <a href="country/greece.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/greece/greece.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇬🇷 Greece</span><span>ギリシャ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- チェコ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="czechia">
-                        <a href="country/czechia.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/czechia/czechia.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇨🇿 Czechia</span><span>チェコ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- スペイン -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="spain">
-                        <a href="country/spain.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/spain/spain.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇪🇸 Spain</span><span>スペイン</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- ベルギー -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="belgium">
-                        <a href="country/belgium.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/belgium/belgium.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇧🇪 Belgium</span><span>ベルギー</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- イングランド -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="england">
-                        <a href="country/england.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/england/england.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span><span>イングランド</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- トルコ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="turkey">
-                        <a href="country/turkey.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/turkey/turkey.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇹🇷 Turkey</span><span>トルコ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- タイ -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="thailand">
-                        <a href="country/thailand.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/thailand/thailand.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇹🇭 Thailand</span><span>タイ</span></h2>
-                        </a>
-                    </section>
-
-                    <!-- フィリピン -->
-                    <section class="top-gallery-item js-top-gallery-item" data-country="philippines">
-                        <a href="country/philippines.html">
-                            <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/philippines/philippines.jpg" width="1512" height="2016" alt="" decoding="async" />
-                            </div>
-                            <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇵🇭 The Philippines</span><span>フィリピン</span></h2>
-                        </a>
-                    </section>
+                    <p class="about-site-text">アイルランドでの留学生活をきっかけに、ヨーロッパを中心に数多くの国を旅しました。旅先で見た景色はもちろん、人との出会いや文化の違いから得た気づきは、今の自分を形づくる大切な要素になっています。このサイトは、そうした体験を写真というかたちで残し、皆さんとシェアするために作りました。</p>
                 </div>
             </div>
-        </main>
-        <!-- the end of top gallery -->
+        </div>
+        <!-- the end of about -->
+
+        <!-- lightbox -->
+        <dialog class="c-lightbox js-lightbox" aria-label="画像モーダル">
+            <div class="c-lightbox-bg js-lightbox-bg">
+                <div class="c-lightbox-inner js-lightbox-inner">
+                    <div class="c-lightbox-img-section">
+                        <div class="c-lightbox-img-name c-lightbox-item js-lightbox-img-name">
+                            <p class="c-lightbox-text"></p>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </div>
+                        <div class="c-lightbox-img js-lightbox-img-wrapper">
+                            <img src="" width="1512" height="2016" alt="" />
+                        </div>
+                        <button class="c-lightbox-close-btn c-lightbox-item js-lightbox-close-btn" type="button" aria-label="Close">
+                            <span class="c-lightbox-text js-lightbox-close-btn-text">close</span>
+                            <span class="c-lightbox-item-revealer js-lightbox-item-revealer"></span>
+                        </button>
+                    </div>
+                    <div class="c-lightbox-caption js-lightbox-caption">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of lightbox -->
 
         <!-- footer -->
         <footer class="footer">
