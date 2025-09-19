@@ -12,7 +12,7 @@ layout > container
 
 .l-container-s {
     @extend %container;
-    max-width: var(--width-content-s);
+    max-width: var(--width-content);
 }
 
 .l-container {

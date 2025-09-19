@@ -13,6 +13,9 @@ component > bg-wrapper
     &--top {
         background-image: url(../img/top/top-bg.jpg);
     }
+    &--about {
+        background-image: url(../img/about-bg.jpg);
+    }
     &--ireland {
         background-image: url(../img/ireland/ireland-bg.jpg);
     }
@@ -78,6 +81,9 @@ component > bg-wrapper
     opacity: 0.5;
     z-index: 0;
     pointer-events: none;
+    &--about {
+        opacity: 0.8;
+    }
 }
 
 .c-page-overlay {
@@ -90,6 +96,6 @@ component > bg-wrapper
     background: #000;
     z-index: 9999;
     pointer-events: none;
-    transform: translateY(0%); 
+    transform: translateY(0%);
     will-change: transform;
 }
