@@ -35,7 +35,7 @@ component > hamburger menu
 
 .c-hamburger-menu-header {
     position: fixed;
-    z-index: 103;
+    z-index: var(--z-index-header);
     inset: 0;
     padding-inline: 5%;
     height: 120px;
@@ -51,7 +51,7 @@ component > hamburger menu
     width: 120px;
     text-align: right;
     position: relative;
-    padding-block: 3px; /* 下線との距離調整 */
+    padding-block: 3px;
     transition: color 0.3s ease;
     &::after {
         content: "";
@@ -86,7 +86,6 @@ component > hamburger menu
 
 .c-hamburger-country-list {
     position: absolute;
-    z-index: 102;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -95,6 +94,7 @@ component > hamburger menu
     top: 50%;
     right: 5%;
     transform: translateY(-1px);
+    z-index: var(--z-index-hamburger-list);
     &::after {
         content: "";
         display: block;
@@ -135,10 +135,9 @@ component > hamburger menu
 }
 
 .c-hamburger-bottom-list {
-    z-index: 103;
+    z-index: var(--z-index-bottom-list);
     width: 100%;
     position: fixed;
-    // background: var(--bg-base);
     bottom: 0;
     display: flex;
     align-items: center;

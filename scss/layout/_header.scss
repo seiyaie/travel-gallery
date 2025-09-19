@@ -26,8 +26,8 @@ layout > header
 .header-nav {
     text-align: center;
     position: relative;
-    z-index: 100;
 }
+
 .header-logo {
     position: relative;
     a {
@@ -124,7 +124,6 @@ layout > header
         gap: 6px 24px;
         text-align: left;
         padding: 16px 8px;
-        z-index: 2;
         @include g.mq() {
             grid-template-rows: repeat(ceil(17/3), auto);
         }
