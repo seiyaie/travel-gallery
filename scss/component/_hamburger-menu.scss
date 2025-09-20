@@ -127,10 +127,16 @@ component > hamburger menu
     &:first-child {
         font-family: var(--font-family-accent);
         font-style: italic;
-        font-size: 56px;
+        font-size: 40px;
+        @include g.mq(sm) {
+            font-size: 56px;
+        }
     }
     &:last-child {
-        font-size: 20px;
+        font-size: 16px;
+        @include g.mq() {
+            font-size: 20px;
+        }
     }
 }
 
