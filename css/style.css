@@ -263,7 +263,7 @@ component > bg-wrapper
   background-image: url(../img/top/top-bg.jpg);
 }
 .c-bg-wrapper--about {
-  background-image: url(../img/about-bg.jpg);
+  background-image: url(../img/about/about-bg.jpg);
 }
 .c-bg-wrapper--ireland {
   background-image: url(../img/ireland/ireland-bg.jpg);
@@ -894,10 +894,20 @@ component > hamburger menu
 .c-hamburger-country-item span:first-child {
   font-family: var(--font-family-accent);
   font-style: italic;
-  font-size: 56px;
+  font-size: 40px;
+}
+@media screen and (min-width: 500px) {
+  .c-hamburger-country-item span:first-child {
+    font-size: 56px;
+  }
 }
 .c-hamburger-country-item span:last-child {
-  font-size: 20px;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .c-hamburger-country-item span:last-child {
+    font-size: 20px;
+  }
 }
 
 .c-hamburger-bottom-list {
@@ -1231,9 +1241,14 @@ layout > footer
 
 .footer-submenu {
   display: grid;
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(9, auto);
   gap: 4px minmax(12px, 24px);
   grid-auto-flow: column;
+}
+@media screen and (min-width: 500px) {
+  .footer-submenu {
+    grid-template-rows: repeat(6, auto);
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-submenu {
@@ -1272,11 +1287,13 @@ layout > footer
     height: 9px;
   }
 }
-.footer-submenu-item:hover {
-  color: var(--font-white);
-}
-.footer-submenu-item:hover::before {
-  transform: rotate(315deg);
+@media (any-hover: hover) {
+  .footer-submenu-item:hover {
+    color: var(--font-white);
+  }
+  .footer-submenu-item:hover::before {
+    transform: rotate(315deg);
+  }
 }
 
 .footer-copy {

@@ -19,7 +19,6 @@ export const initScrollArrow = () => {
         trigger: indicator,
         scroller: "body",
         start: "top top",
-        markers: true,
         onEnter: () =>
             gsap.to(indicator, {
                 autoAlpha: 0,

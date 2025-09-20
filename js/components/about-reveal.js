@@ -17,7 +17,6 @@ export const initAboutReveal = () => {
                 scrollTrigger: {
                     trigger: el,
                     start: "top 80%",
-                    markers: true,
                 },
             });
         });
