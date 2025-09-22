@@ -15,10 +15,33 @@ export const initHamburgerMenu = () => {
 
     const getUrl = (item) => item?.parentElement?.dataset.bg || "";
 
+    // 追加：小さなロードヘルパ & キャッシュ
+    const imgCache = new Map();
+    function loadImage(url) {
+        if (!url) return Promise.resolve();
+        if (imgCache.get(url) === true) return Promise.resolve();
+        const img = new Image();
+        img.src = url;
+        const p = (
+            img.decode
+                ? img.decode()
+                : new Promise((res) => {
+                      if (img.complete) return res();
+                      img.addEventListener("load", res, { once: true });
+                      img.addEventListener("error", res, { once: true }); // エラーでも先に進む
+                  })
+        ).then(() => {
+            imgCache.set(url, true);
+        });
+        return p;
+    }
+
     // 背景ズームアウトアニメーション
-    function showBgZoomOut(url) {
+    async function showBgZoomOut(url) {
         if (!url) return;
         if (bgTween) bgTween.kill(); // 途中のアニメがあったら止める
+
+        await loadImage(url); // ←ここが重要（初回でも確実に見える）
 
         // 背景初期状態にセット
         gsap.set(bg, { backgroundImage: `url(${url})`, opacity: 0, scale: 1.2 });
@@ -107,15 +130,36 @@ export const initHamburgerMenu = () => {
     tl.to(menu, { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7 })
         // itemsをスライドアップ
         .to(
+            // items,
+            // {
+            //     y: 0,
+            //     duration: 0.4,
+            //     ease: "power3.out",
+            //     onComplete: () => {
+            //         initItemScrollTriggers(); // アニメーション終了後スクロールトリガー作成
+            //         ScrollTrigger.refresh();
+            //         refreshBackground();
+            //         refreshOpacities();
+            //     },
+            // },
+            // ">+0.03"
             items,
             {
                 y: 0,
                 duration: 0.4,
                 ease: "power3.out",
-                onComplete: () => {
-                    initItemScrollTriggers(); // アニメーション終了後スクロールトリガー作成
+                onComplete: async () => {
+                    initItemScrollTriggers();
                     ScrollTrigger.refresh();
-                    refreshBackground();
+
+                    // currentActive が未設定なら保険で先頭に
+                    if (!currentActive) currentActive = items[0] || null;
+
+                    await (async () => {
+                        const url = getUrl(currentActive);
+                        if (url) await showBgZoomOut(url);
+                    })();
+
                     refreshOpacities();
                 },
             },
@@ -123,22 +167,46 @@ export const initHamburgerMenu = () => {
         );
 
     // メニュー開く関数
-    const openMenu = () => {
+    // const openMenu = () => {
+    //     if (isAnimating || menu.open) return;
+    //     menu.show();
+    //     // menuとitems初期値にセット
+    //     gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
+    //     gsap.set(items, { y: "100%", opacity: 0.4 });
+
+    //     closeBtn.classList.remove("is-active");
+    //     openBtn.classList.add("is-active");
+    //     // タイムライン再生
+    //     tl.play(0);
+    // };
+
+    // 修正：openMenu 内で「最初に表示する項目」を決めて先にプリロード
+    const openMenu = async () => {
         if (isAnimating || menu.open) return;
         menu.show();
-        // const initial = lastActive || items[0];
-        // const firstUrl = getUrl(initial);
-        // gsap.set(bg, { opacity: 0, backgroundImage: `url(${firstUrl})`, scale: 1.2 });
-        // menuとitems初期値にセット
         gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
         gsap.set(items, { y: "100%", opacity: 0.4 });
-        // タイムライン再生
+
+        // 1) 最初のアクティブを決める（例：先頭項目）
+        currentActive = items[0] || null;
+        closeBtn.focus();
+
+        // 2) その背景を先に読み込んでおく（初回チラつき防止）
+        const firstUrl = getUrl(currentActive);
+        await loadImage(firstUrl);
+        // 3) open/closeのUI状態
+        closeBtn.classList.remove("is-active");
+        openBtn.classList.add("is-active");
+
+        // 4) タイムライン再生
         tl.play(0);
     };
 
     // メニュー閉じる関数
     const closeMenu = () => {
         if (isAnimating || !menu.open) return;
+        openBtn.classList.remove("is-active");
+        closeBtn.classList.add("is-active");
         // タイムライン逆再生
         tl.reverse();
         // 背景ズームイン、フェードアウト

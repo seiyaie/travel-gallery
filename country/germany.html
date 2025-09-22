@@ -10,20 +10,23 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- preload -->
+        <link rel="preload" as="image" href="../img/germany/germany-bg.jpg" imagesizes="100vw" imagesrcset="../img/germany/germany-bg.jpg" />
 
         <!-- css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
         <link rel="stylesheet" href="../css/style.css" />
 
         <!-- js -->
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
         <script src="../js/main.js" type="module"></script>
     </head>
     <body>
-        <div class="c-bg-wrapper c-bg-wrapper--germany js-bg-wrapper"></div>
+        <div class="c-bg js-bg">
+            <img src="../img/germany/germany-bg.jpg" width="2268" height="3024" alt="" fetchpriority="high" decoding="async" />
+        </div>
         <div class="c-page-overlay js-page-overlay"></div>
         <div class="c-body-overlay js-body-overlay"></div>
         <!-- header -->
@@ -194,7 +197,7 @@
                 <!-- 1: 木組の家 / Nuremberg -->
                 <li class="c-gallery-item js-gallery-item">
                     <button aria-label="画像詳細を表示" data-title="木組の家" data-caption="梁が描く幾何学が空へ伸びる。窓辺の緑まで端正なニュルンベルグの顔。">
-                        <img src="../img/germany/germany.jpg" width="1512" height="2016" alt="ニュルンベルグの木組みの家の外観" decoding="async" />
+                        <img src="../img/germany/germany.jpg" width="1512" height="2016" alt="ドイツの伝統的な木組みの家の外観" decoding="async" />
                         <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.06.01</span>
                         <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Half-timbered House, Nuremberg</span>
                     </button>

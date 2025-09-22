@@ -1,7 +1,7 @@
 export const initPageTransition = () => {
     document.addEventListener("DOMContentLoaded", () => {
         const overlay = document.querySelector(".js-page-overlay");
-        const bg = document.querySelector(".js-bg-wrapper");
+        const bg = document.querySelector(".js-bg");
         const kv = document.querySelector(".js-kv-title-wrapper");
         const kvSection = document.querySelector(".js-kv");
         const ease = "power3.inOut";

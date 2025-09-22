@@ -23,12 +23,11 @@ component > description
     border-radius: 4px;
     overflow: hidden;
     opacity: 0.7;
-    max-width: 580px;
     @include g.mq() {
-        width: 40%;
+        width: 400px;
     }
-    &:not(:first-child) {
-        // height: clamp(400px, 70svh, 770px);
+    @include g.mq(lg) {
+        width: 35%;
     }
     &:nth-child(odd) {
         @include g.mq() {
@@ -66,13 +65,13 @@ component > description
     padding: 4px 8px;
     border-radius: 8px;
     left: 50%;
-    transform: translateX(-50%);
+    font-weight: 500;
+    line-height: 1.4;
     &--date {
+        letter-spacing: 0.08em;
         top: 16px;
-        translate: 0 -200%;
     }
     &--name {
         bottom: 16px;
-        translate: 0 200%;
     }
 }

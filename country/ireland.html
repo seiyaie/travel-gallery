@@ -10,20 +10,23 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- preload -->
+        <link rel="preload" as="image" href="../img/ireland/ireland-bg.jpg" imagesizes="100vw" imagesrcset="../img/ireland/ireland-bg.jpg" />
 
         <!-- css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
         <link rel="stylesheet" href="../css/style.css" />
 
         <!-- js -->
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
         <script src="../js/main.js" type="module"></script>
     </head>
     <body>
-        <div class="c-bg-wrapper c-bg-wrapper--ireland js-bg-wrapper"></div>
+        <div class="c-bg js-bg">
+            <img src="../img/ireland/ireland-bg.jpg" width="2268" height="3024" alt="" fetchpriority="high" decoding="async" />
+        </div>
         <div class="c-page-overlay js-page-overlay"></div>
         <div class="c-body-overlay js-body-overlay"></div>
 
@@ -200,7 +203,7 @@
                 <!-- 1: クリスマスのテンプルバー / Dublin -->
                 <li class="c-gallery-item js-gallery-item">
                     <button aria-label="画像詳細を表示" data-title="クリスマスのテンプルバー" data-caption="クリスマスシーズンの夜、ダブリンのランドマーク『The Temple Bar』が無数のライトで輝く。人のざわめきと音楽、グラスの音――アイルランドの冬の熱気を閉じ込めた一枚。">
-                        <img src="../img/ireland/ireland.jpg" width="1512" height="2016" alt="イルミネーションに包まれたThe Temple Bar" decoding="async" />
+                        <img src="../img/ireland/ireland.jpg" width="1512" height="2016" alt="イルミネーションに包まれたテンプルバー" decoding="async" />
                         <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2023.11.04</span>
                         <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Christmas at Temple Bar</span>
                     </button>

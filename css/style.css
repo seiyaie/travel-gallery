@@ -22,8 +22,8 @@ global > font
 ------------------------------
 */
 :root {
-  --font-family-label: "ISL_Andvari";
-  --font-family-title: "Schibsted Grotesk", sans-serif;
+  --font-family-base: "Schibsted Grotesk", sans-serif;
+  --font-family-label: "Orbitron", sans-serif;
   --font-family-accent: "Playfair Display", serif;
 }
 
@@ -242,6 +242,7 @@ body {
   font-size: 16px;
   background-color: var(--bg-base);
   color: var(--font-white);
+  font-family: var(--font-family-base);
 }
 @media screen and (min-width: 768px) {
   body {
@@ -249,72 +250,37 @@ body {
   }
 }
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /*!
 component > bg-wrapper
 ------------------------------
 */
-.c-bg-wrapper {
+.c-bg {
   position: fixed;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
-.c-bg-wrapper--top {
-  background-image: url(../img/top/top-bg.jpg);
+.c-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.c-bg-wrapper--about {
-  background-image: url(../img/about/about-bg.jpg);
-}
-.c-bg-wrapper--ireland {
-  background-image: url(../img/ireland/ireland-bg.jpg);
-}
-.c-bg-wrapper--italy {
-  background-image: url(../img/italy/italy-bg.jpg);
-}
-.c-bg-wrapper--netherlands {
-  background-image: url(../img/netherlands/netherlands-bg.jpg);
-}
-.c-bg-wrapper--scotland {
-  background-image: url(../img/scotland/scotland-bg.jpg);
-}
-.c-bg-wrapper--singapore {
-  background-image: url(../img/singapore/singapore-bg.jpg);
-}
-.c-bg-wrapper--germany {
-  background-image: url(../img/germany/germany-bg.jpg);
-}
-.c-bg-wrapper--portugal {
-  background-image: url(../img/portugal/portugal-bg.jpg);
-}
-.c-bg-wrapper--france {
-  background-image: url(../img/france/france-bg.jpg);
-}
-.c-bg-wrapper--denmark {
-  background-image: url(../img/denmark/denmark-bg.jpg);
-}
-.c-bg-wrapper--greece {
-  background-image: url(../img/greece/greece-bg.jpg);
-}
-.c-bg-wrapper--czechia {
-  background-image: url(../img/czechia/czechia-bg.jpg);
-}
-.c-bg-wrapper--spain {
-  background-image: url(../img/spain/spain-bg.jpg);
-}
-.c-bg-wrapper--belgium {
-  background-image: url(../img/belgium/belgium-bg.jpg);
-}
-.c-bg-wrapper--england {
-  background-image: url(../img/england/england-bg.jpg);
-}
-.c-bg-wrapper--turkey {
-  background-image: url(../img/turkey/turkey-bg.jpg);
-}
-.c-bg-wrapper--thailand {
-  background-image: url(../img/thailand/thailand-bg.jpg);
-}
-.c-bg-wrapper--philippines {
-  background-image: url(../img/philippines/philippines-bg.jpg);
+@supports (height: 1lvh) {
+  .c-bg {
+    height: 100lvh;
+  }
 }
 
 .c-body-overlay {
@@ -351,8 +317,7 @@ component > section label
 ------------------------------
 */
 .c-section-label {
-  font-size: 16px;
-  font-size: 16px;
+  font-size: 14px;
   padding-inline: 4px;
   border-radius: 4px;
   background-color: var(--bg-white);
@@ -361,14 +326,24 @@ component > section label
   width: auto;
   color: var(--font-base);
 }
+@media screen and (min-width: 768px) {
+  .c-section-label {
+    font-size: 16px;
+  }
+}
 
 /*!
 component > kv
 ------------------------------
 */
 .c-kv {
-  height: clamp(400px, 100svh, 1000px);
+  height: clamp(400px, 100vh, 1000px);
   position: relative;
+}
+@supports (height: 1lvh) {
+  .c-kv {
+    height: clamp(400px, 100lvh, 1000px);
+  }
 }
 
 .c-kv-title-wrapper {
@@ -379,7 +354,7 @@ component > kv
 }
 
 .c-kv-title {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1;
 }
@@ -404,12 +379,6 @@ component > kv
 .c-kv-title--first {
   font-style: italic;
   font-family: var(--font-family-accent);
-}
-.c-kv-title--last {
-  font-family: var(--font-family-title);
-}
-.c-kv-title--country {
-  font-family: var(--font-family-title);
 }
 
 .c-kv-describe {
@@ -453,12 +422,13 @@ component > kv
   align-items: center;
   gap: 4px;
   position: absolute;
-  bottom: 32px;
   right: 5%;
   overflow: hidden;
+  bottom: 120px;
 }
 @media screen and (min-width: 768px) {
   .c-kv-scroll-indicator {
+    bottom: 32px;
     right: 50%;
     transform: translateX(50%);
   }
@@ -466,7 +436,6 @@ component > kv
 
 .c-kv-scroll-text {
   font-weight: bold;
-  font-family: var(--font-family-title);
 }
 
 .c-kv-scroll-arrow {
@@ -509,8 +478,13 @@ component > description
 
 .c-description-city-jp::before {
   content: "/";
-  margin-inline: 16px;
+  margin-inline: 4px;
   display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .c-description-city-jp::before {
+    margin-inline: 8px;
+  }
 }
 
 .c-description-text {
@@ -551,11 +525,15 @@ component > description
   border-radius: 4px;
   overflow: hidden;
   opacity: 0.7;
-  max-width: 580px;
 }
 @media screen and (min-width: 768px) {
   .c-gallery-item {
-    width: 40%;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .c-gallery-item {
+    width: 35%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -596,15 +574,15 @@ component > description
   padding: 4px 8px;
   border-radius: 8px;
   left: 50%;
-  transform: translateX(-50%);
+  font-weight: 500;
+  line-height: 1.4;
 }
 .c-gallery-item-label--date {
+  letter-spacing: 0.08em;
   top: 16px;
-  translate: 0 -200%;
 }
 .c-gallery-item-label--name {
   bottom: 16px;
-  translate: 0 200%;
 }
 
 /*!
@@ -812,13 +790,19 @@ component > hamburger menu
 }
 
 .c-hamburger-button {
-  font-size: 16px;
+  font-size: 14px;
+  width: 100px;
   font-weight: bold;
-  width: 120px;
   text-align: right;
   position: relative;
   padding-block: 3px;
   transition: color 0.3s ease;
+}
+@media screen and (min-width: 500px) {
+  .c-hamburger-button {
+    font-size: 16px;
+    width: 120px;
+  }
 }
 .c-hamburger-button::after {
   content: "";
@@ -847,6 +831,12 @@ component > hamburger menu
 @media (any-hover: hover) {
   .c-hamburger-button:hover::before {
     transform: scaleX(1);
+  }
+}
+@media (hover: none) {
+  .c-hamburger-button.is-active::before {
+    transform: scaleX(1);
+    transition-duration: 180ms;
   }
 }
 
@@ -982,6 +972,9 @@ layout > header
   width: 159px;
   height: auto;
 }
+.header-logo a:focus:not(:focus-visible) {
+  outline: none;
+}
 @media screen and (min-width: 768px) {
   .header-logo a {
     width: 200px;
@@ -998,9 +991,15 @@ layout > header
 }
 
 .header-item {
-  font-size: 16px;
+  font-size: 14px;
+  width: 100px;
   font-weight: bold;
-  width: 120px;
+}
+@media screen and (min-width: 500px) {
+  .header-item {
+    font-size: 16px;
+    width: 120px;
+  }
 }
 
 .header-button {
@@ -1046,8 +1045,11 @@ layout > header
     transform: scaleX(1);
   }
 }
-.header-button.is-active::before {
-  transform: scaleX(1);
+@media (hover: none) {
+  .header-button.is-active::before {
+    transform: scaleX(1);
+    transition-duration: 180ms;
+  }
 }
 
 .header-item--country,
@@ -1117,11 +1119,13 @@ layout > header
     height: 9px;
   }
 }
-.header-submenu-item:hover {
-  color: var(--font-white);
-}
-.header-submenu-item:hover::before {
-  transform: rotate(315deg);
+@media (any-hover: hover) {
+  .header-submenu-item:hover {
+    color: var(--font-white);
+  }
+  .header-submenu-item:hover::before {
+    transform: rotate(315deg);
+  }
 }
 
 .header-item:first-child .header-button {
@@ -1154,7 +1158,6 @@ layout > footer
   position: relative;
   padding-top: 120px;
   padding-bottom: 16px;
-  font-family: var(--font-family-title);
 }
 
 .footer-logo {
@@ -1242,7 +1245,7 @@ layout > footer
 .footer-submenu {
   display: grid;
   grid-template-rows: repeat(9, auto);
-  gap: 4px minmax(12px, 24px);
+  gap: 8px;
   grid-auto-flow: column;
 }
 @media screen and (min-width: 500px) {
@@ -1252,7 +1255,7 @@ layout > footer
 }
 @media screen and (min-width: 768px) {
   .footer-submenu {
-    gap: 4px 0;
+    gap: 4px;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -1363,20 +1366,39 @@ pages > top > gallery
   margin-top: 16px;
   font-family: var(--font-family-label);
 }
+.top-gallery-item-label span {
+  display: inline-block;
+}
 @media screen and (min-width: 500px) {
   .top-gallery-item-label span {
     display: block;
   }
 }
-@media screen and (min-width: 500px) {
+.top-gallery-item-label span:first-child {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .top-gallery-item-label span:first-child {
+    font-size: 20px;
+  }
+}
+.top-gallery-item-label span:last-child {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
   .top-gallery-item-label span:last-child {
-    margin-left: 8px;
+    font-size: 16px;
   }
 }
 .top-gallery-item-label span:last-child::before {
-  content: "/";
+  content: "-";
   display: inline-block;
-  margin-inline: 0.25em;
+  margin-inline: 4px;
+}
+@media screen and (min-width: 500px) {
+  .top-gallery-item-label span:last-child::before {
+    margin-inline: 8px;
+  }
 }
 
 /*!
@@ -1447,7 +1469,7 @@ pages > about > about
   font-style: italic;
 }
 .about-me-name span:last-child {
-  font-family: var(--font-family-title);
+  font-weight: 500;
   letter-spacing: 0;
 }
 

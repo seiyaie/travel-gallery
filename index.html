@@ -10,22 +10,24 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- preload -->
+        <link rel="preload" as="image" href="img/top/top-bg.jpg" imagesizes="100vw" imagesrcset="img/top/top-bg.jpg" />
 
         <!-- css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
 
         <!-- js -->
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
         <script src="js/main.js" type="module"></script>
     </head>
     <body>
+        <div class="c-bg js-bg">
+            <img src="img/top/top-bg.jpg" width="2268" height="3024" alt="" fetchpriority="high" decoding="async" />
+        </div>
         <div class="c-page-overlay js-page-overlay"></div>
-        <div class="c-bg-wrapper c-bg-wrapper--top js-bg-wrapper"></div>
         <div class="c-body-overlay js-body-overlay"></div>
         <!-- header -->
         <header class="header js-header">
@@ -173,7 +175,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="ireland">
                         <a href="country/ireland.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/ireland/ireland.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/ireland/ireland.jpg" width="1512" height="2016" alt="イルミネーションに包まれたテンプルバー" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇮🇪 Ireland</span><span>アイルランド</span></h2>
                         </a>
@@ -183,7 +185,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="netherlands">
                         <a href="country/netherlands.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/netherlands/netherlands.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/netherlands/netherlands.jpg" width="1512" height="2016" alt="小さな風車がのったThe Millの建物" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇳🇱 Netherlands</span><span>オランダ</span></h2>
                         </a>
@@ -193,7 +195,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="italy">
                         <a href="country/italy.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/italy/italy.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/italy/italy.jpg" width="1512" height="2016" alt="夜のヴェネチア運河沿い" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇮🇹 Italy</span><span>イタリア</span></h2>
                         </a>
@@ -203,7 +205,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="scotland">
                         <a href="country/scotland.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/scotland/scotland.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/scotland/scotland.jpg" width="1512" height="2016" alt="エディンバラのビクトリア・ストリートの石畳と建物" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span><span>スコットランド</span></h2>
                         </a>
@@ -213,7 +215,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="singapore">
                         <a href="country/singapore.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/singapore/singapore.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/singapore/singapore.jpg" width="1512" height="2016" alt="夜空にライトアップされたスーパーツリー" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇸🇬 Singapore</span><span>シンガポール</span></h2>
                         </a>
@@ -223,7 +225,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="germany">
                         <a href="country/germany.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/germany/germany.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/germany/germany.jpg" width="1512" height="2016" alt="ドイツの伝統的な木組みの家の外観" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇩🇪 Germany</span><span>ドイツ</span></h2>
                         </a>
@@ -233,7 +235,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="portugal">
                         <a href="country/portugal.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/portugal/portugal.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/portugal/portugal.jpg" width="1512" height="2016" alt="波模様の石畳が広がる広場" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇵🇹 Portugal</span><span>ポルトガル</span></h2>
                         </a>
@@ -243,7 +245,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="france">
                         <a href="country/france.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/france/france.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/france/france.jpg" width="1512" height="2016" alt="夜のムーラン・ルージュの赤い風車とネオン" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇫🇷 France</span><span>フランス</span></h2>
                         </a>
@@ -253,7 +255,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="denmark">
                         <a href="country/denmark.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/denmark/denmark.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/denmark/denmark.jpg" width="1512" height="2016" alt="昼のニューハウンと船" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇩🇰 Denmark</span><span>デンマーク</span></h2>
                         </a>
@@ -263,7 +265,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="greece">
                         <a href="country/greece.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/greece/greece.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/greece/greece.jpg" width="1512" height="2016" alt="暮れの青ドーム教会と鐘楼" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇬🇷 Greece</span><span>ギリシャ</span></h2>
                         </a>
@@ -273,7 +275,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="czechia">
                         <a href="country/czechia.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/czechia/czechia.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/czechia/czechia.jpg" width="1512" height="2016" alt="プラハ旧市庁舎の天文時計" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇨🇿 Czechia</span><span>チェコ</span></h2>
                         </a>
@@ -283,7 +285,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="spain">
                         <a href="country/spain.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/spain/spain.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/spain/spain.jpg" width="1512" height="2016" alt="メスキータの天井装飾" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇪🇸 Spain</span><span>スペイン</span></h2>
                         </a>
@@ -293,7 +295,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="belgium">
                         <a href="country/belgium.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/belgium/belgium.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/belgium/belgium.jpg" width="1512" height="2016" alt="ブラボーの像と背景に映る市庁舎（アントワープ）" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇧🇪 Belgium</span><span>ベルギー</span></h2>
                         </a>
@@ -303,7 +305,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="england">
                         <a href="country/england.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/england/england.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/england/england.jpg" width="1512" height="2016" alt="ロンドンのビッグベン" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span><span>イングランド</span></h2>
                         </a>
@@ -313,7 +315,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="turkey">
                         <a href="country/turkey.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/turkey/turkey.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/turkey/turkey.jpg" width="1512" height="2016" alt="イスタンブールのバヤズィト2世モスクと高く伸びたミナレット" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇹🇷 Turkey</span><span>トルコ</span></h2>
                         </a>
@@ -323,7 +325,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="thailand">
                         <a href="country/thailand.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/thailand/thailand.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/thailand/thailand.jpg" width="1512" height="2016" alt="ワットパクナム沿いの河川と橋" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇹🇭 Thailand</span><span>タイ</span></h2>
                         </a>
@@ -333,7 +335,7 @@
                     <section class="top-gallery-item js-top-gallery-item" data-country="philippines">
                         <a href="country/philippines.html">
                             <div class="top-gallery-item-thumbnail js-top-gallery-item-thumbnail">
-                                <img src="img/philippines/philippines.jpg" width="1512" height="2016" alt="" decoding="async" />
+                                <img src="img/philippines/philippines.jpg" width="1512" height="2016" alt="バギオのジョリビー店舗" decoding="async" />
                             </div>
                             <h2 class="top-gallery-item-label js-top-gallery-item-label"><span>🇵🇭 The Philippines</span><span>フィリピン</span></h2>
                         </a>

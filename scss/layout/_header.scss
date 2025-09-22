@@ -34,6 +34,9 @@ layout > header
         display: inline-block;
         width: 159px;
         height: auto;
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
         @include g.mq() {
             width: 200px;
         }
@@ -50,9 +53,13 @@ layout > header
 }
 
 .header-item {
-    font-size: 16px;
+    font-size: 14px;
+    width: 100px;
     font-weight: bold;
-    width: 120px;
+    @include g.mq(sm) {
+        font-size: 16px;
+        width: 120px;
+    }
 }
 
 .header-button {
@@ -93,8 +100,11 @@ layout > header
             transform: scaleX(1);
         }
     }
-    &.is-active::before {
-        transform: scaleX(1);
+    @media (hover: none) {
+        &.is-active::before {
+            transform: scaleX(1);
+            transition-duration: 180ms;
+        }
     }
 }
 
@@ -152,10 +162,12 @@ layout > header
             height: 9px;
         }
     }
-    &:hover {
-        color: var(--font-white);
-        &::before {
-            transform: rotate(315deg);
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--font-white);
+            &::before {
+                transform: rotate(315deg);
+            }
         }
     }
 }

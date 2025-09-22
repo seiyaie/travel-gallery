@@ -35,8 +35,11 @@ component > description
 .c-description-city-jp {
     &::before {
         content: '/';
-        margin-inline: 16px;
+        margin-inline: 4px;
         display: inline-block;
+        @include g.mq() {
+            margin-inline: 8px;
+        }
     }
 }
 

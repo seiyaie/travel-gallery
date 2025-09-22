@@ -10,20 +10,23 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+        <!-- preload -->
+        <link rel="preload" as="image" href="../img/thailand/thailand-bg.jpg" imagesizes="100vw" imagesrcset="../img/thailand/thailand-bg.jpg" />
 
         <!-- css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
         <link rel="stylesheet" href="../css/style.css" />
 
         <!-- js -->
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
         <script src="../js/main.js" type="module"></script>
     </head>
     <body>
-        <div class="c-bg-wrapper c-bg-wrapper--thailand js-bg-wrapper"></div>
+        <div class="c-bg js-bg">
+            <img src="../img/thailand/thailand-bg.jpg" width="2268" height="3024" alt="" fetchpriority="high" decoding="async" />
+        </div>
         <div class="c-page-overlay js-page-overlay"></div>
         <div class="c-body-overlay js-body-overlay"></div>
         <!-- header -->
@@ -165,6 +168,7 @@
             </div>
         </div>
         <!-- the end of kv -->
+
         <!-- gallery -->
         <main class="c-gallery">
             <ul class="c-gallery-list">
@@ -195,8 +199,8 @@
 
                 <!-- 1: ワットパクナム / Bangkok -->
                 <li class="c-gallery-item js-gallery-item">
-                    <button aria-label="画像詳細を表示" data-title="ワットパクナム" data-caption="エメラルド色に輝く仏塔と、宇宙のように広がる天井画。荘厳さと幻想的な美しさに圧倒された。">
-                        <img src="../img/thailand/thailand.jpg" width="1512" height="2016" alt="ワットパクナムの仏塔と天井画" decoding="async" />
+                    <button aria-label="画像詳細を表示" data-title="ワットパクナムへの橋" data-caption="タイらしい作りの橋がとても魅力的だった。">
+                        <img src="../img/thailand/thailand.jpg" width="1512" height="2016" alt="ワットパクナム沿いの河川と橋" decoding="async" />
                         <span class="c-gallery-item-label c-gallery-item-label--date js-gallery-item-date">2024.02.02</span>
                         <span class="c-gallery-item-label c-gallery-item-label--name js-gallery-item-name">Wat Paknam, Bangkok</span>
                     </button>

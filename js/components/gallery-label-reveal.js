@@ -7,6 +7,13 @@ function getLabels(item) {
     return [item.querySelector(dateLabel), item.querySelector(nameLabel)].filter(Boolean);
 }
 
+function setInitial(labels) {
+    gsap.set(labels, {
+        yPercent: (i, el) => (el.matches(dateLabel) ? -200 : 200),
+        xPercent: -50,
+    });
+}
+
 function playIn(item, labels) {
     gsap.to(item, {
         scale: 1.05,
@@ -16,7 +23,7 @@ function playIn(item, labels) {
         overwrite: "auto",
     });
     gsap.to(labels, {
-        y: 0,
+        yPercent: 0,
         duration: 0.5,
         ease: "back.inOut",
         overwrite: "auto",
@@ -32,7 +39,7 @@ function playOut(item, labels) {
         overwrite: "auto",
     });
     gsap.to(labels, {
-        y: (i, el) => (el.matches(dateLabel) ? -200 + "%" : 200 + "%"),
+        yPercent: (i, el) => (el.matches(dateLabel) ? -200 : 200),
         duration: 0.3,
         ease: "power2.in",
         stagger: 0.02,
@@ -48,7 +55,7 @@ export const initGalleryLabelReveal = () => {
         if (!labels.length) return;
 
         // 初期位置
-        // setInitial(item, labels);
+        setInitial(labels);
 
         // --- PC: hover イベント ---
         item.addEventListener("mouseenter", () => playIn(item, labels));
@@ -65,4 +72,22 @@ export const initGalleryLabelReveal = () => {
             onLeaveBack: () => playOut(item, labels),
         });
     });
+
+    // const lazyImgs = Array.from(document.querySelectorAll(".js-gallery-item img["));
+    // if (lazyImgs.length === 0) {
+    //     ScrollTrigger.refresh();
+    // } else {
+    //     let pending = lazyImgs.length;
+    //     const done = () => {
+    //         if (--pending <= 0) ScrollTrigger.refresh();
+    //     };
+    //     lazyImgs.forEach((img) => {
+    //         if (img.complete) {
+    //             done();
+    //         } else {
+    //             img.addEventListener("load", done, { once: true });
+    //             img.addEventListener("error", done, { once: true });
+    //         }
+    //     });
+    // }
 };
