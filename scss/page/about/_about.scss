@@ -61,7 +61,7 @@ pages > about > about
             font-style: italic;
         }
         &:last-child {
-            font-family: var(--font-family-title);
+            font-weight: 500;
             letter-spacing: 0;
         }
     }

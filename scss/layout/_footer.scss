@@ -9,7 +9,6 @@ layout > footer
     position: relative;
     padding-top: 120px;
     padding-bottom: 16px;
-    font-family: var(--font-family-title);
 }
 
 .footer-logo {
@@ -46,7 +45,7 @@ layout > footer
         display: grid;
         align-items: start;
         grid-template-columns: minmax(220px, 320px) 1fr;
-        grid-template-rows: auto auto; // 2段
+        grid-template-rows: auto auto;
         grid-template-areas:
             "contact country"
             "about   country";
@@ -88,13 +87,13 @@ layout > footer
 .footer-submenu {
     display: grid;
     grid-template-rows: repeat(ceil(17/2), auto);
-    gap: 4px minmax(12px, 24px);
+    gap: 8px;
     grid-auto-flow: column;
     @include g.mq(sm) {
         grid-template-rows: repeat(ceil(17/3), auto);
     }
     @include g.mq() {
-        gap: 4px 0;
+        gap: 4px;
     }
     @include g.mq(lg) {
         grid-template-rows: repeat(ceil(17/5), auto);

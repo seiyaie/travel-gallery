@@ -6,13 +6,15 @@ component > section label
 */
 
 .c-section-label {
-  font-size: 16px;
-  font-size: 16px;
-  padding-inline: 4px;
-  border-radius: 4px;
-  background-color: var(--bg-white);
-  font-weight: bold;
-  display: inline-block;
-  width: auto;
-  color: var(--font-base);
+    font-size: 14px;
+    padding-inline: 4px;
+    border-radius: 4px;
+    background-color: var(--bg-white);
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    color: var(--font-base);
+    @include g.mq() {
+        font-size: 16px;
+    }
 }

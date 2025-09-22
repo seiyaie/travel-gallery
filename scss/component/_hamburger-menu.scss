@@ -46,13 +46,17 @@ component > hamburger menu
 }
 
 .c-hamburger-button {
-    font-size: 16px;
+    font-size: 14px;
+    width: 100px;
     font-weight: bold;
-    width: 120px;
     text-align: right;
     position: relative;
     padding-block: 3px;
     transition: color 0.3s ease;
+    @include g.mq(sm) {
+        font-size: 16px;
+        width: 120px;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -80,6 +84,12 @@ component > hamburger menu
     @media (any-hover: hover) {
         &:hover::before {
             transform: scaleX(1);
+        }
+    }
+    @media (hover: none) {
+        &.is-active::before {
+            transform: scaleX(1);
+            transition-duration: 180ms;
         }
     }
 }
