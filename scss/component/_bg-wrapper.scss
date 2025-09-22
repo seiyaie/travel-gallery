@@ -5,68 +5,20 @@ component > bg-wrapper
 ------------------------------
 */
 
-.c-bg-wrapper {
+.c-bg {
     position: fixed;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    &--top {
-        background-image: url(../img/top/top-bg.jpg);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    &--about {
-        background-image: url(../img/about/about-bg.jpg);
-    }
-    &--ireland {
-        background-image: url(../img/ireland/ireland-bg.jpg);
-    }
-    &--italy {
-        background-image: url(../img/italy/italy-bg.jpg);
-    }
-    &--netherlands {
-        background-image: url(../img/netherlands/netherlands-bg.jpg);
-    }
-    &--scotland {
-        background-image: url(../img/scotland/scotland-bg.jpg);
-    }
-    &--singapore {
-        background-image: url(../img/singapore/singapore-bg.jpg);
-    }
-    &--germany {
-        background-image: url(../img/germany/germany-bg.jpg);
-    }
-    &--portugal {
-        background-image: url(../img/portugal/portugal-bg.jpg);
-    }
-    &--france {
-        background-image: url(../img/france/france-bg.jpg);
-    }
-    &--denmark {
-        background-image: url(../img/denmark/denmark-bg.jpg);
-    }
-    &--greece {
-        background-image: url(../img/greece/greece-bg.jpg);
-    }
-    &--czechia {
-        background-image: url(../img/czechia/czechia-bg.jpg);
-    }
-    &--spain {
-        background-image: url(../img/spain/spain-bg.jpg);
-    }
-    &--belgium {
-        background-image: url(../img/belgium/belgium-bg.jpg);
-    }
-    &--england {
-        background-image: url(../img/england/england-bg.jpg);
-    }
-    &--turkey {
-        background-image: url(../img/turkey/turkey-bg.jpg);
-    }
-
-    &--thailand {
-        background-image: url(../img/thailand/thailand-bg.jpg);
-    }
-    &--philippines {
-        background-image: url(../img/philippines/philippines-bg.jpg);
+    @supports (height: 1lvh) {
+            height: 100lvh;
     }
 }
 
