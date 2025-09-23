@@ -8,15 +8,14 @@ component > kv
 .c-kv {
     height: clamp(400px, 100vh, 1000px);
     position: relative;
+    display: grid;
+    place-items: center start;
     @supports (height: 1lvh) {
         height: clamp(400px, 100lvh, 1000px);
     }
 }
 
 .c-kv-title-wrapper {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
     opacity: 0;
 }
 
