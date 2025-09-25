@@ -18,7 +18,8 @@ export const initScrollArrow = () => {
     ScrollTrigger.create({
         trigger: indicator,
         scroller: "body",
-        start: "top top",
+        start: 24,
+        end: 9999,
         onEnter: () =>
             gsap.to(indicator, {
                 autoAlpha: 0,
@@ -36,4 +37,5 @@ export const initScrollArrow = () => {
                 overwrite: "auto",
             }),
     });
+    requestAnimationFrame(() => ScrollTrigger.refresh());
 };
