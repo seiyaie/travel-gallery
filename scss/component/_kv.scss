@@ -6,17 +6,25 @@ component > kv
 */
 
 .c-kv {
-    height: clamp(400px, 100vh, 1000px);
+    min-height: 400px;
+    height: 100vh;
+    @supports (height: 1lvh) {
+        height: 100lvh;
+    }
+}
+
+.c-kv-inner {
     position: relative;
+    width: 90%;
+    margin-inline: auto;
+    height: 100%;
     display: grid;
     place-items: center start;
-    @supports (height: 1lvh) {
-        height: clamp(400px, 100lvh, 1000px);
-    }
 }
 
 .c-kv-title-wrapper {
     opacity: 0;
+    will-change: transform;
 }
 
 .c-kv-title {
