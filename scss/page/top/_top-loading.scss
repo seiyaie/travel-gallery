@@ -1,0 +1,29 @@
+@use "../../global" as g;
+
+/*!
+pages > top > loading
+------------------------------
+*/
+
+.top-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10000;
+    background-color: var(--bg-base);
+    font-family: var(--font-family-counter);
+    font-style: italic;
+    @supports (height: 1dvh) {
+        height: 100dvh;
+    }
+}
+
+.top-loading-counter {
+    font-size: 20vw;
+    padding: 0.2em 0.4em;
+    color: #bcbcc4;
+}
