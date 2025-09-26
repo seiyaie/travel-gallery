@@ -103,11 +103,11 @@ layout > footer
 .footer-submenu-item {
     display: inline-flex;
     color: var(--font-gray);
-    font-size: 12px;
+    font-size: 14px;
     align-items: center;
     gap: 4px;
     @include g.mq() {
-        font-size: 14px;
+        font-size: 16px;
     }
     &::before {
         content: "";

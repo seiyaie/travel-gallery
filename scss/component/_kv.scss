@@ -28,7 +28,7 @@ component > kv
 }
 
 .c-kv-title {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 500;
     line-height: 1;
     @include g.mq(sm) {
@@ -53,7 +53,7 @@ component > kv
 
 .c-kv-describe {
     margin-top: 4px;
-    font-size: 24px;
+    font-size: 28px;
     font-family: var(--font-family-accent);
     font-style: italic;
     @include g.mq(sm) {

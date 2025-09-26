@@ -55,15 +55,15 @@ pages > top > gallery
             display: block;
         }
         &:first-child {
-            font-size: 16px;
+            font-size: 18px;
             @include g.mq() {
                 font-size: 20px;
             }
         }
         &:last-child {
-            font-size: 14px;
+            font-size: 16px;
             @include g.mq() {
-                font-size: 16px;
+                font-size: 18px;
             }
             &::before {
                 content: "-";
