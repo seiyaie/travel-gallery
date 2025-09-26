@@ -15,6 +15,7 @@ global > color
   --font-black: #000000;
   --font-white: #fff;
   --font-gray: #fff9;
+  --font-color-number: #bcbcc4;
 }
 
 /*!
@@ -311,7 +312,7 @@ component > bg-wrapper
   height: 100vh;
   pointer-events: none;
   background-color: #fff;
-  background: #000;
+  background: var(--bg-base);
   z-index: var(--z-index-page-overlay);
   pointer-events: none;
   transform: translateY(0%);
@@ -1447,7 +1448,7 @@ pages > top > loading
 .top-loading-counter {
   font-size: 20vw;
   padding: 0.2em 0.4em;
-  color: #bcbcc4;
+  color: var(--font-color-number);
 }
 
 /*!

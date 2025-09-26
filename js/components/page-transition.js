@@ -204,11 +204,10 @@ export const initPageTransition = () => {
         const kv = document.querySelector(".js-kv-title-wrapper");
         const ease = "power3.inOut";
 
-        // 必須要素が無ければこのモジュールは動かさない（トップ等を除外）
-        if (!overlay || !bg) return;
-
         // === リロード/復元時にKVが見えていたら強制トップへ（共通ユーティリティ）
-        setupScrollTopOnReload({ kvSelector: ".js-kv", once: true });
+        setupScrollTopOnReload({ kvSelector: ".js-kv", once: false });
+
+        if (!overlay || !bg) return;
 
         // === Enter ===
         gsap.set(bg, { scale: 1.15 });
@@ -217,6 +216,7 @@ export const initPageTransition = () => {
         gsap.timeline().to(overlay, { yPercent: 100, duration: 0.6, ease }, 0).to(bg, { scale: 1, duration: 0.8, ease }, 0).to(kv, { y: 0, opacity: 1, duration: 0.8, ease }, 0);
 
         // === Leave ===
+        let isAnimating = false;
         document.addEventListener("click", (e) => {
             const a = e.target.closest("a");
             if (!a) return;
@@ -231,6 +231,9 @@ export const initPageTransition = () => {
             if (url.origin !== location.origin) return;
 
             e.preventDefault();
+
+            if (isAnimating) return;
+            isAnimating = true;
 
             // 内部遷移マーク（復帰時に“リロード扱い”にしないため）
             markInternalNav();

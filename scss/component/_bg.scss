@@ -47,7 +47,7 @@ component > bg-wrapper
     height: 100vh;
     pointer-events: none;
     background-color: #fff;
-    background: #000;
+    background: var(--bg-base);
     z-index: var(--z-index-page-overlay);
     pointer-events: none;
     transform: translateY(0%);
