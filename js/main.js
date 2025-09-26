@@ -9,6 +9,7 @@ import { initHamburgerMenu } from "./components/hamburger-menu.js";
 import { initAboutReveal } from "./components/about-reveal.js";
 import { initScrollArrow } from "./components/scroll-arrow.js";
 import { initTopLoading } from "./components/top-loading.js";
+import { initDescReveal } from "./components/_description-reveal.js";
 
 switchViewport();
 window.addEventListener("resize", switchViewport);
@@ -19,6 +20,7 @@ initDropdownMenu();
 initKvScroll();
 initTopGalleryReveal();
 initGalleryLabelReveal();
+initDescReveal();
 initHamburgerMenu();
 initAboutReveal();
 initScrollArrow();

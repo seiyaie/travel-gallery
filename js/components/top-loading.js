@@ -50,7 +50,7 @@ export const initTopLoading = () => {
             onComplete: () => {
                 if (obj.value < 100) {
                     // 次のインクリメントまでの待ち時間も少しランダムに
-                    const wait = Math.random() * 0.2 + 0.05; //
+                    const wait = Math.random() * 0.1 + 0.05; //
                     gsap.delayedCall(wait, randomIncrement);
                 } else {
                     // 100%に達したら念のため表示を100%に固定してから次へ

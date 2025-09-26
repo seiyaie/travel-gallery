@@ -8,10 +8,9 @@ export const initAboutReveal = () => {
     mm.add("(max-width: 767px)", () => {
         const items = gsap.utils.toArray(".js-about-trigger");
         items.forEach((el) => {
-            gsap.set(el, { opacity: 0, y: 24 });
-            gsap.to(el, {
-                opacity: 1,
-                y: 0,
+            gsap.from(el, {
+                opacity: 0,
+                y: 24,
                 duration: 0.6,
                 ease: "power4.out",
                 scrollTrigger: {
@@ -25,10 +24,9 @@ export const initAboutReveal = () => {
     mm.add("(min-width: 768px)", () => {
         const aboutMe = document.querySelector(".js-about-me");
         if (aboutMe) {
-            gsap.set(aboutMe, { opacity: 0, y: 24 });
-            gsap.to(aboutMe, {
-                opacity: 1,
-                y: 0,
+            gsap.from(aboutMe, {
+                opacity: 0,
+                y: 24,
                 duration: 0.7,
                 ease: "power4.out",
                 scrollTrigger: {
@@ -43,10 +41,9 @@ export const initAboutReveal = () => {
         console.log(rest);
 
         rest.forEach((el) => {
-            gsap.set(el, { opacity: 0, y: 24 });
-            gsap.to(el, {
-                opacity: 1,
-                y: 0,
+            gsap.from(el, {
+                opacity: 0,
+                y: 24,
                 duration: 0.6,
                 ease: "power4.out",
                 scrollTrigger: {
