@@ -1,3 +1,5 @@
+// components/top-loading.js
+
 import { setupScrollTopOnReload, markInternalNav } from "../utility/scroll-reset.js";
 
 export const initTopLoading = () => {

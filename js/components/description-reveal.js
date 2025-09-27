@@ -1,3 +1,5 @@
+// components/description-reveal.js
+
 export const initDescReveal = () => {
     const description = document.querySelectorAll(".js-description-item");
 

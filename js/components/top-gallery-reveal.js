@@ -1,3 +1,5 @@
+// components/top-gallery-reveal.js
+
 export const initTopGalleryReveal = () => {
     ScrollTrigger.batch(".js-top-gallery-item", {
         scroller: 'body',

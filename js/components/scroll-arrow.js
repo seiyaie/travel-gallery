@@ -1,3 +1,5 @@
+// components/scroll-arrow.js
+
 export const initScrollArrow = () => {
     const indicator = document.querySelector(".js-indicator");
     const arrow = document.querySelector(".js-arrow");

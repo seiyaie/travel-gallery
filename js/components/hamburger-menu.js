@@ -1,3 +1,4 @@
+// components/hamburger-menu.js
 export const initHamburgerMenu = () => {
     const menu = document.querySelector(".js-hamburger-menu");
     const openBtn = document.querySelector(".js-hamburger-open-button");

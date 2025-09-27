@@ -1,3 +1,4 @@
+// components/about-reveal.js
 export const initAboutReveal = () => {
     const root = document.querySelector(".about");
     if (!root) return;

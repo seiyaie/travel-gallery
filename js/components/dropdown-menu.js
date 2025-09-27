@@ -1,3 +1,5 @@
+// components/dropdown-menu.js
+
 export const initDropdownMenu = () => {
     // query selectors
     const btn = document.querySelector(".js-dropdown-btn");

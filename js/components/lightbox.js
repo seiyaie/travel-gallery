@@ -1,3 +1,4 @@
+// components/lightbox.js
 export const initLightbox = () => {
     // querySelector（既存）
     const lightbox = document.querySelector(".js-lightbox");
