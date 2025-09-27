@@ -802,6 +802,7 @@ component > hamburger menu
   justify-content: center;
   justify-content: space-between;
   align-items: center;
+  transform: translateZ(0);
 }
 
 .c-hamburger-button {
