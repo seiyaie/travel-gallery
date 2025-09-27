@@ -195,6 +195,7 @@
 //     });
 // };
 
+// components/page-transition.js
 import { setupScrollTopOnReload, markInternalNav } from "../utility/scroll-reset.js";
 
 export const initPageTransition = () => {
@@ -213,7 +214,13 @@ export const initPageTransition = () => {
         gsap.set(bg, { scale: 1.15 });
         if (kv) gsap.set(kv, { y: 50, opacity: 0 });
 
-        gsap.timeline().to(overlay, { yPercent: 100, duration: 0.6, ease }, 0).to(bg, { scale: 1, duration: 0.8, ease }, 0).to(kv, { y: 0, opacity: 1, duration: 0.8, ease }, 0);
+        requestAnimationFrame(() => {
+            gsap.timeline()
+                .to(overlay, { yPercent: 100, duration: 0.6, ease }, 0)
+                .to(bg, { scale: 1, duration: 0.8, ease }, 0)
+                .to(kv, { y: 0, opacity: 1, duration: 0.8, ease }, 0)
+                .add(() => ScrollTrigger.refresh());
+        });
 
         // === Leave ===
         let isAnimating = false;

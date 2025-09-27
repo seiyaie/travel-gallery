@@ -1,4 +1,4 @@
-// utils/scroll-reset.js
+// utility/scroll-reset.js
 
 export const NAV_MARKER_KEY = "nav:link";
 
