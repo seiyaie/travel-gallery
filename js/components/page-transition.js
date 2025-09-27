@@ -199,7 +199,7 @@
 import { setupScrollTopOnReload, markInternalNav } from "../utility/scroll-reset.js";
 
 export const initPageTransition = () => {
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", async () => {
         const overlay = document.querySelector(".js-page-overlay");
         const bg = document.querySelector(".js-bg img");
         const kv = document.querySelector(".js-kv-title-wrapper");
@@ -213,6 +213,11 @@ export const initPageTransition = () => {
         // === Enter ===
         gsap.set(bg, { scale: 1.15 });
         if (kv) gsap.set(kv, { y: 50, opacity: 0 });
+
+        // ★ 画像のデコード完了を待つ（キャッシュ済みでも即resolve）
+        try {
+            await bg.decode();
+        } catch (_) {}
 
         requestAnimationFrame(() => {
             gsap.timeline()
