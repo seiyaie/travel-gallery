@@ -66,7 +66,7 @@ export const initTopLoading = () => {
             onUpdate: () => {
                 counter.textContent = Math.floor(obj.value) + "%";
             },
-            onComplete: () => {
+            onComplete: async () => {
                 if (obj.value < 100) {
                     // 次のインクリメントまでの待ち時間も少しランダムに
                     const wait = Math.random() * 0.1 + 0.02; //
@@ -74,6 +74,9 @@ export const initTopLoading = () => {
                 } else {
                     // 100%に達したら念のため表示を100%に固定してから次へ
                     counter.textContent = "100%";
+                    try {
+                        await bg.decode();
+                    } catch (_) {}
                     tl.play();
                 }
             },
