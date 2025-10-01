@@ -21,11 +21,6 @@ layout > header
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    overflow: hidden;
-    transform: translateZ(0);
-    @include g.mq() {
-        overflow: visible;
-    }
 }
 
 .header-nav {
