@@ -317,6 +317,9 @@ component > bg-wrapper
   pointer-events: none;
   transform: translateY(0%);
   will-change: transform;
+  pointer-events: auto;
+  overscroll-behavior: contain;
+  touch-action: none;
 }
 
 /*!
@@ -368,7 +371,7 @@ component > kv
 }
 
 .c-kv-title {
-  font-size: 40px;
+  font-size: 10vw;
   font-weight: 500;
   line-height: 1;
 }
@@ -397,9 +400,10 @@ component > kv
 
 .c-kv-describe {
   margin-top: 4px;
-  font-size: 28px;
+  font-size: 6vw;
   font-family: var(--font-family-accent);
   font-style: italic;
+  letter-spacing: 0.12em;
 }
 @media screen and (min-width: 500px) {
   .c-kv-describe {
@@ -428,7 +432,6 @@ component > kv
 
 .c-kv-split {
   display: inline-block;
-  will-change: transform, opacity;
 }
 
 .c-kv-scroll-indicator {
@@ -540,6 +543,12 @@ component > description
   overflow: hidden;
   opacity: 0.7;
 }
+.c-gallery-item--vertical {
+  aspect-ratio: 3/4;
+}
+.c-gallery-item--horizontal {
+  aspect-ratio: 4/3;
+}
 @media screen and (min-width: 768px) {
   .c-gallery-item {
     width: 400px;
@@ -604,16 +613,13 @@ component > description
 component >  info
 ------------------------------
 */
-body.is-modal-open {
-  overflow: hidden;
-}
-
 .c-lightbox {
   border: none;
   padding: 0;
   margin: 0;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100%;
   max-height: none;
@@ -621,9 +627,11 @@ body.is-modal-open {
   background-color: var(--bg-black);
   color: var(--font-white);
   z-index: var(--z-index-modal);
-  overflow: auto;
+  overflow-y: auto;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }
 @media screen and (min-width: 768px) {
   .c-lightbox {
@@ -646,7 +654,7 @@ body.is-modal-open {
   width: 90%;
   max-width: var(--width-content);
   height: auto;
-  min-height: 100%;
+  min-height: calc(100% + 1px);
   margin-inline: auto;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -773,6 +781,8 @@ component > hamburger menu
   will-change: opacity;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }
 @media screen and (min-width: 768px) {
   .c-hamburger-menu {
@@ -806,8 +816,8 @@ component > hamburger menu
 }
 
 .c-hamburger-button {
-  font-size: 14px;
-  width: 100px;
+  font-size: 16px;
+  width: 120px;
   font-weight: bold;
   text-align: right;
   position: relative;
@@ -973,13 +983,6 @@ layout > header
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  overflow: hidden;
-  transform: translateZ(0);
-}
-@media screen and (min-width: 768px) {
-  .header-inner {
-    overflow: visible;
-  }
 }
 
 .header-nav {
@@ -1430,9 +1433,9 @@ pages > top > loading
 */
 .top-loading {
   position: fixed;
+  inset: 0;
   width: 100%;
   height: 100%;
-  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1440,6 +1443,9 @@ pages > top > loading
   background-color: var(--bg-base);
   font-family: var(--font-family-counter);
   font-style: italic;
+  pointer-events: auto;
+  overscroll-behavior: contain;
+  touch-action: none;
 }
 @supports (height: 1dvh) {
   .top-loading {

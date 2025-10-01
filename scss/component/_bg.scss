@@ -52,4 +52,7 @@ component > bg-wrapper
     pointer-events: none;
     transform: translateY(0%);
     will-change: transform;
+    pointer-events: auto;
+    overscroll-behavior: contain;
+    touch-action: none;
 }

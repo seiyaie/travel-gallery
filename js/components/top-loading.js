@@ -1,6 +1,7 @@
 // components/top-loading.js
 
 import { setupScrollTopOnReload, markInternalNav } from "../utility/scroll-reset.js";
+import { disableScroll, enableScroll } from "../utility/scroll-lock.js";
 
 export const initTopLoading = () => {
     const loading = document.querySelector(".js-loading");
@@ -17,9 +18,27 @@ export const initTopLoading = () => {
     gsap.set(bg, { scale: 1.15 });
     gsap.set(kv, { y: 50, opacity: 0 });
 
+    // bodyスクロール止め
+    disableScroll();
+
     // ===== 次の演出は一旦停止状態で用意しておく =====
     const tl = gsap.timeline({ paused: true });
-    tl.to(counter, { duration: 0.25, opacity: 0 }).to(loading, { delay: 0.1, duration: 0.6, yPercent: 100, ease }, ">+0.1").to(bg, { scale: 1, ease, duration: 1 }, "<").to(kv, { y: 0, opacity: 1, duration: 0.8, ease }, "<");
+    tl.to(counter, { duration: 0.25, opacity: 0 })
+        .to(loading, { delay: 0.1, duration: 0.6, yPercent: 100, ease }, ">+0.1")
+        .to(bg, { scale: 1, ease, duration: 1 }, "<")
+        .to(
+            kv,
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease,
+                onComplete: () => {
+                    enableScroll();
+                },
+            },
+            "<"
+        );
 
     // === Leave ===
     let isAnimating = false;

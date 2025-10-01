@@ -1,4 +1,5 @@
 // components/hamburger-menu.js
+import { disableScroll, enableScroll } from "../utility/scroll-lock.js";
 export const initHamburgerMenu = () => {
     const menu = document.querySelector(".js-hamburger-menu");
     const openBtn = document.querySelector(".js-hamburger-open-button");
@@ -111,12 +112,14 @@ export const initHamburgerMenu = () => {
         defaults: { ease: "power4.inOut" },
         onStart: () => {
             isAnimating = true;
+            disableScroll();
         },
         onComplete: () => {
             isAnimating = false;
         },
         onReverseComplete: () => {
             isAnimating = false;
+            enableScroll();
             menu.close();
             // メニュー閉じたらスクロールトリガー削除
             ScrollTrigger.getAll().forEach((st) => {
@@ -188,6 +191,7 @@ export const initHamburgerMenu = () => {
         gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
         gsap.set(items, { y: "100%", opacity: 0.4 });
 
+        // disableScroll();
         // 1) 最初のアクティブを決める（例：先頭項目）
         currentActive = items[0] || null;
         closeBtn.focus();
@@ -206,6 +210,7 @@ export const initHamburgerMenu = () => {
     // メニュー閉じる関数
     const closeMenu = () => {
         if (isAnimating || !menu.open) return;
+        // enableScroll();
         openBtn.classList.remove("is-active");
         closeBtn.classList.add("is-active");
         // タイムライン逆再生
