@@ -197,6 +197,7 @@
 
 // components/page-transition.js
 import { setupScrollTopOnReload, markInternalNav } from "../utility/scroll-reset.js";
+import { disableScroll, enableScroll } from "../utility/scroll-lock.js";
 
 export const initPageTransition = () => {
     document.addEventListener("DOMContentLoaded", async () => {
@@ -219,11 +220,36 @@ export const initPageTransition = () => {
             await bg.decode();
         } catch (_) {}
 
+        document.body.style.overflow = "hidden";
+
         requestAnimationFrame(() => {
             gsap.timeline()
-                .to(overlay, { yPercent: 100, duration: 0.6, ease }, 0)
+                .to(
+                    overlay,
+                    {
+                        yPercent: 100,
+                        duration: 0.6,
+                        ease,
+                        onStart: () => {
+                            disableScroll();
+                        },
+                    },
+                    0
+                )
                 .to(bg, { scale: 1, duration: 0.8, ease }, 0)
-                .to(kv, { y: 0, opacity: 1, duration: 0.8, ease }, 0)
+                .to(
+                    kv,
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease,
+                        onComplete: () => {
+                            enableScroll();
+                        },
+                    },
+                    0
+                )
                 .add(() => ScrollTrigger.refresh());
         });
 

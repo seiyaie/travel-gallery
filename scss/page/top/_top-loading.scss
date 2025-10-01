@@ -7,9 +7,9 @@ pages > top > loading
 
 .top-loading {
     position: fixed;
+    inset: 0;
     width: 100%;
     height: 100%;
-    position: fixed;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -17,6 +17,9 @@ pages > top > loading
     background-color: var(--bg-base);
     font-family: var(--font-family-counter);
     font-style: italic;
+    pointer-events: auto;
+    overscroll-behavior: contain;
+    touch-action: none;
     @supports (height: 1dvh) {
         height: 100dvh;
     }
