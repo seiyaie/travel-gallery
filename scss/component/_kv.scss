@@ -28,7 +28,7 @@ component > kv
 }
 
 .c-kv-title {
-    font-size: 40px;
+    font-size: 10vw;
     font-weight: 500;
     line-height: 1;
     @include g.mq(sm) {
@@ -53,9 +53,10 @@ component > kv
 
 .c-kv-describe {
     margin-top: 4px;
-    font-size: 28px;
+    font-size: 6vw;
     font-family: var(--font-family-accent);
     font-style: italic;
+    letter-spacing: 0.12em;
     @include g.mq(sm) {
         font-size: 32px;
     }
@@ -76,7 +77,6 @@ component > kv
 
 .c-kv-split {
     display: inline-block;
-    will-change: transform, opacity;
 }
 
 .c-kv-scroll-indicator {
