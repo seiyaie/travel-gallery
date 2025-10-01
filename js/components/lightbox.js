@@ -1,4 +1,6 @@
 // components/lightbox.js
+import { disableScroll, enableScroll } from "../utility/scroll-lock.js";
+
 export const initLightbox = () => {
     // querySelector（既存）
     const lightbox = document.querySelector(".js-lightbox");
@@ -14,8 +16,6 @@ export const initLightbox = () => {
     // ===== Timeline（1本だけ：順再生=開く／逆再生=閉じる） =====
     let isAnimating = false;
 
-    // if (!lightbox) return;
-
     if (!lightbox || !lightboxImgWrapper || !lightboxImg || !imgName || !closeBtn || !closeBtnText || !lightboxCaption || !lightboxBg) return;
 
     const tl = gsap.timeline({
@@ -23,6 +23,7 @@ export const initLightbox = () => {
         defaults: { ease: "power4.inOut" },
         onStart: () => {
             isAnimating = true;
+            disableScroll();
         },
         onComplete: () => {
             isAnimating = false;
@@ -31,7 +32,7 @@ export const initLightbox = () => {
             isAnimating = false;
             // 逆再生が終わってからdialogをclose
             lightbox.close();
-            document.body.classList.remove("is-modal-open");
+            enableScroll();
         },
     });
 
@@ -39,10 +40,6 @@ export const initLightbox = () => {
     tl.to(lightbox, {
         duration: 0.6,
         clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
-        onStart: () => {
-            // 再生開始時に操作可、スクロール固定
-            document.body.classList.add("is-modal-open");
-        },
     });
 
     // 画像枠もワイプ
@@ -82,6 +79,7 @@ export const initLightbox = () => {
 
         // dialogを開いてからTL再生
         lightbox.showModal();
+        disableScroll();
         tl.timeScale(1).play(0);
     }
 
