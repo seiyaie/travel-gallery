@@ -4,7 +4,7 @@ export const initTopGalleryReveal = () => {
     ScrollTrigger.batch(".js-top-gallery-item", {
         scroller: 'body',
         trigger: '.js-top-gallery-item',
-        start: "center 80%",
+        start: "top 70%",
         onEnter: (batch) => {
             gsap.to(batch, {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
