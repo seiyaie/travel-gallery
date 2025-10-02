@@ -5,8 +5,10 @@ export const initHamburgerMenu = () => {
     const openBtn = document.querySelector(".js-hamburger-open-button");
     const closeBtn = document.querySelector(".js-hamburger-close-button");
     const bg = menu.querySelector(".js-hamburger-bg");
-    const items = Array.from(menu.querySelectorAll(".js-hamburger-country-item a, .js-hamburger-bottom-item a"));
-    console.log(items);
+    const scrollItems = Array.from(menu.querySelectorAll(".js-hamburger-item a"));
+    const hoverItems = Array.from(menu.querySelectorAll(".js-hamburger-bottom-item a"));
+    const items = [...scrollItems, ...hoverItems];
+
     if (!openBtn || !closeBtn || !menu || !bg) return;
 
     //  状態管理
@@ -28,10 +30,10 @@ export const initHamburgerMenu = () => {
             img.decode
                 ? img.decode()
                 : new Promise((res) => {
-                if (img.complete) return res();
-                img.addEventListener("load", res, { once: true });
+                      if (img.complete) return res();
+                      img.addEventListener("load", res, { once: true });
                       img.addEventListener("error", res, { once: true }); // エラーでも先に進む
-                })
+                  })
         ).then(() => {
             imgCache.set(url, true);
         });
@@ -94,7 +96,7 @@ export const initHamburgerMenu = () => {
             if (st.vars.scroller === menu) st.kill();
         });
 
-        items.forEach((item) => {
+        scrollItems.forEach((item) => {
             ScrollTrigger.create({
                 scroller: menu,
                 trigger: item,
@@ -134,19 +136,6 @@ export const initHamburgerMenu = () => {
     tl.to(menu, { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7 })
         // itemsをスライドアップ
         .to(
-            // items,
-            // {
-            //     y: 0,
-            //     duration: 0.4,
-            //     ease: "power3.out",
-            //     onComplete: () => {
-            //         initItemScrollTriggers(); // アニメーション終了後スクロールトリガー作成
-            //         ScrollTrigger.refresh();
-            //         refreshBackground();
-            //         refreshOpacities();
-            //     },
-            // },
-            // ">+0.03"
             items,
             {
                 y: 0,
@@ -156,8 +145,7 @@ export const initHamburgerMenu = () => {
                     initItemScrollTriggers();
                     ScrollTrigger.refresh();
 
-                    // currentActive が未設定なら保険で先頭に
-                    if (!currentActive) currentActive = items[0] || null;
+                    if (!currentActive) currentActive = scrollItems[0] || null;
 
                     await (async () => {
                         const url = getUrl(currentActive);
@@ -170,20 +158,6 @@ export const initHamburgerMenu = () => {
             ">+0.03"
         );
 
-    // メニュー開く関数
-    // const openMenu = () => {
-    //     if (isAnimating || menu.open) return;
-    //     menu.show();
-    //     // menuとitems初期値にセット
-    //     gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
-    //     gsap.set(items, { y: "100%", opacity: 0.4 });
-
-    //     closeBtn.classList.remove("is-active");
-    //     openBtn.classList.add("is-active");
-    //     // タイムライン再生
-    //     tl.play(0);
-    // };
-
     // 修正：openMenu 内で「最初に表示する項目」を決めて先にプリロード
     const openMenu = async () => {
         if (isAnimating || menu.open) return;
@@ -193,7 +167,7 @@ export const initHamburgerMenu = () => {
 
         // disableScroll();
         // 1) 最初のアクティブを決める（例：先頭項目）
-        currentActive = items[0] || null;
+        currentActive = scrollItems[0] || null;
         closeBtn.focus();
 
         // 2) その背景を先に読み込んでおく（初回チラつき防止）
@@ -237,7 +211,7 @@ export const initHamburgerMenu = () => {
 
     // 背景クリックで閉じる
     menu.addEventListener("click", (e) => {
-        if (!e.target.closest(".js-hamburger-country-item, .js-header-logo, .js-hamburger-bottom-item")) {
+        if (!e.target.closest(".js-hamburger-item, .js-header-logo, .js-hamburger-bottom-item")) {
             closeMenu();
         }
     });
