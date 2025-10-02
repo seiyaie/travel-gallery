@@ -5,8 +5,8 @@ export const initHamburgerMenu = () => {
     const openBtn = document.querySelector(".js-hamburger-open-button");
     const closeBtn = document.querySelector(".js-hamburger-close-button");
     const bg = menu.querySelector(".js-hamburger-bg");
-    const items = Array.from(menu.querySelectorAll(".js-hamburger-country-item a"));
-
+    const items = Array.from(menu.querySelectorAll(".js-hamburger-country-item a, .js-hamburger-bottom-item a"));
+    console.log(items);
     if (!openBtn || !closeBtn || !menu || !bg) return;
 
     //  状態管理
@@ -15,7 +15,7 @@ export const initHamburgerMenu = () => {
     let hoverTarget = null; // hover中のitem
     let bgTween = null;
 
-    const getUrl = (item) => item?.parentElement?.dataset.bg || "";
+    const getUrl = (item) => item?.closest("[data-bg]")?.dataset.bg || "";
 
     // 追加：小さなロードヘルパ & キャッシュ
     const imgCache = new Map();
@@ -28,10 +28,10 @@ export const initHamburgerMenu = () => {
             img.decode
                 ? img.decode()
                 : new Promise((res) => {
-                      if (img.complete) return res();
-                      img.addEventListener("load", res, { once: true });
+                if (img.complete) return res();
+                img.addEventListener("load", res, { once: true });
                       img.addEventListener("error", res, { once: true }); // エラーでも先に進む
-                  })
+                })
         ).then(() => {
             imgCache.set(url, true);
         });
@@ -120,13 +120,13 @@ export const initHamburgerMenu = () => {
         onReverseComplete: () => {
             isAnimating = false;
             enableScroll();
-            menu.close();
             // メニュー閉じたらスクロールトリガー削除
             ScrollTrigger.getAll().forEach((st) => {
                 if (st.vars.scroller === menu) st.kill();
             });
             items.forEach((item) => gsap.set(item, { clearProps: "all" }));
             gsap.set(menu, { clearProps: "clipPath,opacity" });
+            menu.close();
         },
     });
 
@@ -237,7 +237,7 @@ export const initHamburgerMenu = () => {
 
     // 背景クリックで閉じる
     menu.addEventListener("click", (e) => {
-        if (!e.target.closest(".js-hamburger-country-item", ".js-header-logo", ".js-hamburger-bottom-item")) {
+        if (!e.target.closest(".js-hamburger-country-item, .js-header-logo, .js-hamburger-bottom-item")) {
             closeMenu();
         }
     });
