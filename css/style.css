@@ -45,9 +45,7 @@ global > z-index
 :root {
   --z-index-page-overlay: 9999;
   --z-index-header: 1000;
-  --z-index-bottom-list: 1000;
-  --z-index-hamburger-list: 100;
-  --z-index-modal: 10;
+  --z-index-modal: 1000;
 }
 
 /*!
@@ -804,15 +802,16 @@ component > hamburger menu
 
 .c-hamburger-menu-header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: var(--z-index-header);
-  inset: 0;
   padding-inline: 5%;
   height: 120px;
   display: flex;
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  transform: translateZ(0);
 }
 
 .c-hamburger-button {
@@ -876,7 +875,6 @@ component > hamburger menu
   top: 50%;
   right: 5%;
   transform: translateY(-1px);
-  z-index: var(--z-index-hamburger-list);
 }
 .c-hamburger-country-list::after {
   content: "";
@@ -927,7 +925,6 @@ component > hamburger menu
 }
 
 .c-hamburger-bottom-list {
-  z-index: var(--z-index-bottom-list);
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -971,6 +968,7 @@ layout > header
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   z-index: var(--z-index-header);
 }
