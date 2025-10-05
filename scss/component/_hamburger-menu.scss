@@ -116,12 +116,11 @@ component > hamburger menu
 }
 
 .c-hamburger-country-item {
-    will-change: opacity, transform;
-    text-align: right;
     overflow: hidden;
 }
 
 .c-hamburger-country-item a {
+    will-change: opacity, transform;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
