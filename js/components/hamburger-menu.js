@@ -138,9 +138,10 @@ export const initHamburgerMenu = () => {
         .to(
             items,
             {
-                y: 0,
+                yPercent: 0,
                 duration: 0.4,
                 ease: "power3.out",
+                snap: { yPercent: 1 },
                 onComplete: async () => {
                     initItemScrollTriggers();
                     ScrollTrigger.refresh();
@@ -163,7 +164,7 @@ export const initHamburgerMenu = () => {
         if (isAnimating || menu.open) return;
         menu.show();
         gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
-        gsap.set(items, { y: "100%", opacity: 0.4 });
+        gsap.set(items, { yPercent: 100, opacity: 0.4 });
 
         // disableScroll();
         // 1) 最初のアクティブを決める（例：先頭項目）
