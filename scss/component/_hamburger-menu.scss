@@ -10,14 +10,14 @@ component > hamburger menu
     position: fixed;
     inset: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 2px);
     color: var(--font-white);
     overflow: auto;
     z-index: var(--z-index-modal);
-    will-change: opacity;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: none;
+    isolation: isolate;
     @include g.mq() {
         display: none;
     }
@@ -38,15 +38,22 @@ component > hamburger menu
 .c-hamburger-menu-header {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    inset-inline: 0;
+    width: 100%;
     z-index: var(--z-index-header);
-    padding-inline: 5%;
+    -webkit-backface-visibility: initial;
+    backface-visibility: initial;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.c-hamburger-menu-header-inner {
     height: 120px;
+    width: 90%;
+    margin-inline: auto;
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .c-hamburger-button {
@@ -55,7 +62,7 @@ component > hamburger menu
     font-weight: bold;
     text-align: right;
     position: relative;
-    padding-block: 3px;
+    padding-block: 4px;
     transition: color 0.3s ease;
     @include g.mq(sm) {
         font-size: 16px;
@@ -65,9 +72,9 @@ component > hamburger menu
         content: "";
         position: absolute;
         right: 0;
-        inset-block-end: -3px;
+        inset-block-end: -4px;
         width: 100%;
-        height: 1px;
+        height: 2px;
         background: rgba(255, 255, 255, 0.35);
         pointer-events: none;
         inset-inline-end: 0;
@@ -75,8 +82,8 @@ component > hamburger menu
     &::before {
         content: "";
         position: absolute;
-        inset-block-end: -3px;
-        height: 1px;
+        inset-block-end: -4px;
+        height: 2px;
         width: 100%;
         background: rgba(255, 255, 255, 1);
         transform: scaleX(0);
@@ -105,9 +112,8 @@ component > hamburger menu
     flex-direction: column;
     align-items: flex-end;
     gap: 16px;
-    top: 50%;
+    top: calc(50% - 2px);
     right: 5%;
-    transform: translateY(-1px);
     &::after {
         content: "";
         display: block;
@@ -117,16 +123,14 @@ component > hamburger menu
 
 .c-hamburger-country-item {
     overflow: hidden;
+    text-align: right;
 }
 
 .c-hamburger-country-item a {
-    will-change: opacity, transform;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: block;
     gap: 4px;
     opacity: 0.4;
-    padding-left: 5px;
+    padding-left: 6px;
     @media (any-hover: hover) {
         &:hover {
             opacity: 1;
