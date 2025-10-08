@@ -23,6 +23,7 @@ component > description
     border-radius: 4px;
     overflow: hidden;
     opacity: 0.7;
+    will-change: transform;
     &--vertical {
         aspect-ratio: 3 / 4;
     }
@@ -74,6 +75,7 @@ component > description
     left: 50%;
     font-weight: 500;
     line-height: 1.4;
+    will-change: transform;
     &--date {
         letter-spacing: 0.08em;
         top: 16px;
