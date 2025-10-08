@@ -1,7 +1,6 @@
 // main.js
 
 import { switchViewport } from "./utility/switch-viewport.js";
-import { refreshOnLazyImages } from "./utility/refresh-on-lazy.js";
 import { initLightbox } from "./components/lightbox.js";
 import { initDropdownMenu } from "./components/dropdown-menu.js";
 import { initKvScroll } from "./components/kv-scroll.js";
