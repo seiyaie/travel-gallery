@@ -14,6 +14,7 @@ export const initScrollArrow = () => {
             duration: 1.2,
             repeat: -1,
             ease: "power.in",
+            snap: { y: 1 },
         }
     );
 
