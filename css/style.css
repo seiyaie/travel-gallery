@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 global > color
 ------------------------------
@@ -44,7 +43,7 @@ global > z-index
 */
 :root {
   --z-index-page-overlay: 9999;
-  --z-index-header: 1000;
+  --z-index-header: 999;
   --z-index-modal: 1000;
 }
 
@@ -265,17 +264,26 @@ component > bg-wrapper
 */
 .c-bg {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
+.c-bg::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--bg-base);
+  z-index: 0;
+}
 .c-bg img {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
+  transform: translateZ(0);
 }
 @supports (height: 1lvh) {
   .c-bg {
@@ -286,8 +294,7 @@ component > bg-wrapper
 .c-body-overlay {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100vh;
   background-color: rgb(0, 0, 0);
@@ -345,8 +352,9 @@ component > kv
 ------------------------------
 */
 .c-kv {
-  min-height: 400px;
+  min-height: 560px;
   height: 100vh;
+  margin-top: -1px;
 }
 @supports (height: 1lvh) {
   .c-kv {
@@ -365,11 +373,11 @@ component > kv
 
 .c-kv-title-wrapper {
   opacity: 0;
-  will-change: transform;
+  contain: paint;
 }
 
 .c-kv-title {
-  font-size: 10vw;
+  font-size: 38px;
   font-weight: 500;
   line-height: 1;
 }
@@ -397,8 +405,9 @@ component > kv
 }
 
 .c-kv-describe {
+  contain: paint;
   margin-top: 4px;
-  font-size: 6vw;
+  font-size: 22px;
   font-family: var(--font-family-accent);
   font-style: italic;
   letter-spacing: 0.12em;
@@ -433,12 +442,11 @@ component > kv
 }
 
 .c-kv-scroll-indicator {
-  display: inline-flex;
+  position: absolute;
+  display: flex;
   align-items: center;
   gap: 4px;
-  position: absolute;
-  right: 5%;
-  overflow: hidden;
+  right: 20px;
   bottom: 120px;
 }
 @media screen and (min-width: 768px) {
@@ -453,9 +461,15 @@ component > kv
   font-weight: bold;
 }
 
+.c-kv-scroll-viewport {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
 .c-kv-scroll-arrow {
-  color: white;
-  display: inline-block;
+  display: block;
+  pointer-events: none;
 }
 
 /*!
@@ -540,6 +554,7 @@ component > description
   border-radius: 4px;
   overflow: hidden;
   opacity: 0.7;
+  will-change: transform;
 }
 .c-gallery-item--vertical {
   aspect-ratio: 3/4;
@@ -598,6 +613,7 @@ component > description
   left: 50%;
   font-weight: 500;
   line-height: 1.4;
+  will-change: transform;
 }
 .c-gallery-item-label--date {
   letter-spacing: 0.08em;
@@ -616,10 +632,9 @@ component >  info
   padding: 0;
   margin: 0;
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
-  height: 100%;
+  height: calc(100% + 2px);
   max-height: none;
   max-width: none;
   background-color: var(--bg-black);
@@ -772,15 +787,15 @@ component > hamburger menu
   position: fixed;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 2px);
   color: var(--font-white);
   overflow: auto;
   z-index: var(--z-index-modal);
-  will-change: opacity;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
+  isolation: isolate;
 }
 @media screen and (min-width: 768px) {
   .c-hamburger-menu {
@@ -803,15 +818,21 @@ component > hamburger menu
 .c-hamburger-menu-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
+  width: 100%;
   z-index: var(--z-index-header);
-  padding-inline: 5%;
+  backface-visibility: initial;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.c-hamburger-menu-header-inner {
   height: 120px;
+  width: 90%;
+  margin-inline: auto;
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .c-hamburger-button {
@@ -820,7 +841,7 @@ component > hamburger menu
   font-weight: bold;
   text-align: right;
   position: relative;
-  padding-block: 3px;
+  padding-block: 4px;
   transition: color 0.3s ease;
 }
 @media screen and (min-width: 500px) {
@@ -833,9 +854,9 @@ component > hamburger menu
   content: "";
   position: absolute;
   right: 0;
-  inset-block-end: -3px;
+  inset-block-end: -4px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: rgba(255, 255, 255, 0.35);
   pointer-events: none;
   inset-inline-end: 0;
@@ -843,8 +864,8 @@ component > hamburger menu
 .c-hamburger-button::before {
   content: "";
   position: absolute;
-  inset-block-end: -3px;
-  height: 1px;
+  inset-block-end: -4px;
+  height: 2px;
   width: 100%;
   background: rgb(255, 255, 255);
   transform: scaleX(0);
@@ -872,9 +893,8 @@ component > hamburger menu
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
-  top: 50%;
+  top: calc(50% - 2px);
   right: 5%;
-  transform: translateY(-1px);
 }
 .c-hamburger-country-list::after {
   content: "";
@@ -883,18 +903,15 @@ component > hamburger menu
 }
 
 .c-hamburger-country-item {
-  will-change: opacity, transform;
-  text-align: right;
   overflow: hidden;
+  text-align: right;
 }
 
 .c-hamburger-country-item a {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: block;
   gap: 4px;
   opacity: 0.4;
-  padding-left: 5px;
+  padding-left: 6px;
 }
 @media (any-hover: hover) {
   .c-hamburger-country-item a:hover {
@@ -967,8 +984,7 @@ layout > header
 .header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   width: 100%;
   z-index: var(--z-index-header);
 }
@@ -1030,16 +1046,16 @@ layout > header
   width: 100%;
   position: relative;
   display: inline-block;
-  padding-block: 3px; /* 下線との距離調整 */
+  padding-block: 4px;
   transition: color 0.3s ease;
 }
 .header-button::after {
   content: "";
   position: absolute;
   right: 0;
-  inset-block-end: -3px;
+  inset-block-end: -4px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: rgba(255, 255, 255, 0.35);
   pointer-events: none;
 }
@@ -1051,8 +1067,8 @@ layout > header
 .header-button::before {
   content: "";
   position: absolute;
-  inset-block-end: -3px;
-  height: 1px;
+  inset-block-end: -4px;
+  height: 2px;
   width: 100%;
   background: rgb(255, 255, 255);
   transform: scaleX(0);
