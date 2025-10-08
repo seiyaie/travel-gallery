@@ -72,7 +72,6 @@ function createTriggerFor(item) {
         trigger: item,
         start: "top 70%",
         end: "bottom 30%",
-        markers: true, // デバッグ時のみ
         onToggle: (self) => (self.isActive ? playIn(item, labels) : playOut(item, labels)),
     });
     // onEnter: () => playIn(item, labels),
@@ -98,7 +97,12 @@ export const initGalleryLabelReveal = () => {
 
         // 既に読み込み済み（キャッシュ含む）→ 即作成（必要に応じてdecodeでさらに確実に）
         if (img.complete && img.naturalWidth > 0) {
-            createTriggerFor(item);
+            (async () => {
+                try {
+                    await img.decode();
+                } catch (_) {}
+                createTriggerFor(item);
+            })();
             return;
         }
 
