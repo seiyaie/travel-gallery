@@ -4,18 +4,15 @@
 component >  info
 ------------------------------
 */
-// body.is-modal-open {
-//     overflow: hidden;
-// }
+
 .c-lightbox {
     border: none;
     padding: 0;
     margin: 0;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100vw;
-    height: 100%;
+    height: calc(100% + 2px);
     max-height: none;
     max-width: none;
     background-color: var(--bg-black);
