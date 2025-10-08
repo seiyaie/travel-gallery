@@ -6,8 +6,9 @@ component > kv
 */
 
 .c-kv {
-    min-height: 400px;
+    min-height: 560px;
     height: 100vh;
+    margin-top: -1px;
     @supports (height: 1lvh) {
         height: 100lvh;
     }
@@ -24,11 +25,11 @@ component > kv
 
 .c-kv-title-wrapper {
     opacity: 0;
-    will-change: transform;
+    contain: paint;
 }
 
 .c-kv-title {
-    font-size: 10vw;
+    font-size: 38px;
     font-weight: 500;
     line-height: 1;
     @include g.mq(sm) {
@@ -52,8 +53,9 @@ component > kv
 }
 
 .c-kv-describe {
+    contain: paint;
     margin-top: 4px;
-    font-size: 6vw;
+    font-size: 22px;
     font-family: var(--font-family-accent);
     font-style: italic;
     letter-spacing: 0.12em;
@@ -80,13 +82,13 @@ component > kv
 }
 
 .c-kv-scroll-indicator {
-    display: inline-flex;
+    position: absolute;
+    display: flex;
     align-items: center;
     gap: 4px;
-    position: absolute;
-    right: 5%;
-    overflow: hidden;
+    right: 20px;
     bottom: 120px;
+
     @include g.mq() {
         bottom: 32px;
         right: 50%;
@@ -98,7 +100,13 @@ component > kv
     font-weight: bold;
 }
 
+.c-kv-scroll-viewport {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
 .c-kv-scroll-arrow {
-    color: white;
-    display: inline-block;
+    display: block;
+    pointer-events: none;
 }
