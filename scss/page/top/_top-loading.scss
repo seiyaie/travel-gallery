@@ -20,6 +20,7 @@ pages > top > loading
     pointer-events: auto;
     overscroll-behavior: contain;
     touch-action: none;
+    transform: translateZ(0);
     @supports (height: 1dvh) {
         height: 100dvh;
     }
@@ -29,4 +30,5 @@ pages > top > loading
     font-size: 20vw;
     padding: 0.2em 0.4em;
     color: var(--font-color-number);
+    will-change: contents;
 }
