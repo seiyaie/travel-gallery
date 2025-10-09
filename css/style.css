@@ -268,13 +268,8 @@ component > bg-wrapper
   height: 100vh;
   width: 100%;
   overflow: hidden;
-}
-.c-bg::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: var(--bg-base);
-  z-index: 0;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 .c-bg img {
   position: relative;
@@ -282,8 +277,7 @@ component > bg-wrapper
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
-  transform: translateZ(0);
+  display: block;
 }
 @supports (height: 1lvh) {
   .c-bg {
@@ -354,7 +348,6 @@ component > kv
 .c-kv {
   min-height: 560px;
   height: 100vh;
-  margin-top: -1px;
 }
 @supports (height: 1lvh) {
   .c-kv {
@@ -1460,6 +1453,7 @@ pages > top > loading
   pointer-events: auto;
   overscroll-behavior: contain;
   touch-action: none;
+  transform: translateZ(0);
 }
 @supports (height: 1dvh) {
   .top-loading {
@@ -1471,6 +1465,7 @@ pages > top > loading
   font-size: 20vw;
   padding: 0.2em 0.4em;
   color: var(--font-color-number);
+  will-change: contents;
 }
 
 /*!
