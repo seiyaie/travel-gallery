@@ -13,6 +13,17 @@ export const initTopLoading = () => {
     setupScrollTopOnReload({ kvSelector: ".js-kv", once: false });
 
     if (!loading || !counter) return;
+    
+// ===== ローディング画面初期状態 =====
+    gsap.set(counter, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+    });
+
+    gsap.set(loading, {
+        yPercent: 0,
+    });
 
     // ===== 背景・タイトル初期状態 =====
     gsap.set(bg, { scale: 1.15 });
