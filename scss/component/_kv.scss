@@ -8,7 +8,6 @@ component > kv
 .c-kv {
     min-height: 560px;
     height: 100vh;
-    margin-top: -1px;
     @supports (height: 1lvh) {
         height: 100lvh;
     }
