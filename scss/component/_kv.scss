@@ -8,6 +8,8 @@ component > kv
 .c-kv {
     min-height: 560px;
     height: 100vh;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     @supports (height: 1lvh) {
         height: 100lvh;
     }

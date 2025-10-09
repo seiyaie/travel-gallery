@@ -27,7 +27,6 @@ component > bg-wrapper
 }
 
 .c-body-overlay {
-    content: "";
     position: fixed;
     inset: 0;
     width: 100%;
@@ -35,6 +34,8 @@ component > bg-wrapper
     background-color: rgba(0, 0, 0);
     opacity: 0.5;
     pointer-events: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     &--about {
         opacity: 0.8;
     }
@@ -53,8 +54,6 @@ component > bg-wrapper
     background: var(--bg-base);
     z-index: var(--z-index-page-overlay);
     pointer-events: none;
-    transform: translateY(0%);
-    will-change: transform;
     pointer-events: auto;
     overscroll-behavior: contain;
     touch-action: none;

@@ -11,6 +11,8 @@ layout > header
     inset-inline: 0;
     width: 100%;
     z-index: var(--z-index-header);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .header-inner {

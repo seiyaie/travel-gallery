@@ -286,7 +286,6 @@ component > bg-wrapper
 }
 
 .c-body-overlay {
-  content: "";
   position: fixed;
   inset: 0;
   width: 100%;
@@ -294,6 +293,7 @@ component > bg-wrapper
   background-color: rgb(0, 0, 0);
   opacity: 0.5;
   pointer-events: none;
+  backface-visibility: hidden;
 }
 .c-body-overlay--about {
   opacity: 0.8;
@@ -314,8 +314,6 @@ component > bg-wrapper
   background: var(--bg-base);
   z-index: var(--z-index-page-overlay);
   pointer-events: none;
-  transform: translateY(0%);
-  will-change: transform;
   pointer-events: auto;
   overscroll-behavior: contain;
   touch-action: none;
@@ -348,6 +346,7 @@ component > kv
 .c-kv {
   min-height: 560px;
   height: 100vh;
+  backface-visibility: hidden;
 }
 @supports (height: 1lvh) {
   .c-kv {
@@ -980,6 +979,7 @@ layout > header
   inset-inline: 0;
   width: 100%;
   z-index: var(--z-index-header);
+  backface-visibility: hidden;
 }
 
 .header-inner {
