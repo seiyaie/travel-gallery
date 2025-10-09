@@ -11,20 +11,15 @@ component > bg-wrapper
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    &::after {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        background: var(--bg-base);
-        z-index: 0;
-    }
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     img {
         position: relative;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 1;
-        transform: translateZ(0);
+        display: block;
     }
     @supports (height: 1lvh) {
         height: 100lvh;
