@@ -1,6 +1,4 @@
 // main.js
-
-import { switchViewport } from "./utility/switch-viewport.js";
 import { initLightbox } from "./components/lightbox.js";
 import { initDropdownMenu } from "./components/dropdown-menu.js";
 import { initKvScroll } from "./components/kv-scroll.js";
@@ -13,8 +11,6 @@ import { initScrollArrow } from "./components/scroll-arrow.js";
 import { initTopLoading } from "./components/top-loading.js";
 import { initDescReveal } from "./components/description-reveal.js";
 
-switchViewport();
-window.addEventListener("resize", switchViewport);
 initTopLoading();
 initPageTransition();
 initLightbox();
