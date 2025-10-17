@@ -12,8 +12,6 @@ component > bg-wrapper
     width: 100%;
     overflow: hidden;
     will-change: transform;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     img {
         position: relative;
         width: 100%;
@@ -34,8 +32,7 @@ component > bg-wrapper
     background-color: rgba(0, 0, 0);
     opacity: 0.5;
     pointer-events: none;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+
     &--about {
         opacity: 0.8;
     }
