@@ -30,9 +30,12 @@ component > kv
 }
 
 .c-kv-title {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1;
+    @include g.mq(xs) {
+        font-size: 38px;
+    }
     @include g.mq(sm) {
         font-size: 48px;
     }
@@ -56,10 +59,13 @@ component > kv
 .c-kv-describe {
     contain: paint;
     margin-top: 4px;
-    font-size: 22px;
     font-family: var(--font-family-accent);
     font-style: italic;
     letter-spacing: 0.12em;
+    font-size: 18px;
+    @include g.mq(xs) {
+        font-size: 22px;
+    }
     @include g.mq(sm) {
         font-size: 32px;
     }
