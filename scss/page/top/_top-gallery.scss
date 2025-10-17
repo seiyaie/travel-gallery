@@ -50,9 +50,9 @@ pages > top > gallery
     margin-top: 16px;
     font-family: var(--font-family-label);
     span {
-        display: inline-block;
-        @include g.mq(sm) {
-            display: block;
+        display: block;
+        @include g.mq(lg) {
+            display: inline-block;
         }
         &:first-child {
             font-size: 18px;
