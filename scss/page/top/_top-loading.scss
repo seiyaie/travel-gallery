@@ -13,14 +13,13 @@ pages > top > loading
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    z-index: 10000;
+    z-index: var(--z-index-page-overlay);
     background-color: var(--bg-base);
     font-family: var(--font-family-counter);
     font-style: italic;
     pointer-events: auto;
     overscroll-behavior: contain;
     touch-action: none;
-    transform: translateZ(0);
     @supports (height: 1dvh) {
         height: 100dvh;
     }
