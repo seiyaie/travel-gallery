@@ -43,7 +43,7 @@ global > z-index
 */
 :root {
   --z-index-page-overlay: 9999;
-  --z-index-header: 999;
+  --z-index-header: 100;
   --z-index-modal: 1000;
 }
 
@@ -269,7 +269,6 @@ component > bg-wrapper
   width: 100%;
   overflow: hidden;
   will-change: transform;
-  backface-visibility: hidden;
 }
 .c-bg img {
   position: relative;
@@ -293,7 +292,6 @@ component > bg-wrapper
   background-color: rgb(0, 0, 0);
   opacity: 0.5;
   pointer-events: none;
-  backface-visibility: hidden;
 }
 .c-body-overlay--about {
   opacity: 0.8;
@@ -369,9 +367,14 @@ component > kv
 }
 
 .c-kv-title {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1;
+}
+@media screen and (min-width: 375px) {
+  .c-kv-title {
+    font-size: 38px;
+  }
 }
 @media screen and (min-width: 500px) {
   .c-kv-title {
@@ -399,10 +402,15 @@ component > kv
 .c-kv-describe {
   contain: paint;
   margin-top: 4px;
-  font-size: 22px;
   font-family: var(--font-family-accent);
   font-style: italic;
   letter-spacing: 0.12em;
+  font-size: 18px;
+}
+@media screen and (min-width: 375px) {
+  .c-kv-describe {
+    font-size: 22px;
+  }
 }
 @media screen and (min-width: 500px) {
   .c-kv-describe {
@@ -787,7 +795,6 @@ component > hamburger menu
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
-  isolation: isolate;
 }
 @media screen and (min-width: 768px) {
   .c-hamburger-menu {
@@ -828,12 +835,12 @@ component > hamburger menu
 }
 
 .c-hamburger-button {
-  font-size: 16px;
-  width: 120px;
+  font-size: 14px;
+  width: 100px;
   font-weight: bold;
   text-align: right;
   position: relative;
-  padding-block: 4px;
+  padding-block: 2px;
   transition: color 0.3s ease;
 }
 @media screen and (min-width: 500px) {
@@ -842,21 +849,31 @@ component > hamburger menu
     width: 120px;
   }
 }
+@media screen and (min-width: 768px) {
+  .c-hamburger-button {
+    padding-block: 4px;
+  }
+}
 .c-hamburger-button::after {
   content: "";
   position: absolute;
   right: 0;
-  inset-block-end: -4px;
+  inset-block-end: -2px;
   width: 100%;
   height: 2px;
   background: rgba(255, 255, 255, 0.35);
   pointer-events: none;
   inset-inline-end: 0;
 }
+@media screen and (min-width: 768px) {
+  .c-hamburger-button::after {
+    inset-block-end: -4px;
+  }
+}
 .c-hamburger-button::before {
   content: "";
   position: absolute;
-  inset-block-end: -4px;
+  inset-block-end: -2px;
   height: 2px;
   width: 100%;
   background: rgb(255, 255, 255);
@@ -865,6 +882,11 @@ component > hamburger menu
   pointer-events: none;
   transform-origin: right;
   inset-inline-end: 0;
+}
+@media screen and (min-width: 768px) {
+  .c-hamburger-button::before {
+    inset-block-end: -4px;
+  }
 }
 @media (any-hover: hover) {
   .c-hamburger-button:hover::before {
@@ -979,7 +1001,6 @@ layout > header
   inset-inline: 0;
   width: 100%;
   z-index: var(--z-index-header);
-  backface-visibility: hidden;
 }
 
 .header-inner {
@@ -1002,11 +1023,16 @@ layout > header
 }
 .header-logo a {
   display: inline-block;
-  width: 159px;
+  width: 140px;
   height: auto;
 }
 .header-logo a:focus:not(:focus-visible) {
   outline: none;
+}
+@media screen and (min-width: 375px) {
+  .header-logo a {
+    width: 159px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-logo a {
@@ -1024,14 +1050,19 @@ layout > header
 }
 
 .header-item {
-  font-size: 16px;
-  width: 120px;
+  font-size: 14px;
+  width: 100px;
   font-weight: bold;
+}
+@media screen and (min-width: 500px) {
+  .header-item {
+    font-size: 16px;
+    width: 120px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-item {
     font-size: 18px;
-    width: 120px;
   }
 }
 
@@ -1039,14 +1070,19 @@ layout > header
   width: 100%;
   position: relative;
   display: inline-block;
-  padding-block: 4px;
+  padding-block: 2px;
   transition: color 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .header-button {
+    padding-block: 4px;
+  }
 }
 .header-button::after {
   content: "";
   position: absolute;
   right: 0;
-  inset-block-end: -4px;
+  inset-block-end: -2px;
   width: 100%;
   height: 2px;
   background: rgba(255, 255, 255, 0.35);
@@ -1054,15 +1090,15 @@ layout > header
 }
 @media screen and (min-width: 768px) {
   .header-button::after {
-    height: 2px;
+    inset-block-end: -4px;
   }
 }
 .header-button::before {
   content: "";
   position: absolute;
-  inset-block-end: -4px;
-  height: 2px;
+  inset-block-end: -2px;
   width: 100%;
+  height: 2px;
   background: rgb(255, 255, 255);
   transform: scaleX(0);
   transition: transform 0.4s ease;
@@ -1070,7 +1106,7 @@ layout > header
 }
 @media screen and (min-width: 768px) {
   .header-button::before {
-    height: 2px;
+    inset-block-end: -4px;
   }
 }
 @media (any-hover: hover) {
@@ -1400,11 +1436,11 @@ pages > top > gallery
   font-family: var(--font-family-label);
 }
 .top-gallery-item-label span {
-  display: inline-block;
+  display: block;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1080px) {
   .top-gallery-item-label span {
-    display: block;
+    display: inline-block;
   }
 }
 .top-gallery-item-label span:first-child {
@@ -1446,14 +1482,13 @@ pages > top > loading
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  z-index: 10000;
+  z-index: var(--z-index-page-overlay);
   background-color: var(--bg-base);
   font-family: var(--font-family-counter);
   font-style: italic;
   pointer-events: auto;
   overscroll-behavior: contain;
   touch-action: none;
-  transform: translateZ(0);
 }
 @supports (height: 1dvh) {
   .top-loading {
