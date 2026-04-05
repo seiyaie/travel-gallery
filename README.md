@@ -1,5 +1,7 @@
 # Webサイト：Travel Gallery
 
+![Travel Gallery サムネイル](./img/docs/thumbnail.jpg)
+
 ## 概要
 
 過去に訪れた国々で撮影した写真をまとめたギャラリーサイトです。  
