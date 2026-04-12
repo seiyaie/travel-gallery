@@ -19,7 +19,8 @@ pages > top > gallery
 
 .top-gallery-item {
     will-change: clip-path;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    clip-path: inset( 0 0 100% 0);
+    -webkit-clip-path: inset( 0 0 100% 0);
     border: 1px solid var(--border-base);
     height: 300px;
     width: 100%;

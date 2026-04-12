@@ -133,7 +133,7 @@ export const initHamburgerMenu = () => {
     });
 
     // menuをしたから上に開く
-    tl.to(menu, { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7 })
+    tl.to(menu, { clipPath: "inset(0% 0 0 0)", webkitClipPath: "inset(0% 0 0 0)", duration: 0.7 })
         // itemsをスライドアップ
         .to(
             items,
@@ -163,7 +163,7 @@ export const initHamburgerMenu = () => {
     const openMenu = async () => {
         if (isAnimating || menu.open) return;
         menu.show();
-        gsap.set(menu, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 1 });
+        gsap.set(menu, { clipPath: "inset(100% 0 0 0)", webkitClipPath: "inset(100% 0 0 0)", opacity: 1 });
         gsap.set(items, { yPercent: 100, opacity: 0.4 });
 
         // disableScroll();

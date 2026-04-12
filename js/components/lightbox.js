@@ -33,6 +33,20 @@ export const initLightbox = () => {
             isAnimating = false;
             // 逆再生が終わってからdialogをclose
             lightbox.close();
+            gsap.set(lightbox, {
+                clipPath: "inset(100% 0 0 0)",
+                webkitClipPath: "inset(100% 0 0 0)",
+            });
+
+            gsap.set([lightboxImgWrapper, lightboxCaption], {
+                clipPath: "inset(100% 0 0 0)",
+                webkitClipPath: "inset(100% 0 0 0)",
+            });
+
+            gsap.set([imgName, closeBtnText], {
+                top: 25,
+            });
+
             enableScroll();
         },
     });
@@ -40,7 +54,6 @@ export const initLightbox = () => {
     // クリップパスを「開いた形」へ
     tl.to(lightbox, {
         duration: 0.6,
-        // clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
         clipPath: "inset(0% 0 0 0)",
         webkitClipPath: "inset(0% 0 0 0)",
     });
@@ -70,24 +83,38 @@ export const initLightbox = () => {
     );
 
     // アニメーション初期化
-    tl.reverse(0);
+    tl.pause(0);
 
     // ===== 開く処理 =====
     function openLightbox({ src, title, caption }) {
         if (isAnimating) return;
 
-        // 中身セット（表示前）
         lightboxImg.src = src || "";
         imgName.textContent = title || "";
         lightboxCaptionText.textContent = caption || "";
 
-        // dialogを開いてからTL再生
         lightbox.showModal();
-        disableScroll();
+
+        // showModal後に初期状態を明示的にセット
+        gsap.set(lightbox, {
+            clipPath: "inset(100% 0 0 0)",
+            webkitClipPath: "inset(100% 0 0 0)",
+        });
+
+        gsap.set([lightboxImgWrapper, lightboxCaption], {
+            clipPath: "inset(100% 0 0 0)",
+            webkitClipPath: "inset(100% 0 0 0)",
+        });
+
+        gsap.set([imgName, closeBtnText], {
+            top: 25,
+        });
+
+        // 強制的に再レイアウト
+        lightbox.offsetHeight;
+
         requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                tl.timeScale(1).play(0);
-            });
+            tl.invalidate().restart();
         });
     }
 

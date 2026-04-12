@@ -14,7 +14,8 @@ component > hamburger menu
     color: var(--font-white);
     overflow: auto;
     z-index: var(--z-index-modal);
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0);
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: none;
     @include g.mq() {
