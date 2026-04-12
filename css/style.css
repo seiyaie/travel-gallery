@@ -641,8 +641,7 @@ component >  info
   color: var(--font-white);
   z-index: var(--z-index-modal);
   overflow-y: auto;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
 }
@@ -704,8 +703,7 @@ component >  info
   min-height: clamp(200px, 50vh, 70vh);
   height: 100%;
   overflow: hidden;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 .c-lightbox-img img {
   max-width: 100%;
@@ -749,8 +747,7 @@ component >  info
   min-height: 0;
   padding: 16px;
   font-size: 14px;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 @media screen and (min-width: 768px) {
   .c-lightbox-caption {
@@ -791,8 +788,7 @@ component > hamburger menu
   color: var(--font-white);
   overflow: auto;
   z-index: var(--z-index-modal);
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
 }
@@ -1252,7 +1248,7 @@ layout > footer
 }
 
 .footer-nav {
-  padding: 16px;
+  padding-block: 16px;
 }
 
 .footer-list {
@@ -1401,8 +1397,7 @@ pages > top > gallery
 
 .top-gallery-item {
   will-change: clip-path;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   border: 1px solid var(--border-base);
   height: 300px;
   width: 100%;
