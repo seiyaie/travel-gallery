@@ -634,7 +634,7 @@ component >  info
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: calc(100% + 2px);
+  height: 100dvh;
   max-height: none;
   max-width: none;
   background-color: var(--bg-black);
@@ -667,7 +667,7 @@ component >  info
   width: 90%;
   max-width: var(--width-content);
   height: auto;
-  min-height: calc(100% + 1px);
+  min-height: 100dvh;
   margin-inline: auto;
   display: grid;
   grid-template-rows: 1fr auto;
