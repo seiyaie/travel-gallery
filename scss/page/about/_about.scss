@@ -15,8 +15,7 @@ pages > about > about
     gap: 24px;
     @include g.mq() {
         align-items: start;
-        grid-template-columns: minmax(300px, 1fr) 1fr;
-        gap: 40px;
+        grid-template-columns: minmax(360px, 1fr) 1fr;
     }
     @include g.mq(lg) {
         gap: 60px;
@@ -48,6 +47,9 @@ pages > about > about
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @include g.mq(lg) {
+        gap: 40px;
+    }
 }
 
 .about-me-name {
@@ -83,17 +85,36 @@ pages > about > about
     }
 }
 
+.about-me-skill-list {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 0;
+}
+
+.about-me-skill-item {
+    @include g.mq() {
+        font-size: 16px;
+    }
+    @include g.mq(lg) {
+        font-size: 20px;
+    }
+    &:not(:last-child)::after {
+        margin-inline: 0.5em;
+        content: "/";
+    }
+}
+
 .about-site {
     margin-top: 24px;
+    @include g.mq() {
+        margin-top: 40px;
+    }
 }
 
 .about-site-text {
-    font-size: 16px;
     margin-top: 24px;
-    @include g.mq() {
-        font-size: 18px;
-    }
-    @include g.mq() {
+    @include g.mq(lg) {
         font-size: 20px;
     }
 }

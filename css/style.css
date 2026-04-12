@@ -1511,8 +1511,7 @@ pages > about > about
 @media screen and (min-width: 768px) {
   .about-me {
     align-items: start;
-    grid-template-columns: minmax(300px, 1fr) 1fr;
-    gap: 40px;
+    grid-template-columns: minmax(360px, 1fr) 1fr;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -1548,6 +1547,11 @@ pages > about > about
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media screen and (min-width: 1080px) {
+  .about-me-description {
+    gap: 40px;
+  }
 }
 
 .about-me-name {
@@ -1587,20 +1591,41 @@ pages > about > about
   margin-top: 16px;
 }
 
+.about-me-skill-list {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-skill-item {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .about-me-skill-item {
+    font-size: 20px;
+  }
+}
+.about-me-skill-item:not(:last-child)::after {
+  margin-inline: 0.5em;
+  content: "/";
+}
+
 .about-site {
   margin-top: 24px;
 }
-
-.about-site-text {
-  font-size: 16px;
-  margin-top: 24px;
-}
 @media screen and (min-width: 768px) {
-  .about-site-text {
-    font-size: 18px;
+  .about-site {
+    margin-top: 40px;
   }
 }
-@media screen and (min-width: 768px) {
+
+.about-site-text {
+  margin-top: 24px;
+}
+@media screen and (min-width: 1080px) {
   .about-site-text {
     font-size: 20px;
   }
