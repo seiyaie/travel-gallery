@@ -19,7 +19,8 @@ component >  info
     color: var(--font-white);
     z-index: var(--z-index-modal);
     overflow-y: auto;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0);
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: none;
     @include g.mq() {
@@ -68,6 +69,12 @@ component >  info
     }
 }
 
+.c-lightbox-img,
+.c-lightbox-caption {
+    clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0);
+}
+
 .c-lightbox-img {
     display: flex;
     align-items: center;
@@ -75,13 +82,12 @@ component >  info
     min-height: clamp(200px, 50vh, 70vh);
     height: 100%;
     overflow: hidden;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     img {
         max-width: 100%;
         max-height: 100%;
         width: auto;
         height: auto;
-        object-fit: contain; 
+        object-fit: contain;
         display: block;
         margin-inline: auto;
     }
@@ -116,7 +122,6 @@ component >  info
     min-height: 0;
     padding: 16px;
     font-size: 14px;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     @include g.mq() {
         font-size: 16px;
     }

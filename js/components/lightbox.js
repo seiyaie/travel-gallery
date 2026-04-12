@@ -2,7 +2,7 @@
 import { disableScroll, enableScroll } from "../utility/scroll-lock.js";
 
 export const initLightbox = () => {
-    // querySelector（既存）
+    // querySelector
     const lightbox = document.querySelector(".js-lightbox");
     const thumbnails = document.querySelectorAll(".js-gallery-item button");
     const lightboxImgWrapper = document.querySelector(".js-lightbox-img-wrapper");
@@ -11,6 +11,7 @@ export const initLightbox = () => {
     const closeBtn = document.querySelector(".js-lightbox-close-btn");
     const closeBtnText = document.querySelector(".js-lightbox-close-btn-text");
     const lightboxCaption = document.querySelector(".js-lightbox-caption");
+    const lightboxCaptionText = document.querySelector(".js-lightbox-caption p");
     const lightboxBg = document.querySelector(".js-lightbox-bg");
 
     // ===== Timeline（1本だけ：順再生=開く／逆再生=閉じる） =====
@@ -39,7 +40,9 @@ export const initLightbox = () => {
     // クリップパスを「開いた形」へ
     tl.to(lightbox, {
         duration: 0.6,
-        clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+        // clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+        clipPath: "inset(0% 0 0 0)",
+        webkitClipPath: "inset(0% 0 0 0)",
     });
 
     // 画像枠もワイプ
@@ -47,7 +50,8 @@ export const initLightbox = () => {
         [lightboxImgWrapper, lightboxCaption],
         {
             duration: 1,
-            clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+            clipPath: "inset(0% 0 0 0)",
+            webkitClipPath: "inset(0% 0 0 0)",
             stagger: {
                 amount: 0.1,
             },
@@ -75,12 +79,16 @@ export const initLightbox = () => {
         // 中身セット（表示前）
         lightboxImg.src = src || "";
         imgName.textContent = title || "";
-        lightboxCaption.textContent = caption || "";
+        lightboxCaptionText.textContent = caption || "";
 
         // dialogを開いてからTL再生
         lightbox.showModal();
         disableScroll();
-        tl.timeScale(1).play(0);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                tl.timeScale(1).play(0);
+            });
+        });
     }
 
     // ===== 閉じる処理 =====
