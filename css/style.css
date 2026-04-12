@@ -1262,7 +1262,7 @@ layout > footer
   .footer-list {
     display: grid;
     align-items: start;
-    grid-template-columns: minmax(220px, 320px) 1fr;
+    grid-template-columns: minmax(100px, 250px) 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "contact country" "about   country";
     -moz-column-gap: 48px;
@@ -1293,11 +1293,13 @@ layout > footer
 .footer-item--country {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 8px;
   max-width: 500px;
 }
 @media screen and (min-width: 768px) {
   .footer-item--country {
+    min-width: 420px;
     grid-area: country;
   }
 }
@@ -1310,17 +1312,12 @@ layout > footer
 .footer-submenu {
   display: grid;
   grid-template-rows: repeat(9, auto);
-  gap: 8px;
+  gap: 12px;
   grid-auto-flow: column;
 }
 @media screen and (min-width: 500px) {
   .footer-submenu {
     grid-template-rows: repeat(6, auto);
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer-submenu {
-    gap: 4px;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -1334,7 +1331,7 @@ layout > footer
   color: var(--font-gray);
   font-size: 14px;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .footer-submenu-item {

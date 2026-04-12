@@ -44,7 +44,7 @@ layout > footer
     @include g.mq() {
         display: grid;
         align-items: start;
-        grid-template-columns: minmax(220px, 320px) 1fr;
+        grid-template-columns: minmax(100px, 250px) 1fr;
         grid-template-rows: auto auto;
         grid-template-areas:
             "contact country"
@@ -74,9 +74,11 @@ layout > footer
 .footer-item--country {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     gap: 8px;
     max-width: 500px;
     @include g.mq() {
+        min-width: 420px;
         grid-area: country;
     }
     @include g.mq(lg) {
@@ -87,13 +89,10 @@ layout > footer
 .footer-submenu {
     display: grid;
     grid-template-rows: repeat(ceil(17/2), auto);
-    gap: 8px;
+    gap: 12px;
     grid-auto-flow: column;
     @include g.mq(sm) {
         grid-template-rows: repeat(ceil(17/3), auto);
-    }
-    @include g.mq() {
-        gap: 4px;
     }
     @include g.mq(lg) {
         grid-template-rows: repeat(ceil(17/5), auto);
@@ -105,7 +104,7 @@ layout > footer
     color: var(--font-gray);
     font-size: 14px;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     @include g.mq() {
         font-size: 16px;
     }
