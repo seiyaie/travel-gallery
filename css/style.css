@@ -634,7 +634,7 @@ component >  info
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   max-height: none;
   max-width: none;
   background-color: var(--bg-black);
@@ -646,9 +646,9 @@ component >  info
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
 }
-@media screen and (min-width: 768px) {
+@supports (height: 1dvh) {
   .c-lightbox {
-    height: 100vh;
+    height: 100dvh;
   }
 }
 
@@ -667,7 +667,7 @@ component >  info
   width: 90%;
   max-width: var(--width-content);
   height: auto;
-  min-height: 100dvh;
+  min-height: 100vh;
   margin-inline: auto;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -681,6 +681,11 @@ component >  info
     grid-template-rows: none;
     grid-template-columns: minmax(460px, 1fr) minmax(260px, 500px);
     align-content: stretch;
+  }
+}
+@supports (height: 1dvh) {
+  .c-lightbox-inner {
+    height: 100dvh;
   }
 }
 
