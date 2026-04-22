@@ -63,10 +63,6 @@ function createTriggerFor(item) {
         item.addEventListener("mouseleave", () => playOut(item, labels));
     }
 
-    // // PC hover
-    // item.addEventListener("mouseenter", () => playIn(item, labels));
-    // item.addEventListener("mouseleave", () => playOut(item, labels));
-
     // ScrollTrigger
     item._st = ScrollTrigger.create({
         trigger: item,
@@ -74,11 +70,6 @@ function createTriggerFor(item) {
         end: "bottom 30%",
         onToggle: (self) => (self.isActive ? playIn(item, labels) : playOut(item, labels)),
     });
-    // onEnter: () => playIn(item, labels),
-    // onEnterBack: () => playIn(item, labels),
-    // onLeave: () => playOut(item, labels),
-    // onLeaveBack: () => playOut(item, labels),
-    // });
 
     return item._st;
 }
@@ -89,11 +80,6 @@ export const initGalleryLabelReveal = () => {
     items.forEach((item) => {
         const img = item.querySelector("img");
 
-        // // 画像が無い（説明ブロック等）→ 即作成
-        // if (!img) {
-        //     createTriggerFor(item);
-        //     return;
-        // }
 
         // 既に読み込み済み（キャッシュ含む）→ 即作成（必要に応じてdecodeでさらに確実に）
         if (img.complete && img.naturalWidth > 0) {
@@ -116,7 +102,7 @@ export const initGalleryLabelReveal = () => {
         img.addEventListener("error", done, { once: true });
     });
 
-    // refresh のたびに「ラベルの初期位置だけ」入れ直す（演出の整合用）
+    // refresh のたびに「ラベルの初期位置だけ」入れ直す
     const onRefresh = () => {
         items.forEach((item) => {
             const st = item._st;
